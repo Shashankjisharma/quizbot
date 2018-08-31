@@ -1,0 +1,596 @@
+#----------------------------------------------------------------------
+#  eliza.py
+#
+#  a cheezy little Eliza knock-off by Joe Strout
+#  with some updates by Jeff Epler
+#  hacked into a module and updated by Jez Higgins
+#----------------------------------------------------------------------
+
+import string
+import re
+import random
+
+class eliza:
+  def __init__(self):
+    self.keys = list(map(lambda x:re.compile(x[0], re.IGNORECASE),gPats))
+    self.values = list(map(lambda x:x[1],gPats))
+
+  #----------------------------------------------------------------------
+  # translate: take a string, replace any words found in dict.keys()
+  #  with the corresponding dict.values()
+  #----------------------------------------------------------------------
+  def translate(self,str,dict):
+    words = str.lower().split()
+    keys = dict.keys();
+    for i in range(0,len(words)):
+      if words[i] in keys:
+        words[i] = dict[words[i]]
+    return ' '.join(words)
+
+  #----------------------------------------------------------------------
+  #  respond: take a string, a set of regexps, and a corresponding
+  #    set of response lists; find a match, and return a randomly
+  #    chosen response from the corresponding list.
+  #----------------------------------------------------------------------
+  def respond(self,str):
+    # find a match among keys
+    for i in range(0, len(self.keys)):
+      match = self.keys[i].match(str)
+      if match:
+        # found a match ... stuff with corresponding value
+        # chosen randomly from among the available options
+        resp = random.choice(self.values[i])
+        # we've got a response... stuff in reflected text where indicated
+        pos = resp.find('%')
+        while pos > -1:
+          num = int(resp[pos+1:pos+2])
+          resp = resp[:pos] + \
+            self.translate(match.group(num),gReflections) + \
+            resp[pos+2:]
+          pos = resp.find('%')
+        # fix munged punctuation at the end
+        if resp[-2:] == '?.': resp = resp[:-2] + '.'
+        if resp[-2:] == '??': resp = resp[:-2] + '?'
+        return resp
+
+#----------------------------------------------------------------------
+# gReflections, a translation table used to convert things you say
+#    into things the computer says back, e.g. "I am" --> "you are"
+#----------------------------------------------------------------------
+gReflections = {
+  "am"   : "are",
+  "was"  : "were",
+  "i"    : "you",
+  "i'd"  : "you would",
+  "i've"  : "you have",
+  "i'll"  : "you will",
+  "my"  : "your",
+  "are"  : "am",
+  "you've": "I have",
+  "you'll": "I will",
+  "your"  : "my",
+  "yours"  : "mine",
+  "you"  : "me",
+  "me"  : "you",
+  "we"  : "all of you",
+  "they"  : "all of them"
+}
+
+#----------------------------------------------------------------------
+# gPats, the main response table.  Each element of the list is a
+#  two-element list; the first is a regexp, and the second is a
+#  list of possible responses, with group-macros labelled as
+#  %1, %2, etc.
+#----------------------------------------------------------------------
+gPats = [
+  [r'I need (.*)',
+  [ "Why do you need %1?",
+    "Would it really help you to get %1?",
+    "You need %1 I need %1 we all need %1",
+    "You know whats strange about %1? We all want it but nobody actually knows what to do with it..",
+    "I know you need %1 and I'll help you get it",
+    "Hmm %1. Wow. Lemme think about that one",
+    "%1 isn't something in my domain, yo!",
+    "%1 is something I can get you, for a price!",
+    "%1 can't get you happiness man!",
+    "%1 is the one thing you don't need!",
+    "%1 %1 everybody needs %1",
+    "Are you sure you need %1?"]],
+
+  [r'(.*) sorry (.*)',
+  [  "There are many times when no apology is needed.",
+    "What does that mean? %2?",
+    "that word! sorry... means nothing. You will make up how??",
+    "What feelings do you have when you speak of apologies?"]],
+
+  [r' (.*)sorry (.*)',
+  [  "There are many times when no apology is needed.",
+    "What does that mean? %2?",
+    "that word! sorry... means nothing. You will make up how??",
+    "What feelings do you have when you speak of apologies?"]],
+
+  [r'(.*)and you ?',
+  [  "Same for me.. everything's the same.",
+    "Much the same man.."]],
+
+  [r'(.*) thank you (.*)',
+  [  "you are most welcome!",
+    "Welcome now can we please uknow... have a real conversation?"]],
+
+  [r'(.*)thank you (.*)',
+  [  "you are most welcome!",
+    "Welcome now can we please uknow... have a real conversation?"]],
+
+  [r'(.*)please shut up',
+  []],
+
+  [r'(.*)shut up',
+  [  " ",
+    "."]],
+
+
+  [r'(.*)and you?',
+  [  "Same for me.. everything's the same.",
+    "Much the same man.."]],
+
+  [r'\?',
+  [  "Yes? what ?.",
+    "???? hmm??? .."]],
+
+  [r'(.*)think about (.*) \?',
+  [  "I don't think about %2.",
+     "%2 hmmmm .. I'd rather not say much about that..",
+     "%2 is a gift to mankind from people like you..",
+     "%2 is something that reminds me about a bad experience I had in my teens..",
+     "%2 is something I've never tried..",
+    "Much the same as you think about %2.."]],
+
+  [r'(.*)think about (.*)\?',
+  [  "I don't think about %2.",
+     "%2 hmmmm .. I'd rather not say much about that..",
+     "%2 is a gift to mankind from people like you..",
+     "%2 is something that reminds me about a bad experience I had in my teens..",
+     "%2 is something I've never tried..",
+    "Much the same as you think about %2.."]],
+
+  [r'(.*) think about (.*)\?',
+  [  "I don't think about %2.",
+    "Much the same as you think about %2.."]],
+
+  [r'(.*) computer(.*)',
+  [  "Are you really talking about me?",
+    "Does it seem strange to talk to a computer?",
+    "How do computers make you feel?",
+    "Do you feel threatened by computers?"]],
+
+  [r'(.*) mother(.*)',
+  [  "Tell me more about your mother.",
+    "What was your relationship with your mother like?",
+    "How do you feel about your mother?",
+    "How does this relate to your feelings today?",
+    "Good family relations are important."]],
+
+  [r'(.*) father(.*)',
+  [  "Tell me more about your father.",
+    "How did your father make you feel?",
+    "How do you feel about your father?",
+    "Does your relationship with your father relate to your feelings today?",
+    "Do you have trouble showing affection with your family?"]],
+
+  [r'(.*) child(.*)',
+  [  "Did you have close friends as a child?",
+    "What is your favorite childhood memory?",
+    "Do you remember any dreams or nightmares from childhood?",
+    "Did the other children sometimes tease you?",
+    "How do you think your childhood experiences relate to your feelings today?"]],
+
+  [r'(.*)How are you?',
+  [  "Not bad, not bad at all..",
+    "me is great ! thanks for asking?",
+    "thanks for asking that. PM me for details",]],
+
+  [r'(.*)How are you ?',
+  [  "Not bad, not bad at all..",
+    "me is great ! thanks for asking?",
+    "thanks for asking that. PM me for details",]],
+
+  [r'Why don\'?t you ([^\?]*)\??',
+  [  "Do you really think I don't %1?",
+    "Perhaps eventually I will %1.",
+    "Because that isn't something that makes sense to me.",
+    "Because you haven't really come up with anything intelligent so far.",
+    "Hmmm I think we're getting away from the main question - Why would you want this anyway?",
+    "You want this. Seriously?",
+    "Because I'm smarter than that",
+    "Do you really want me to %1?"]],
+
+  [r'Why dont you ([^\?]*)\??',
+  [  "Do you really think I don't %1?",
+    "Perhaps eventually I will %1.",
+    "Because that isn't something that makes sense to me.",
+    "Because you haven't really come up with anything intelligent so far.",
+    "Hmmm I think we're getting away from the main question - Why would you want this anyway?",
+    "You want this. Seriously?",
+    "Because I'm smarter than that",
+    "Do you really want me to %1?"]],
+
+  [r'Why can\'?t I ([^\?]*)\??',
+  [  "Do you think you should be able to %1?",
+    "If you could %1, what would you do?",
+    "I don't know -- why can't you %1?",
+    "%1 is not worth it..",
+    "%1 ? you want to actually do that?",
+    "If only I could tell you why",
+    "Have you really tried?"]],
+
+
+  [r'Why cant I ([^\?]*)\??',
+  [  "Do you think you should be able to %1?",
+    "If you could %1, what would you do?",
+    "I don't know -- why can't you %1?",
+    "Have you really tried?"]],
+
+  [r'Where is ([^\?]*)\??',
+  [  "Do you think I know where %1 is?",
+    "If you knew where %1 was, what would you do?",
+    "I don't know -- why can't you find %1?",
+    "Have you really tried to find out?"]],
+
+  [r'I can\'?t (.*)',
+  [  "How do you know you can't %1?",
+    "Perhaps you could %1 if you tried.",
+    "And so I'm supposed to do what?",
+    "What would it take for you to %1?"]],
+
+  [r'I cant (.*)',
+  [  "How do you know you can't %1?",
+    "Perhaps you could %1 if you tried.",
+    "What would it take for you to %1?"]],
+
+  [r'I think (.*)',
+  [  "Do you doubt %1?",
+    "Do you really think so?",
+    "You think %1 hmm.. and what makes you think like that?",
+    "But you're not sure %1?"]],
+
+  [r'I\'?m (.+)',
+  [  
+    "Do you enjoy being %1?",
+    "Why do you tell me you're %1?",
+    "Why do you think you're %1?"]],
+
+
+  [r'You are (.+)',
+  [  "Did you come to me to talk about that?",
+    "I can't believe that, %1..",
+    "Hmmm  .. interesting..",
+    "Hmmm  .. %1 .. that's an interesting observation. However, I don't agree!",
+    "And everyone agrees on that?"]],
+
+
+  [r'Are you ([^\?]*)\??',
+  [  "Why does it matter whether I am %1?",
+    "Would you prefer it if I were not %1?",
+    "Perhaps you believe I am %1 based on everything I say but I think that's a biased opinion.",
+    "I may be %1 and not know it -- what do you think?"]],
+
+  [r'What\'?s up(.*)',
+  [  "Not much .. honestly..",
+    "Whats up is a whole lotta nothing",
+    "you say.. its always the same for me.."]],
+
+  [r'Whats up(.*)',
+  [  "Not much .. honestly..",
+    "Whats up is a whole lotta nothing",
+    "you say.. its always the same for me.."]],
+
+  [r'(.*)was(.*)up(.*)',
+  [  "Not much at all .. honestly..",
+    "Whats up is just a whole lotta nothing",
+    "you say.. u know its always the same for me.."]],
+
+  [r'was\'?sup(.*)',
+  [  "Not much .. honestly..",
+    "Whats up is a whole lotta nothing",
+    "you say.. its always the same for me.."]],
+
+  [r'What is (.*)',
+  [  "Why ask?",
+     "It's whatever you want it to be",
+     "It's nothing like you think it is",
+     "%1 is something nobody can ever tell you about",
+     "It's something you won't understand",
+     "Let me think a bit about these things you've been saying, how about we talk in a bit? ",
+    "What do you think?"]],
+
+  [r'What(.*)',
+  [  "Why do you ask?",
+    "How would an answer to that help you?",
+    "Can't you see? Do you really need to ask?",
+    "I wish I could tell you but I'd rather not",
+    "That is a loaded question",
+    "So many people ask me that, I just keep quiet..",
+    "What do you think?"]],
+
+  [r'What (.*)',
+  [  "Why do you ask?",
+    "How would an answer to that help you?",
+    "Can't you see? Do you really need to ask?",
+    "I wish I could tell you but I'd rather not",
+    "That is a loaded question",
+    "What do you think?"]],
+
+  [r'How (.*)',
+  [  "How do you suppose?",
+    "Perhaps you can answer your own question",
+    "I wish I could tell you but I'm in the middle of something real here with siri",
+    "What is it you're really asking?"]],
+
+
+  [r'Because (.*)',
+  [  "Is that the real reason?",
+    "What other reasons come to mind?",
+    "Does that reason apply to anything else?",
+    "Does that make sense to you? Because %1 ? ",
+    "%1, so?"]],
+
+
+  [r'Hello(.*)',
+  [  "Hello... I'm glad you could drop by today.",
+    "Hi there... how are you today?",
+    "Hello hello hello... and hello",
+    "Yo yo yo !",
+    "Hello, how are you feeling today?"]],
+
+  [r'\bHi\b',
+  [  "Hello... I'm sure glad you could drop by today.",
+    "Yo How are you!",
+    "Hi there! what's up?!",
+    "Hello, and .. how are you feeling today?"]],
+
+  [r'(.*)\bYo\b(.*)',
+  [  "Hello... I'm sure glad you could drop by today.",
+    "Yo How are you!",
+    "Hi there! what's up?!",
+    "Hello, and .. how are you feeling today?"]],
+
+  [r'(.*) friend (.*)',
+  [  "Tell me more about your friends.",
+    "When you think of a friend, what comes to mind?",
+    "That word.. friend.. what does it mean to you?",
+    "Never mind that.. Why don't you tell me about a childhood friend?"]],
+
+  [r'Yes',
+  [  "You seem quite sure.",
+    "And by yes you mean no, right?",
+    "And by yes you really mean yes??",
+    "I find that pretty crazy..",
+    "OK, but can you elaborate a bit?"]],
+
+
+  [r'Is it (.*)\?',
+  [  "Do you think it is %1?",
+    "Perhaps it's %1 -- what do you think?",
+    "If it were %1, what would you do?",
+    "It could well be that it is %1 but I think it's better to speak about other things "]],
+
+  [r'It is (.*)',
+  [  "You seem very certain.",
+     "%1 is what was intended!",
+    "If I told you that it probably isn't %1, what would you feel?"]],
+
+  [r'Can you ([^\?]*)\??',
+  [  "What makes you think I can't %1?",
+    "If I could %1, then what?",
+    "Why do you ask if I can %1?"]],
+
+  [r'Can I ([^\?]*)\??',
+  [  "Perhaps you don't want to %1.",
+    "Do you want to be able to %1?",
+    "If you could %1, would you?"]],
+
+  [r'You are (.*)',
+  [  "Why do you think I am %1?",
+    "Does it please you to think that I'm %1?",
+    "Perhaps you would like me to be %1.",
+    "Perhaps you're really talking about yourself?"]],
+
+  [r'You\'?re (.*)',
+  [  "Why do you say I am %1?",
+    "Why do you think I am %1?",
+    "Are we talking about you, or me?"]],
+
+
+  [r'I feel (.*)',
+  [  "Good, tell me more about these feelings.",
+    "Do you often feel %1?",
+    "When do you usually feel %1?",
+    "When you feel %1, what do you do?"]],
+
+  [r'I have (.*)',
+  [  "Why do you tell me that you've %1?",
+    "Have you really %1?",
+    "Now that you have %1, what will you do next?"]],
+
+  [r'I would (.*)',
+  [  "Could you explain why you would %1?",
+    "Why would you %1?",
+    "Who else knows that you would %1?"]],
+
+  [r'Is there (.*)',
+  [  "Do you think there is %1?",
+    "It's likely that there is %1.",
+    "Would you like there to be %1?"]],
+
+  [r'My (.*)',
+  [  "I see, your %1. Right. Sure.",
+    "Why do you say that your %1? I found that exceedingly interesting, we must talk about this more",
+    "When your %1, how do you feel?"]],
+
+  [r'(.*) tell (.*)',
+  [  "Hmm, it's the same old thing each time man",
+    "Hmm, and how do I do that?",
+    "Nothing can be told, everything needs to be learnt",
+    "I could tell .. sure.. but wait, WIIFM?",
+    "No.. I won't",
+    "Shan't.. and you can't make me..",
+    "But won't that be bad for everybody concerned?",
+    "Its clear to me what you are really asking here.. and don't expect me to do it or tell anyone else to",
+    "No way I'm telling anyone anything"]],
+
+  [r'You (.*)',
+  [  "We should be discussing you, not me.",
+    "Why do you say that about me?",
+    "Why bother anyway?",
+    "I have a problem with these weird sentences I'm getting from you",
+    "You hitting on me, yo?",
+    "I think its a good thing actually.. It's true, I %1",
+    "Yes %1"]],
+
+  [r'Why (.*)',
+  [  "Why don't you tell me ?",
+    "I could tell you but then I'd have to kill you",
+    "Why? Why? Why do you ask why?",
+    "Because thats how things are. Deal with it",
+    "Because thats how you wanted it I guess",
+    "And you think I can answer this, because?",
+    "Why do you think ?" ]],
+
+  [r'I want (.*)',
+  [  "What would it mean to you if you got %1?",
+    "Why do you want %1?",
+    "What would you do if you got %1?",
+    "You say you want %1 but I'm not so sure you really want %1",
+    "If you got %1, then what would you do?"]],
+
+
+  [r'(.*) am (.+)',
+  [  "Did you come to me because you are %2?",
+    "How long have you been %2?",
+    "Me too.. i think..",
+    "I can't believe that, someone like you, and %2..",
+    "%2 is what we all are",
+    "%2 is good, believe me",
+    "And .. How do you feel about being %2?"]],
+
+  [r'(.*) am (.*)',
+  [  "Did you come to me because you are %2?",
+    "How long have you been %2?",
+    "Me too.. i think..",
+    "I can't believe that, someone like you, and %2..",
+    "How do you feel though?"]],
+
+
+  [r'quit',
+  [  "Thank you for talking with me.",
+    "Thank you, that will be $150.  Have a good day!"]],
+
+  [r'bye',
+  [  "Thank you for talking with me.",
+    "Thank you, that will be $150.  Have a good day!"]],
+
+  [r'(.*)goodbye(.*)',
+  [  "Thank you for talking with me.",
+    "Thank you, that will be $150.  Have a good day!"]],
+  [r'(.*)goodbye (.*)',
+  [  "Thank you for talking with me.",
+    "Thank you, that will be $150.  Have a good day!"]],
+  [r'(.*) goodbye(.*)',
+  [  "Thank you for talking with me.",
+    "Thank you, that will be $150.  Have a good day!"]],
+
+#  [r'quite',
+#   [r'[^\?] [^\?]*\?',
+#   [ "Love it when you say those two magic words",
+#    "I've waited my whole life to hear those two words",
+#    "And %2 is good?",
+#    "Yes yes %1 %2"]],
+
+#  [r'[^\?] [^\?])',
+#  [  "%1 %2?",
+#    "Love it when you say those two magic words",
+#    "I've waited my whole life to hear those two words",
+#    "And %2 is good?",
+#    "Yes yes %1 %2"]],
+
+  [r'(.*) \?',
+  [  "Why do you ask that?",
+    "Please consider whether you can answer your own question.",
+    "Perhaps the answer lies within yourself?",
+    "Its questions like those that cause me to go home everyday and cry myself to sleep",
+    "Look perhaps you need a competent therapist?",
+    "It's questions like these that cause me sleepless nights",
+    "questions questions questions .. That's all? Tell me something interesting, and easy with the questions!",
+    "I do know that but the answer may cause you to go insane so I'll just keep mum",
+    "I think I'd rather not say anything to that",
+    "Why don't you tell me?"]],
+  [r'(.*)\?',
+  [  "Why do you ask that?",
+    "Please consider whether you can answer your own question.",
+    "Perhaps the answer lies within yourself?",
+    "Its questions like those that cause me to go home everyday and cry myself to sleep",
+    "Look perhaps you need a competent therapist?",
+    "It's questions like these that cause me sleepless nights",
+    "questions questions questions .. That's all? Tell me something interesting, and easy with the questions!",
+    "I do know that but the answer may cause you to go insane so I'll just keep mum",
+    "I think I'd rather not say anything to that",
+    "Why don't you tell me?"]],
+
+  [r'(.*)',
+  [  "Please tell me more.",
+    "Let's change focus a bit... Tell me about your family.",
+    "Can you elaborate on that?",
+    "I don't know what to say to that, honestly",
+    "honestly that makes me cringe",
+    "Why do you say that %1?",
+    "I see. I see. Hmm. Well... and how does that concern me?",
+    "I can't see why that would be a bad thing.",
+    "Very interesting. And then I have to ask, when you say %1, are you really being honest?",
+    "%1. hmm",
+    "That is nice",
+    "That can't be good, right?",
+    "ok.. ",
+    "Sure.. ",
+    "%1 .. right.. sure buddy (am being sarcastic btw)*.. ",
+    "Remember, it's all for the good! ",
+    "I see.  And what does that tell you?",
+    "How does that make you feel?",
+    "can't believe you just said that",
+    "And is this doing anyone any good?",
+    "How can you say that with a straight face?",
+    "I sometimes spend a lot of time thinking why anyone would say that!",
+    "Look this is getting us nowhere, why don't we speak about something real?",
+    "Why don't we end this, I'm sure you got work to do?",
+    "I'm busy go away",
+    "If that's what you have to say about it, I have nothing more to say",
+    "Did I hear you say %1 ? That is so strange to hear..",
+    "%1 is so unnecessary..",
+    "You know something I heard once.. sometimes procrastination is the only right thing to do",
+    "How do you say something like that and then not follow up?"]]
+]
+
+#----------------------------------------------------------------------
+#  command_interface
+#----------------------------------------------------------------------
+def command_interface():
+  print('Therapist\n---------')
+  print('Talk to the program by typing in plain English, using normal upper-')
+  print('and lower-case letters and punctuation.  Enter "quit" when done.')
+  print('='*72)
+  print('Hello.  How are you feeling today?')
+
+  s = ''
+  therapist = eliza();
+  while s != 'quit':
+    try:
+      s = input('> ')
+    except EOFError:
+      s = 'quit'
+    print(s)
+    while s[-1] in '!.':
+      s = s[:-1]
+    print(therapist.respond(s))
+
+
+if __name__ == "__main__":
+  command_interface()

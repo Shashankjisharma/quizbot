@@ -292,6 +292,7 @@ class Bot(irc.IRCClient):
         self.answer = cqa[2]
         self.msg(self.factory.channel, 'TOPIC: %s: %s' %
                 (self.category, self.question))
+        self.logfile.write('\n%s is question' %(self.question))
         if config.verbose:
             print '%s - %s - %s' % (self.category, self.question, self.answer)
         # Make list of hidden parts of the answer.
@@ -360,6 +361,7 @@ class Bot(irc.IRCClient):
             '*' if idx in self.answer_masks and c is not ' ' else c for
             idx, c in enumerate(str(self.answer)))
         self.msg(self.factory.channel, 'HINT: %s' % self.answer_hint)
+        self.logfile.write('\n%s is hint\n'%(self.answer_hint))
         self.hint_num += 1
 
     def fail(self):

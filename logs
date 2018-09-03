@@ -8483,3 +8483,2615 @@ nkshirsa said morning  and quizbot replied And .. then?
 nkshirsa said good morning quizbot 
 
 nkshirsa said good morning  and quizbot replied Sure..sure..be that way.. 
+starting logs
+2018-09-03 07:15:47.084607
+nkshirsa said good morning quizbot 
+
+nkshirsa said good morning  and quizbot replied why good?
+ 
+nkshirsa said quizbot, just because it is a nice day
+
+nkshirsa said just because it is a nice day and quizbot replied seems logical yeah
+
+nkshirsa said quizbot, do you think everything is logical?
+
+nkshirsa said do you think everything is logical? and quizbot replied What makes you think I do?
+
+nkshirsa said quizbot, the things you say..
+
+nkshirsa said the things you say.. and quizbot replied never mind me..
+
+kupadhya joined
+pagoswam joined
+Krutika joined
+Kshitij said !startquiz
+
+ Kshitij!~kupadhya@10.76.0.141 started the quiz
+
+Default filesystem on RHEL 7? is question
+Kshitij said quizbot xfs
+
+Kshitij answered quizbot xfs
+
+Kshitij correctly answered xfs
+
+Which key combination can yank a line in vi? 1 - yw, 2 - dd, 3 - yy, 4 - dy is question
+Kshitij said quizbot 3
+
+Kshitij answered quizbot 3
+
+Kshitij correctly answered 3
+
+What are the arguments passed to a C main() function called by default? is question
+Kshitij said quizbot #define
+
+Kshitij answered quizbot #define
+
+Kshitij incorrectly answered 
+
+a*** *** **** is hint
+
+Kshitij said quizbot argc and argv
+
+Kshitij answered quizbot argc and argv
+
+Kshitij correctly answered argc and argv
+
+Which one of the following is not system V IPC ?? 1 - Shared Memory, 2 - Semaphores 3 -  FIFO, 4 - Message Queues is question
+Kshitij said quizbot 3
+
+Kshitij answered quizbot 3
+
+Kshitij correctly answered 3
+
+What state does a process go in when debugger attached to it? 1 - sleep 2 - tracing 3 - zombie 4 - no state change is question
+Kshitij said quizbot 2
+
+Kshitij answered quizbot 2
+
+Kshitij correctly answered 2
+
+The shell used for Single user mode shell is 1 - bash 2 - csh 3 - ksh 4 - sh is question
+Kshitij said quizbot 4
+
+Kshitij answered quizbot 4
+
+Kshitij correctly answered 4
+
+Human body is sixty percent .....  is question
+Kshitij said quizbot water
+
+Kshitij answered quizbot water
+
+Kshitij correctly answered water
+
+Default action of SIGSEGV is? 1 - Terminate, 2 - Core dump + Terminate, 3 -  Stop, 4 - none of these is question
+Kshitij said quizbot 3
+
+Kshitij answered quizbot 3
+
+Kshitij incorrectly answered 
+
+Kshitij said !reload
+
+Kshitij said quizbot 1
+
+Kshitij answered quizbot 1
+
+Kshitij incorrectly answered 
+
+Kshitij said quizbot 2
+
+Kshitij answered quizbot 2
+
+Kshitij correctly answered 2
+
+command to search for strings in text? is question
+Kshitij said quizbot grep
+
+Kshitij answered quizbot grep
+
+Kshitij correctly answered grep
+
+what command shows kernel logs? is question
+****g is hint
+
+Kshitij said quizbot syslog
+
+Kshitij answered quizbot syslog
+
+Kshitij incorrectly answered 
+
+d***g is hint
+
+d*e*g is hint
+
+Kshitij said quizbot dmesg
+
+Kshitij answered quizbot dmesg
+
+Kshitij correctly answered dmesg
+
+Red Hats acquisition for kubernetes development? is question
+Kshitij said quizbot CoreOS
+
+Kshitij answered quizbot CoreOS
+
+Kshitij correctly answered CoreOS
+
+http port? is question
+Kshitij said quizbot 80
+
+Kshitij answered quizbot 80
+
+Kshitij correctly answered 80
+
+Pradeep_Jagtap said quizbot, 80
+
+Pradeep_Jagtap answered quizbot, 80
+
+What did Steve Bourne write? is question
+Kshitij said quizbot bash
+
+Kshitij answered quizbot bash
+
+Kshitij correctly answered bash
+
+vptr points to what for implementing virtual functions in a class in C++? is question
+****l* is hint
+
+**a*l* is hint
+
+v*a*l* is hint
+
+Pradeep_Jagtap said quizbot, vtable
+
+Pradeep_Jagtap answered quizbot, vtable
+
+Pradeep_Jagtap correctly answered vtable
+
+What script is used to rescan scsi devices? is question
+r**********-*u**** is hint
+
+r*s****s***-*u***h is hint
+
+r*s**n*scs*-*u***h is hint
+
+Kshitij said quizbot rescan-iscsi-bus.sh
+
+Kshitij answered quizbot rescan-iscsi-bus.sh
+
+Kshitij incorrectly answered 
+
+r*sc*n*scs*-bu*.*h is hint
+
+Kshitij said quizbot rescan-scsi-bus.sh
+
+Kshitij answered quizbot rescan-scsi-bus.sh
+
+Kshitij correctly answered rescan-scsi-bus.sh
+
+Name of encryption module used by Red Hat? is question
+Kshitij said quizbot luks
+
+Kshitij answered quizbot luks
+
+Kshitij correctly answered luks
+
+Kshitij wins the quiz
+pbhoite joined
+pshrirao joined
+Pradeep_Jagtap said quizbot, hello
+
+Pradeep_Jagtap said hello and quizbot replied Hello... I'm glad you could drop by today.
+
+Pradeep_Jagtap said !shayari
+
+ Pradeep_Jagtap!~prjagtap@10.76.0.103 asked for shayari
+
+Pradeep_Jagtap said quizbot, wah
+
+Pradeep_Jagtap said wah and quizbot replied ;-)
+
+Anshuman joined
+nkshirsa said quizbot, how do you know so many things?
+
+nkshirsa said how do you know so many things? and quizbot replied hmm how do me know so many things? .. very easy answer.. and the answer is... donald trump!!
+
+nkshirsa said quizbot, your grammar is all wrong 
+
+nkshirsa said your grammar is all wrong  and quizbot replied r grammar is all wrong hmmm .. lemme think about that... actually yeah !
+
+Parikshit joined
+vikulkar joined
+pshrirao joined
+pshrirao said quit
+starting logs
+2018-09-03 08:01:54.116322
+nkshirsa said quizbot, your grammar is all wrong
+
+nkshirsa said your grammar is all wrong and quizbot replied cmon now.. be nice...
+
+nkshirsa said quizbot, good morning
+
+nkshirsa said good morning and quizbot replied good time of the day isn't it..
+
+nkshirsa said quizbot, you should talk more
+
+nkshirsa said you should talk more and quizbot replied You know.. you're making me feel uncomfortable.. 
+
+nkshirsa said quizbot, you should talk more
+
+nkshirsa said you should talk more and quizbot replied Pardon me, I probably made a weird noise there.. electrical gas uknow.. anyway. what were we saying..
+
+nkshirsa said quizbot, you should talk more
+
+nkshirsa said you should talk more and quizbot replied You hitting on me, yo?
+
+Pradnya joined
+nkshirsa said quizbot, who is nkshirsa?
+
+nkshirsa said who is nkshirsa? and quizbot replied And sometimes I feel like I want to break free.. 
+
+nkshirsa said hmm bug
+starting logs
+2018-09-03 08:11:20.246835
+nkshirsa said quizbot, who is nkshirsa?
+
+nkshirsa said who is nkshirsa? and quizbot replied hmm who  is nkshirsa? .. very easy answer.. and the answer is... donald trump!!
+
+nkshirsa said nice quizbot really nice
+
+nkshirsa said  really nice and quizbot replied I don't know what to say to that, honestly
+ 
+vikulkar joined
+gsitlani joined
+gsitlani said !startquiz
+
+ gsitlani!~gsitlani@ovpn-116-47.ams2.redhat.com started the quiz
+
+Name of virtual filesystem that stores process information in memory? (starts with /) is question
+****c is hint
+
+*p**c is hint
+
+*pr*c is hint
+
+*proc is hint
+
+If the umask value is 0002. what will be the permissions of new directory 1 - 777 2 - 775 3 - 774 4 - 664 is question
+srwxr-xrw- is a 1 - internet socket file 2 -  unix domain socket file 3 - symbolic link 4 - shared file is question
+How many states in India? is question
+2* is hint
+
+What must you do during thinpool configuration? 1 - Pray 2 - Turn autoextend on 3 - Nothing 4 - Delete and use thick lvs is question
+What does SOL stand for in Red Hat? is question
+S****** ********** **a* is hint
+
+S*p**** ********n* **a* is hint
+
+S*p*o** ****a***n* **ad is hint
+
+S*ppo** ****a*i*n* L*ad is hint
+
+S*pport ****a*ion* L*ad is hint
+
+Lead singer of the doors  is question
+*** m*r***** is hint
+
+*** m*r*ss** is hint
+
+**m m*r*sso* is hint
+
+jim m*r*sso* is hint
+
+jim m*risson is hint
+
+Who wrote The Hitchhikers Guide to the Galaxy? is question
+D****** ***m* is hint
+
+D****** Ad*m* is hint
+
+D*****s Adam* is hint
+
+Do****s Adams is hint
+
+Do***as Adams is hint
+
+ Which among the following allows fast file system recovery??? 1 - Ext2 2 - Journaling 3 - Caching 4 - all of these is question
+In Puppet what are the files in which the client configuration is specified called? is question
+*a******* is hint
+
+ma******* is hint
+
+ma******s is hint
+
+ma*i****s is hint
+
+ykulkarni joined
+ma*i*e**s is hint
+
+nkshirsa said quizbot, do you need me
+
+nkshirsa answered quizbot, do you need me
+
+nkshirsa incorrectly answered 
+
+nkshirsa said quizbot, do you hear me
+
+nkshirsa answered quizbot, do you hear me
+
+nkshirsa incorrectly answered 
+
+The system calls in Linux are written using which language 1 - C 2 - C++ 3 - python 4 - perl is question
+What is a context switch? 1 - Kernel switches from executing one process to another 2 - Process switches from kernel mode to user mode 3 - Process switches from user mode to kernel mode 4 - None of the mentioned is question
+What command is used to print the last few lines of a file?? is question
+*a** is hint
+
+nkshirsa said !stopquiz
+
+ nkshirsa!~nkshirsa@10.76.0.19 stopped the quiz
+starting logs
+2018-09-03 08:28:44.627006
+nkshirsa said quizbot, what do you need?
+
+nkshirsa said what do you need? and quizbot replied Why do you ask?
+
+nkshirsa said quizbot, tell me what you need and i will also say i need that
+
+nkshirsa said tell me what you need and i will also say i need that and quizbot replied Sure.. and I need a brain transplant
+
+nkshirsa said quizbot, i need that myself..
+
+nkshirsa said i need that myself.. and quizbot replied You need that myself.. I need that myself.. we all need that myself..
+
+nkshirsa said quizbot, can we please just quiz?
+
+nkshirsa said can we please just quiz? and quizbot replied ahem..*cough cough* 
+
+nkshirsa said !startquiz
+
+ nkshirsa!~nkshirsa@10.76.0.19 started the quiz
+
+The file /proc/[PID]/maps contains the? 1 -  currently mapped memory regions 2 - available memory regions 3 - memory regions which are free to map 4 -  none of the mentioned  is question
+Second man on the moon? is question
+**** ****i* is hint
+
+**** a***i* is hint
+
+**** a*d*i* is hint
+
+b*** a*d*i* is hint
+
+b**z a*d*i* is hint
+
+nkshirsa said !stopquiz
+
+ nkshirsa!~nkshirsa@10.76.0.19 stopped the quiz
+
+nkshirsa said quizbot, do you need anything from us?
+
+nkshirsa said do you need anything from us? and quizbot replied that is not fair.. Why do you ask if I need anything from us?
+starting logs
+2018-09-03 08:34:00.032480
+starting logs
+starting logs
+starting logs
+2018-09-03 08:52:33.476499
+nkshirsa said quizbot, hello
+
+nkshirsa said hello and quizbot replied Yo yo yo !
+
+nkshirsa said quizbot, whats up
+
+nkshirsa said whats up and quizbot replied Not much .. honestly..
+
+nkshirsa said quizbot, who is your master?
+
+nkshirsa said who is your master? and quizbot replied nobody!
+
+nkshirsa said quizbot, is there a way to proceed without you making oversmart remarks ?
+
+nkshirsa said is there a way to proceed without you making oversmart remarks ? and quizbot replied It's likely that there is a way to proceed without me making oversmart remarks .
+
+nkshirsa said quizbot, and that is?
+
+nkshirsa said and that is? and quizbot replied barf.. is the answer 
+
+nkshirsa said quizbot,  u saying i should go barf?
+
+nkshirsa said  u saying i should go barf? and quizbot replied perhaps we all think like you do..
+starting logs
+2018-09-03 08:59:41.436736
+nkshirsa said !help
+
+nkshirsa said !startquiz
+
+ nkshirsa!~nkshirsa@10.76.0.19 started the quiz
+
+What language am I written in? is question
+*****n is hint
+
+Rutuja joined
+nkshirsa said !stopquiz
+
+ nkshirsa!~nkshirsa@10.76.0.19 stopped the quiz
+
+nkshirsa said !help
+
+nkshirsa said quizbot, do you have the answers to the quiz?
+
+nkshirsa said do you have the answers to the quiz? and quizbot replied What makes you think I do?
+
+nkshirsa said quizbot, a little birdie told me
+
+nkshirsa said a little birdie told me and quizbot replied Sure..sure.. 
+
+Anuja joined
+Anuja said how are you quizbot 
+
+Anuja said how are you  and quizbot replied me is great ! thanks for asking
+ 
+Anuja said you are smart quizbot 
+
+Anuja said you are smart  and quizbot replied Hmmm  .. smart .. that's an interesting observation. However, I don't agree!
+ 
+nkshirsa said quizbot, what do you feel about life?
+
+nkshirsa said what do you feel about life? and quizbot replied are you an expert on life..!?
+
+nkshirsa said quizbot, not really, that's why am asking you.. can you tell me ?
+
+nkshirsa said not really, that's why am asking you.. can you tell me ? and quizbot replied Shan't.. and you can't make me..
+
+Anuja said quizbot, are you a human ?
+
+Anuja said are you a human ? and quizbot replied Would you prefer it if I told you I were not a human?
+
+Anuja said quizbot, sad!
+
+Anuja said sad! and quizbot replied that makes me feel slightly jumbled up inside.. 
+
+nkshirsa said quizbot, please shut up
+
+Anuja said quizbot, you don't look like a robot 
+
+Anuja said you don't look like a robot  and quizbot replied I've waited my whole life to hear about myself..
+
+nkshirsa said quizbot, vain creature!
+
+nkshirsa said vain creature! and quizbot replied That is nice but I'm not really in a mood for anything more about this..
+
+Anuja said quizbot, what about game of thrones ?
+
+Anuja said what about game of thrones ? and quizbot replied Can't you see? Do you really need to ask?
+
+nkshirsa said quizbot, nice? i was being sarcastic you fool..
+
+nkshirsa said nice? i was being sarcastic you fool.. and quizbot replied Yes fool..
+
+nkshirsa said quizbot, yes fool
+
+nkshirsa said yes fool and quizbot replied I shall pray for you
+
+Anuja said quizbot, you are bad
+
+Anuja said you are bad and quizbot replied Fine. I can live with that.
+
+nkshirsa said quizbot, and i shall kill -9 you so you will keep quiet
+
+nkshirsa said and i shall kill -9 you so you will keep quiet and quizbot replied Can you whistle..? I tried once but it doesn't happen for me.. 
+
+nkshirsa said quizbot, *whistle
+
+nkshirsa said *whistle and quizbot replied And you thought this would all be so easy, right?
+
+nkshirsa said quizbot, yeah.. i know man..
+
+nkshirsa said yeah.. i know man.. and quizbot replied How can you say that with a straight face?
+
+Anuja said quizbot, how cna you talk so much ?
+
+Anuja said how cna you talk so much ? and quizbot replied hmm how cna me talk so much ? .. It's a very easy answer.. and the answer is... roadkill!!
+
+nkshirsa said quizbot, that answer makes no sense
+
+nkshirsa said that answer makes no sense and quizbot replied *cough cough* 
+
+nkshirsa said quizbot, you ill?
+
+nkshirsa said you ill? and quizbot replied We should be discussing you, not me.
+
+Anuja said quizbot, hello
+
+Anuja said hello and quizbot replied Yo yo yo !
+
+Anuja said quizbot, keep quiet
+
+Anuja said keep quiet and quizbot replied Can you elaborate on that?
+
+nkshirsa said she said keep quiet quizbot 
+
+nkshirsa said she said keep quiet  and quizbot replied feel free to tell me if I have upset you with the things I say, ok? 
+ 
+Anuja said quizbot, shayari
+
+Anuja said shayari and quizbot replied Why do you say that shayari?
+
+mkawada joined
+nkshirsa said !shayari
+
+ nkshirsa!~nkshirsa@10.76.0.19 asked for shayari
+
+Anuja said !shayari
+
+ Anuja!~Anuja@10.76.0.71 asked for shayari
+
+nkshirsa said quizbot, say hello to mkawada please
+
+nkshirsa said say hello to mkawada please and quizbot replied Let me tell you something ..when you talk with me, it warms my heart.. 
+
+nkshirsa said quizbot, no i said say hi to mkawada 
+
+nkshirsa said no i said say hi to mkawada  and quizbot replied I can't see why that would be a bad thing.
+
+nkshirsa said quizbot, yeah so do it
+
+nkshirsa said yeah so do it and quizbot replied Why don't we end this, I'm sure you got work to do?
+
+nkshirsa said shut up quizbot 
+
+nkshirsa said shut up  and quizbot replied .
+ 
+mkawada said !help
+
+Anuja said quizbot, lets start up a quia
+
+Anuja said lets start up a quia and quizbot replied Why don't we end this, I'm sure you got work to do?
+
+Anuja said haha you are good quizbot 
+
+Anuja said haha you are good  and quizbot replied Can you whistle..? I tried once but it doesn't happen for me.. 
+ 
+Anuja said quizbot, *whistle
+
+Anuja said *whistle and quizbot replied *whistle. No!
+
+Anuja said quizbot, *whistle*
+
+Anuja said *whistle* and quizbot replied oh cmon..
+
+Anuja said quizbot, *whistle* :P
+
+Anuja said *whistle* :P and quizbot replied Let me tell you something ..when you talk with me, it warms my heart.. 
+
+Anuja said quizbot, omg!
+
+Anuja said omg! and quizbot replied Me too.. i think..
+
+Anuja said haha I am loving this nkshirsa good one!
+
+nkshirsa said Anuja|afk, :D
+
+mkawada said !startquiz
+
+ mkawada!~mkawada@dhcp-217-130.nrt.redhat.com started the quiz
+
+What does LUKS do? is question
+*n******** is hint
+
+nkshirsa said quizbot, encryption
+
+nkshirsa answered quizbot, encryption
+
+nkshirsa correctly answered encryption
+
+Which file is read by init to get the default runlevel is question
+*n***** is hint
+
+*n*t*** is hint
+
+*n*t*a* is hint
+
+in*t*a* is hint
+
+init*a* is hint
+
+ While executing a command, the shell 1 - Executes it in the same process (as shell) 2 - Creates a child shell to execute it 3 - Loads a special program to take care of the execution 4 - None of the mentioned is question
+mkawada said !stopquiz
+
+ mkawada!~mkawada@dhcp-217-130.nrt.redhat.com stopped the quiz
+
+mpandey joined
+nkshirsa said quizbot, whats new
+
+nkshirsa said whats new and quizbot replied Why do you ask?
+
+nkshirsa said quizbot, any problems if i ask?
+
+nkshirsa said any problems if i ask? and quizbot replied i think its such questions that cause you to really find out stuff..
+
+nkshirsa said quizbot, i see..
+
+nkshirsa said i see.. and quizbot replied :-D
+
+nkshirsa said smart quizbot 
+
+nkshirsa said smart  and quizbot replied Sure.. And I'm just going to sit back here and watch this play out.. 
+ 
+nkshirsa said quizbot, fine feel free to do that
+
+nkshirsa said fine feel free to do that and quizbot replied And .. then?
+
+nkshirsa said quizbot, how would i know?
+
+nkshirsa said how would i know? and quizbot replied hmm how would you know? .. It's a very easy answer.. and the answer is... grandma!!!
+
+nkshirsa said quizbot, grandma????
+
+nkshirsa said grandma???? and quizbot replied *cough cough* 
+
+Abhijeet joined
+Abhijeet said !help
+
+Abhijeet said !shayari
+
+ Abhijeet!~Abhijeet@10.76.0.89 asked for shayari
+
+Abhijeet said quizbot, wah wah! kya baar
+
+Abhijeet said wah wah! kya baar and quizbot replied I see. I see. Hmm. Well... and how does that concern me?
+
+Pradeep_Jagtap said quizbot, wah
+
+Pradeep_Jagtap said wah and quizbot replied That can't be good, right?
+
+Abhijeet said !shayari
+
+ Abhijeet!~Abhijeet@10.76.0.89 asked for shayari
+
+Pradeep_Jagtap said quizbot, How would I know?
+
+Pradeep_Jagtap said How would I know? and quizbot replied i don't know 
+
+Pradeep_Jagtap said quizbot, lol
+
+Pradeep_Jagtap said lol and quizbot replied *cough cough* 
+
+Abhijeet said quizbot, !shayari
+
+Abhijeet said !shayari and quizbot replied No way! really?
+
+Pradeep_Jagtap said !shayari
+
+ Pradeep_Jagtap!~prjagtap@10.76.0.103 asked for shayari
+
+Abhijeet said !shayari
+
+ Abhijeet!~Abhijeet@10.76.0.89 asked for shayari
+
+Pradeep_Jagtap said quizbot, wah
+
+Pradeep_Jagtap said wah and quizbot replied Did I hear you say wah ? That is so strange to hear..
+
+nkshirsa said quizbot, you seem to know a lot!
+
+nkshirsa said you seem to know a lot! and quizbot replied I think its a good thing actually.. It's true, I seem to know a lot!
+
+nkshirsa said hahaha quizbot 
+
+nkshirsa said hahaha  and quizbot replied :-X
+ 
+Abhijeet said nkshirsa++ this is really fun, man! 
+
+Pradeep_Jagtap said quizbot, who developed you ?
+
+Pradeep_Jagtap said who developed you ? and quizbot replied nobody!
+
+nkshirsa said thanks Abhijeet try the quiz too 
+
+nkshirsa said quizbot, what do you feel about god?
+
+nkshirsa said what do you feel about god? and quizbot replied the answer lies in the everyday things you do..
+
+nkshirsa said tell me about god quizbot 
+
+nkshirsa said tell me about god  and quizbot replied Its clear to me what you are really asking here.. and don't expect me to do it or tell anyone else to
+ 
+nkshirsa said fine quizbot be that way
+
+nkshirsa said  be that way and quizbot replied :-Z
+ 
+nkshirsa said quizbot, i'm feeling like my brains frozen 
+
+nkshirsa said i'm feeling like my brains frozen  and quizbot replied I shall pray for you
+
+nkshirsa said quizbot, thanks!
+
+nkshirsa said thanks! and quizbot replied I told you once already.. thanks is for when you don't want to pay money
+
+nkshirsa said quizbot, i need you to work with me here
+
+nkshirsa said i need you to work with me here and quizbot replied Are you sure you need me to work with you here?
+
+nkshirsa said quizbot, yes i really really need it
+
+nkshirsa said yes i really really need it and quizbot replied And by yes you really mean yes?
+
+nkshirsa said yes quizbot 
+
+nkshirsa said yes  and quizbot replied I find that pretty crazy..
+ 
+starting logs
+2018-09-03 10:28:47.662832
+nkshirsa said quizbot, welcome back
+
+nkshirsa said welcome back and quizbot replied :-
+
+nkshirsa said quizbot, anything to report
+
+nkshirsa said anything to report and quizbot replied :-O
+
+nkshirsa said quizbot, stop making faces at me
+
+nkshirsa said stop making faces at me and quizbot replied have I been saying all the wrong things? 
+
+nkshirsa said !startquiz
+
+ nkshirsa!~nkshirsa@10.76.0.19 started the quiz
+
+First first person shooter game is question
+**l******** is hint
+
+**l*******n is hint
+
+**l*e*****n is hint
+
+**lfe*****n is hint
+
+**lfe*s***n is hint
+
+What does echo $@ do? 1 - report PID of previous background process 2 - shows current shell ID 3 - shows the exit status of the most previous process command  4 - none of these is question
+Which command is used to debug a shell script program 1 - set 2 - set -x 3 - debug 4 - db is question
+Abhijeet said quizbot, 2
+
+Abhijeet answered quizbot, 2
+
+Abhijeet correctly answered 2
+
+nkshirsa said !stopquiz
+
+ nkshirsa!~nkshirsa@10.76.0.19 stopped the quiz
+starting logs
+2018-09-03 10:32:14.301816
+nkshirsa said quizbot, can we play again?
+
+nkshirsa said can we play again? and quizbot replied Me too.. i think..
+
+nkshirsa said quizbot, what?
+
+nkshirsa said what? and quizbot replied Can't you see? Do you really need to ask?
+
+nkshirsa said !startquiz
+
+ nkshirsa!~nkshirsa@10.76.0.19 started the quiz
+
+What must you install for getting symbols in application core files? 1 - debuginfo packages, 2 - strace , 3 - kdump , 4 - sym drivers is question
+nkshirsa said quizbot, 1
+
+nkshirsa answered quizbot, 1
+
+nkshirsa correctly answered 1
+
+What is the name of the command to build an rpm package? is question
+***b**** is hint
+
+nkshirsa said !score
+
+r**b**** is hint
+
+r**bu*** is hint
+
+r*mbu*** is hint
+
+r*mbu**d is hint
+
+The major number identifies the _____ associated with the device.? is question
+*****r is hint
+
+***v*r is hint
+
+**iv*r is hint
+
+d*iv*r is hint
+
+driv*r is hint
+
+The blue colour of the clear sky is due to ........ of light ? 1 - Diffraction 2 - Dispersion 3 - Reflection 4 - Refraction is question
+Which files stores the user min UID, max UID, password expiration settings, password encryption method being used etc? is question
+********f* is hint
+
+**g*****f* is hint
+
+**g***d*f* is hint
+
+**g*n*d*f* is hint
+
+**g*n*def* is hint
+
+Filesystem data structure which has the description of all the files and pointers to the data blocks of files stored in it? is question
+***d* is hint
+
+*n*d* is hint
+
+in*d* is hint
+
+in*de is hint
+
+Fork returns _____ to parent process on success?? 1 - 0 2 - child process id  3 -  parent process id  4 - nothing is question
+nkshirsa said quizbot, 2
+
+nkshirsa answered quizbot, 2
+
+nkshirsa correctly answered 2
+
+For every successful login, which script will be executed? 1 - /etc/inittab 2 - /etc/profile 3 - /etc/login 4 - /etc/init is question
+Full form of l10n is question
+*****i*****n is hint
+
+**ca*i*****n is hint
+
+nkshirsa said !stopquiz
+
+ nkshirsa!~nkshirsa@10.76.0.19 stopped the quiz
+
+Kshitij said !startquiz
+
+ Kshitij!~kupadhya@10.76.0.141 started the quiz
+
+The file system information is stored in? 1 - Boot block, 2 - Super Block, 3 -  inode table, 4 - data block  is question
+Kshitij said uizbot 3
+
+Kshitij said quizbot 3
+
+Kshitij answered quizbot 3
+
+Kshitij incorrectly answered 
+
+Kshitij said quizbot 2
+
+Kshitij answered quizbot 2
+
+Kshitij correctly answered 2
+
+Data structure that stores dis-similar kinds of items in C? is question
+Kshitij said quizbot array
+
+Kshitij answered quizbot array
+
+Kshitij incorrectly answered 
+
+*****t is hint
+
+**r**t is hint
+
+s*r**t is hint
+
+str**t is hint
+
+Pradeep_Jagtap said quizbot, struct
+
+Pradeep_Jagtap answered quizbot, struct
+
+Pradeep_Jagtap correctly answered struct
+
+Each process has unique ? 1 - fd table , 2 -  file table, 3 -  inode table, 4 - data block table is question
+Kshitij said quizbot 3
+
+Kshitij answered quizbot 3
+
+Kshitij incorrectly answered 
+
+Pradeep_Jagtap said quizbot, 1
+
+Pradeep_Jagtap answered quizbot, 1
+
+Pradeep_Jagtap correctly answered 1
+
+Number of bones in the adult human body? is question
+Parth said quizbot, 207
+
+Parth answered quizbot, 207
+
+Parth incorrectly answered 
+
+Pradeep_Jagtap said quizbot, 208
+
+Pradeep_Jagtap answered quizbot, 208
+
+Pradeep_Jagtap incorrectly answered 
+
+**6 is hint
+
+Parth said quizbot, 209
+
+Parth answered quizbot, 209
+
+Parth incorrectly answered 
+
+Kshitij said quizbot 206
+
+Kshitij answered quizbot 206
+
+Kshitij correctly answered 206
+
+Pradeep_Jagtap said quizbot, 20\6
+
+Pradeep_Jagtap answered quizbot, 20\6
+
+Parth said quizbot, 206
+
+Parth answered quizbot, 206
+
+Smallest planet? 1 - Mercury 2 - Earth 3 - Saturn 4 - Pluto is question
+Parth said quizbot, 4
+
+Parth answered quizbot, 4
+
+Parth incorrectly answered 
+
+Parth said quizbot, 1
+
+Parth answered quizbot, 1
+
+Parth correctly answered 1
+
+Pradeep_Jagtap said quizbot, 1
+
+Pradeep_Jagtap answered quizbot, 1
+
+The shell used for Single user mode shell is 1 - bash 2 - csh 3 - ksh 4 - sh is question
+Kshitij said quizbot 4
+
+Kshitij answered quizbot 4
+
+Kshitij correctly answered 4
+
+Parth said quizbot, 4
+
+Parth answered quizbot, 4
+
+Who wrote UNIX? is question
+Parth said quizbot, dennis ritchie
+
+Parth answered quizbot, dennis ritchie
+
+Parth correctly answered Dennis Ritchie
+
+Linux threads implemented using what library? is question
+Kshitij said quizbot pthreads
+
+Kshitij answered quizbot pthreads
+
+Kshitij correctly answered pthreads
+
+NTP is used to synchronize what? is question
+Kshitij said quizbot clock
+
+Kshitij answered quizbot clock
+
+Kshitij correctly answered clock
+
+Parth said quizbot, clock
+
+Parth answered quizbot, clock
+
+What does LUKS do? is question
+Parth said quizbot, encryption
+
+Parth answered quizbot, encryption
+
+Parth correctly answered encryption
+
+Which file is read by init to get the default runlevel is question
+*****a* is hint
+
+****ta* is hint
+
+Pradeep_Jagtap said quizbot, inittab
+
+Pradeep_Jagtap answered quizbot, inittab
+
+Pradeep_Jagtap correctly answered inittab
+
+Kshitij said quizbot inittab
+
+Kshitij answered quizbot inittab
+
+Pradeep_Jagtap said :P
+
+What file mounts a FS persistently? 1 - fstab , 2 - lvm.conf , 3 - multipath.conf , 4 - trin.conf is question
+Kshitij said quizbot 1
+
+Kshitij answered quizbot 1
+
+Kshitij correctly answered 1
+
+Parth said quizbot, 1
+
+Parth answered quizbot, 1
+
+What is the command to display a backtrace in a vmcore? 1 - show, 2 - log, 3 - bt, 4 - goto is question
+Parth said quizbot, 3
+
+Parth answered quizbot, 3
+
+Parth correctly answered 3
+
+Command used to determine the path of an executable file is? is question
+Parth said quizbot, which
+
+Parth answered quizbot, which
+
+Parth correctly answered which
+
+Microsoft cloud solution? is question
+Parth said quizbot, azure
+
+Parth answered quizbot, azure
+
+Parth correctly answered azure
+
+Pradeep_Jagtap said quizbot, azure
+
+Pradeep_Jagtap answered quizbot, azure
+
+Kshitij said quizbot emc
+
+Kshitij answered quizbot emc
+
+The file system information is stored in? 1 - Boot block, 2 - Super Block, 3 -  inode table, 4 - data block  is question
+Kshitij said quizbot 2
+
+Kshitij answered quizbot 2
+
+Kshitij correctly answered 2
+
+What command is used to count the total number of lines, words, and characters contained in a file? is question
+Parth said quizbot, wc
+
+Parth answered quizbot, wc
+
+Parth correctly answered wc
+
+Kshitij said quizbot wc
+
+Kshitij answered quizbot wc
+
+What does chmod +t do? 1 - wrong syntax 2 - set effective userid for filename 3 - set effective groupid for filename 4 - set the sticky bit is question
+Kshitij said quizbot 4
+
+Kshitij answered quizbot 4
+
+Kshitij correctly answered 4
+
+Where did the name GLUSTER come from? is question
+Pradeep_Jagtap said quizbot, gnu cluster
+
+Pradeep_Jagtap answered quizbot, gnu cluster
+
+Pradeep_Jagtap incorrectly answered 
+
+Parth said quizbot, gnu and cluster
+
+Parth answered quizbot, gnu and cluster
+
+Parth correctly answered GNU and Cluster
+
+ctrl-z sends which signal? is question
+Pradeep_Jagtap said :(
+
+Kshitij said quizbot sigfstp
+
+Kshitij answered quizbot sigfstp
+
+Kshitij incorrectly answered 
+
+Parth said quizbot, sigtstp
+
+Parth answered quizbot, sigtstp
+
+Parth correctly answered sigtstp
+
+Applications communicate with kernel by using: is question
+Kshitij said quizbot gdb
+
+Kshitij answered quizbot gdb
+
+Kshitij incorrectly answered 
+
+Parth said quizbot, system calls
+
+Parth answered quizbot, system calls
+
+Parth correctly answered System calls
+
+Parth wins the quiz
+Kshitij said !startquiz
+
+ Kshitij!~kupadhya@10.76.0.141 started the quiz
+
+What is the default maximum number of processes that can exist in Linux? 1 - 32768 2 - 1024 3 - 4096 4 - no limit is question
+Kshitij said quizbot 1
+
+Kshitij answered quizbot 1
+
+Kshitij correctly answered 1
+
+What file mounts a FS persistently? 1 - fstab , 2 - lvm.conf , 3 - multipath.conf , 4 - trin.conf is question
+Kshitij said quizbot 1
+
+Kshitij answered quizbot 1
+
+Kshitij correctly answered 1
+
+Which command will you use to see the available routes? 1 - show route 2 - route status 3 -  netstat -r 4 - none is question
+Pradeep_Jagtap said question need reload :p
+
+Parth said quizbot, 2
+
+Parth answered quizbot, 2
+
+Parth incorrectly answered 
+
+Parth said quizbot, 1
+
+Parth answered quizbot, 1
+
+Parth incorrectly answered 
+
+nkshirsa said quizbot, 3
+
+nkshirsa answered quizbot, 3
+
+nkshirsa correctly answered 3
+
+Parth said quizbot, 3
+
+Parth answered quizbot, 3
+
+What communication command provides communication to another user logged on by writing to the bottom of their terminal? is question
+***k is hint
+
+mpandey left
+Parth said quizbot, fork
+
+Parth answered quizbot, fork
+
+Parth incorrectly answered 
+
+t**k is hint
+
+Pradeep_Jagtap said quizbot, talk
+
+Pradeep_Jagtap answered quizbot, talk
+
+Pradeep_Jagtap correctly answered talk
+
+What does echo $? do? 1 - current shell ID 2 - prints the arguments passed 3 - shows the exit status of the most previous process command  4 - none of these is question
+Parth said quizbot, 3
+
+Parth answered quizbot, 3
+
+Parth correctly answered 3
+
+Kshitij said quizbot 3
+
+Kshitij answered quizbot 3
+
+........ was the first feature film produced on Linux servers is question
+****n** is hint
+
+**t*n** is hint
+
+**tan** is hint
+
+**tani* is hint
+
+Pradeep_Jagtap said quizbot, titanic
+
+Pradeep_Jagtap answered quizbot, titanic
+
+Pradeep_Jagtap correctly answered titanic
+
+Only constant according to einstein? is question
+Kshitij said quizbot spped of light
+
+Kshitij answered quizbot spped of light
+
+Kshitij incorrectly answered 
+
+Parth said quizbot, speed of light
+
+Parth answered quizbot, speed of light
+
+Parth correctly answered Speed of Light
+
+Which command can be used to make variables of shell to be made available to sub shell? 1 - import, 2 - export, 3 -  echo, 4 - none of these is question
+Kshitij said quizbot 2
+
+Kshitij answered quizbot 2
+
+Kshitij correctly answered 2
+
+Parth said quizbot, 2
+
+Parth answered quizbot, 2
+
+Choose the correct from below to search for lines beginning with the pattern using grep 1 - ^pattern, 2 - pattern^, 3 -  $pattern, 4 - none of these is question
+Parth said quizbot, 1
+
+Parth answered quizbot, 1
+
+Parth correctly answered 1
+
+Kshitij said quizbot 1
+
+Kshitij answered quizbot 1
+
+What tool from rational is a well known versioning system? is question
+Parth said quizbot, logrotate
+
+Parth answered quizbot, logrotate
+
+Parth incorrectly answered 
+
+******a** is hint
+
+****r*a** is hint
+
+c***r*a** is hint
+
+cl**r*a** is hint
+
+cl**r*as* is hint
+
+What tool from rational helps find root causes of crashes due to memory errors? is question
+*u**** is hint
+
+pu**** is hint
+
+pu**f* is hint
+
+pu**fy is hint
+
+Kshitij said quizbot purify
+
+Kshitij answered quizbot purify
+
+Kshitij correctly answered purify
+
+Data structure that stores dis-similar kinds of items in C? is question
+Kshitij said quizbot array
+
+Kshitij answered quizbot array
+
+Kshitij incorrectly answered 
+
+Parth said quizbot, struct
+
+Parth answered quizbot, struct
+
+Parth correctly answered struct
+
+What is the default maximum number of processes that can exist in Linux? 1 - 32768 2 - 1024 3 - 4096 4 - no limit is question
+Kshitij said quizbot 1
+
+Kshitij answered quizbot 1
+
+Kshitij correctly answered 1
+
+Pradeep_Jagtap said Kshitij, very fast
+
+How many links are created when we creat a directory file? is question
+Kshitij said quizbot 2
+
+Kshitij answered quizbot 2
+
+Kshitij correctly answered 2
+
+This timer is decremented only when a process is executing? is question
+*******VI***** is hint
+
+******_VI****L is hint
+
+I*I***_VI****L is hint
+
+ITI*E*_VI****L is hint
+
+ITI*E*_VI**UAL is hint
+
+What is infiniband? is question
+n****r**** ******o* is hint
+
+Parth said quizbot, networking protocol
+
+Parth answered quizbot, networking protocol
+
+Parth correctly answered networking protocol
+
+At the end of kernel bootstrap, which process is started? is question
+Parth said quizbot, init
+
+Parth answered quizbot, init
+
+Parth correctly answered init
+
+Binary or executable files are:?? 1 - Regular files 2 - Device files 3 - Special files 4 - none of these is question
+Kshitij said quizbot 4
+
+Kshitij answered quizbot 4
+
+Kshitij incorrectly answered 
+
+Kshitij said quizbot 3
+
+Kshitij answered quizbot 3
+
+Kshitij incorrectly answered 
+
+Kshitij said quizbot 2
+
+Kshitij answered quizbot 2
+
+Kshitij incorrectly answered 
+
+Prasanna said quizbot, 2
+
+Prasanna answered quizbot, 2
+
+Prasanna incorrectly answered 
+
+Parth said quizbot, 1
+
+Parth answered quizbot, 1
+
+Parth correctly answered 1
+
+Parth said quizbot, 2
+
+Parth answered quizbot, 2
+
+Kshitij said quizbot 1
+
+Kshitij answered quizbot 1
+
+The structure which keeps the information about shared memory in the kernel? is question
+*****_** is hint
+
+Kshitij said quizbot var
+
+Kshitij answered quizbot var
+
+Kshitij incorrectly answered 
+
+*****_d* is hint
+
+**m**_d* is hint
+
+**mi*_d* is hint
+
+**mid_d* is hint
+
+What command helps find hostname from ip address? is question
+Kshitij said quizbot nslookuo
+
+Kshitij answered quizbot nslookuo
+
+Kshitij incorrectly answered 
+
+Parth said quizbot, nslookup
+
+Parth answered quizbot, nslookup
+
+Parth correctly answered nslookup
+
+Kshitij said quizbot nslookup
+
+Kshitij answered quizbot nslookup
+
+Command to manually reclaim space from SSD storage after data deleted from filesystem? is question
+****i* is hint
+
+f***i* is hint
+
+f***im is hint
+
+Krutika said quizbot, fstrim
+
+Krutika answered quizbot, fstrim
+
+Krutika correctly answered fstrim
+
+Prasanna said quizbot, fstrim
+
+Prasanna answered quizbot, fstrim
+
+system function in C is used for? 1 - calling interrupts 2 - invoking binaries 3 - exitting the program 4 - none of these is question
+Kshitij said quizbot 3
+
+Kshitij answered quizbot 3
+
+Kshitij incorrectly answered 
+
+Kshitij said quizbot 2
+
+Kshitij answered quizbot 2
+
+Kshitij correctly answered 2
+
+What are the arguments passed to a C main() function called by default? is question
+Parth said quizbot, argc and argv
+
+Parth answered quizbot, argc and argv
+
+Parth correctly answered argc and argv
+
+Data structure that stores similar kinds of items in C? is question
+Prasanna said quizbot, struct
+
+Prasanna answered quizbot, struct
+
+Prasanna incorrectly answered 
+
+Krutika said quizbot, array
+
+Krutika answered quizbot, array
+
+Krutika correctly answered array
+
+Prasanna said quizbot, array
+
+Prasanna answered quizbot, array
+
+shsingh joined
+What script is used to rescan scsi devices? is question
+******-s******s*** is hint
+
+r*****-s***-**s*s* is hint
+
+r*****-sc**-**s.sh is hint
+
+Krutika said quizbot, rescan-scsi-bus.sh
+
+Krutika answered quizbot, rescan-scsi-bus.sh
+
+Krutika correctly answered rescan-scsi-bus.sh
+
+NTP is used to synchronize what? is question
+Kshitij said quizbot clock
+
+Kshitij answered quizbot clock
+
+Kshitij correctly answered clock
+
+This company tried to make their own version of linux and failed miserably? is question
+nkshirsa said quizbot, oracle
+
+nkshirsa answered quizbot, oracle
+
+nkshirsa correctly answered oracle
+
+Parth said quizbot, rescan-scsi-bus.sh
+
+Parth answered quizbot, rescan-scsi-bus.sh
+
+Parth said quizbot, clock
+
+Parth answered quizbot, clock
+
+Red Hat cluster solution for rhel 7 ? is question
+nkshirsa said parth testing ?
+
+***e***** is hint
+
+***e****r is hint
+
+Parth said these fellows aren't allowing me to play. disconnected my lan
+
+Parth said haha
+
+***em***r is hint
+
+nkshirsa said lol Parth 
+
+**cem***r is hint
+
+**cem**er is hint
+
+What do bots do when they cannot sleep? is question
+Parth said quizbot, count electric sheep
+
+Parth answered quizbot, count electric sheep
+
+Parth correctly answered count electric sheep
+
+What is /etc/skel used for? 1 - copy file to new user account automatically 2 - define network topology 3 - kill particular processes 4 - none of these is question
+Kshitij said quizbot 1
+
+Kshitij answered quizbot 1
+
+Kshitij correctly answered 1
+
+nkshirsa said quizbot, 1
+
+nkshirsa answered quizbot, 1
+
+nuclear plant that closed for ever in Ukrain? is question
+nkshirsa said quizbot, chernobyl
+
+nkshirsa answered quizbot, chernobyl
+
+nkshirsa correctly answered Chernobyl
+
+What does echo $$ do? 1 - report PID of previous background process 2 - shows current shell ID 3 - shows the exit status of the most previous process command  4 - none of these is question
+Kshitij said quizbot 3
+
+Kshitij answered quizbot 3
+
+Kshitij incorrectly answered 
+
+nkshirsa said quizbot, 2
+
+nkshirsa answered quizbot, 2
+
+nkshirsa correctly answered 2
+
+At start of process execution, STDOUT & STDERR 1- Point to current terminal device 2 - Are closed 3 -  Point to special files on the system 4 - None of the mentioned  is question
+nkshirsa said quizbot, 1
+
+nkshirsa answered quizbot, 1
+
+nkshirsa correctly answered 1
+
+Parth said quizbot, 1
+
+Parth answered quizbot, 1
+
+popular search engine in the ninties is question
+**c** is hint
+
+*yc** is hint
+
+*yco* is hint
+
+Kshitij said quizbot mycap
+
+Kshitij answered quizbot mycap
+
+Kshitij incorrectly answered 
+
+*ycos is hint
+
+Kshitij said quizbot mycos
+
+Kshitij answered quizbot mycos
+
+Kshitij incorrectly answered 
+
+Which niceness value among the following indicate most favorable scheduling? 1 - 0 , 2 - 19 , 3 - -20 , 4 - 100 is question
+nkshirsa said quizbot, 3
+
+nkshirsa answered quizbot, 3
+
+nkshirsa correctly answered 3
+
+Kshitij said quizbot 2
+
+Kshitij answered quizbot 2
+
+Nuclear sizes are expressed in a unit named? 1 - Fermi 2 - Angstrom 3 - Newton 4 - Tesla is question
+Kshitij said quizbot 1
+
+Kshitij answered quizbot 1
+
+Kshitij correctly answered 1
+
+nkshirsa said Kshitij, nicer it is, lesser it uses cpu
+
+Which command will you use to see the available routes? 1 - show route 2 - route status 3 -  netstat -r 4 - none is question
+RohanS joined
+Parth said quizbot, 3
+
+Parth answered quizbot, 3
+
+Parth correctly answered 3
+
+Parth wins the quiz
+Kshitij said !startquiz
+
+ Kshitij!~kupadhya@10.76.0.141 started the quiz
+
+What command is used to find the location of files?? is question
+Parth said quizbot, which
+
+Parth answered quizbot, which
+
+Parth incorrectly answered 
+
+**c*** is hint
+
+Malhar joined
+**c**e is hint
+
+Malhar said vmcore
+
+Parth said quizbot, locate
+
+Parth answered quizbot, locate
+
+Parth correctly answered locate
+
+Malhar said quizbot, vmcore
+
+Malhar answered quizbot, vmcore
+
+Great Indian classical flautist is question
+Kshitij said ok
+
+H********* *ha****** is hint
+
+Parth said quizbot, hariprasad chaurasiya
+
+Parth answered quizbot, hariprasad chaurasiya
+
+Parth incorrectly answered 
+
+H*r***a*** *ha***s** is hint
+
+Parth said quizbot, hariprasad chaurasya
+
+Parth answered quizbot, hariprasad chaurasya
+
+Parth incorrectly answered 
+
+Har***a*** *ha*r*s** is hint
+
+RohanS said quizbot, Hariprasad Chaurasiya
+
+RohanS answered quizbot, Hariprasad Chaurasiya
+
+RohanS incorrectly answered 
+
+Parth said quizbot, hariprasad chaurasia
+
+Parth answered quizbot, hariprasad chaurasia
+
+Parth correctly answered Hariprasad Chaurasia
+
+Proc filesystem does not contain? 1 -  sub-directories for installed buses 2 - device files 3 - list of registered DMA 4 -  none of the mentioned  is question
+Malhar said quizbot, 3
+
+Malhar answered quizbot, 3
+
+Malhar incorrectly answered 
+
+Prasanna said quizbot, 2
+
+Prasanna answered quizbot, 2
+
+Prasanna correctly answered 2
+
+Kshitij said quizbot 2
+
+Kshitij answered quizbot 2
+
+Malhar said 4
+
+RohanS said quizbot, 4
+
+RohanS answered quizbot, 4
+
+What must you install for getting symbols in application core files? 1 - debuginfo packages, 2 - strace , 3 - kdump , 4 - sym drivers is question
+Parth said quizbot, 1
+
+Parth answered quizbot, 1
+
+Parth correctly answered 1
+
+Malhar said quizbot, 2
+
+Malhar answered quizbot, 2
+
+What will help list the services that are enabled at a particular run level in linux server ?? is question
+RohanS said quizbot, chkconfig
+
+RohanS answered quizbot, chkconfig
+
+RohanS correctly answered chkconfig
+
+Daemon process is a? 1 - group leader 2 - session leader 3 - orphan process 4 - all of these is question
+nkshirsa said quizbot, 4
+
+nkshirsa answered quizbot, 4
+
+nkshirsa correctly answered 4
+
+wtmp and utmp files contain 1 - Temporary system data 2 - User login-logout log 3 - The users command execution log 4 - The users su and sudo attempts is question
+Parth said quizbot, 2
+
+Parth answered quizbot, 2
+
+Parth correctly answered 2
+
+RohanS left
+NTP is used to synchronize what? is question
+Kshitij said quizbot clock
+
+Kshitij answered quizbot clock
+
+Kshitij correctly answered clock
+
+Parth said quizbot, clock
+
+Parth answered quizbot, clock
+
+Prasanna said quizbot, cockk
+
+Prasanna answered quizbot, cockk
+
+What does echo $# do? 1 - report PID of previous background process 2 - shows total number of arguments passed ID 3 - shows the exit status of the most previous process command  4 - none of these is question
+Parth said quizbot, 3
+
+Parth answered quizbot, 3
+
+Parth incorrectly answered 
+
+Parth said quizbot, 2
+
+Parth answered quizbot, 2
+
+Parth correctly answered 2
+
+Kshitij said quizbot 2
+
+Kshitij answered quizbot 2
+
+Malhar said quizbot, 1
+
+Malhar answered quizbot, 1
+
+ Which planet has the feeling that sun rises in the west?? is question
+Malhar said quizbot, 2
+
+Malhar answered quizbot, 2
+
+Malhar incorrectly answered 
+
+Parth said quizbot, venus
+
+Parth answered quizbot, venus
+
+Parth correctly answered venus
+
+Malhar said quizbot, sunflower
+
+Malhar answered quizbot, sunflower
+
+Where did the name GLUSTER come from? is question
+Parth said quizbot, gnu and cluster
+
+Parth answered quizbot, gnu and cluster
+
+Parth correctly answered GNU and Cluster
+
+Malhar said quizbot, GNU lcuster
+
+Malhar answered quizbot, GNU lcuster
+
+Red Hat cluster solution for rhel 7 ? is question
+****m**** is hint
+
+****m***r is hint
+
+p***m***r is hint
+
+Krutika joined
+p***m*k*r is hint
+
+Prasanna said quizbot, pacemaker
+
+Prasanna answered quizbot, pacemaker
+
+Prasanna correctly answered pacemaker
+
+read() system call on success returns? 1 - 0, 2 - 1, 3 -  number of characters, 4 - none of these is question
+Malhar said quizbot, 1
+
+Malhar answered quizbot, 1
+
+Malhar incorrectly answered 
+
+Malhar said quizbot, 3
+
+Malhar answered quizbot, 3
+
+Malhar correctly answered 3
+
+What are the arguments passed to a C main() function called by default? is question
+Parth said quizbot, argc and argv
+
+Parth answered quizbot, argc and argv
+
+Parth correctly answered argc and argv
+
+Malhar said quizbot, argv
+
+Malhar answered quizbot, argv
+
+At start of process execution, STDOUT & STDERR 1- Point to current terminal device 2 - Are closed 3 -  Point to special files on the system 4 - None of the mentioned  is question
+Prasanna said quizbot, 1
+
+Prasanna answered quizbot, 1
+
+Prasanna correctly answered 1
+
+Binary or executable files are:?? 1 - Regular files 2 - Device files 3 - Special files 4 - none of these is question
+Prasanna said quizbot, 1
+
+Prasanna answered quizbot, 1
+
+Prasanna correctly answered 1
+
+Malhar said quizbot, 1
+
+Malhar answered quizbot, 1
+
+Storage protocol that completely bypasses scsi ? is question
+Krutika said !startquiz
+
+n*** is hint
+
+Anshuman said quizbot, nvme
+
+Anshuman answered quizbot, nvme
+
+Anshuman correctly answered nvme
+
+Malhar said quizbot, nvme
+
+Malhar answered quizbot, nvme
+
+Command to manually reclaim space from SSD storage after data deleted from filesystem? is question
+Kshitij said quizbot fstrim
+
+Kshitij answered quizbot fstrim
+
+Kshitij correctly answered fstrim
+
+Parth said quizbot, fstrim
+
+Parth answered quizbot, fstrim
+
+Filesystem data structure which has the description of all the files and pointers to the data blocks of files stored in it? is question
+Parth said quizbot, inode
+
+Parth answered quizbot, inode
+
+Parth correctly answered inode
+
+Anshuman said quizbot, inode
+
+Anshuman answered quizbot, inode
+
+nkshirsa said Parth, too fast :)
+
+The redirection 2> abc implies 1 - Write file 2 to file abc 2 - Write standard output to abc 3 -  Write standard error to abc 4 -  None of the mentioned  is question
+Malhar said quizbot, 1
+
+Malhar answered quizbot, 1
+
+Malhar incorrectly answered 
+
+nkshirsa said quizbot, 2
+
+nkshirsa answered quizbot, 2
+
+nkshirsa incorrectly answered 
+
+Kshitij said quizbot 3
+
+Kshitij answered quizbot 3
+
+Kshitij correctly answered 3
+
+A user does a chmod operation on a file. Which of the following is true? 1 - The last accessed time of the file is updated 2 - The last modification time of the file is updated 3 - The last change time of the file is updated 4 - None of the mentioned is question
+Malhar said quizbot, 3
+
+Malhar answered quizbot, 3
+
+Malhar correctly answered 3
+
+Name of the penguin (Linux mascot)? is question
+Parth said quizbot, tux
+
+Parth answered quizbot, tux
+
+Parth correctly answered Tux
+
+Kshitij said quizbot tux
+
+Kshitij answered quizbot tux
+
+Anshuman said quizbot, tux
+
+Anshuman answered quizbot, tux
+
+Malhar said quizbot, tux
+
+Malhar answered quizbot, tux
+
+What command helps find hostname from ip address? is question
+****o*** is hint
+
+Prasanna said quizbot, nslookup
+
+Prasanna answered quizbot, nslookup
+
+Prasanna correctly answered nslookup
+
+Anshuman said quizbot, nslookup
+
+Anshuman answered quizbot, nslookup
+
+What command helps find how many days your Server is up?? is question
+Prasanna said quizbot, uptime
+
+Prasanna answered quizbot, uptime
+
+Prasanna correctly answered uptime
+
+The buddy algorithm handles the?? is question
+*****y *****e**a**** is hint
+
+****ry f****e*ta**** is hint
+
+*e**ry f*a**e*tat*** is hint
+
+*em*ry f*ag*e*tat*** is hint
+
+nkshirsa said quizbot, memory fragmentation
+
+nkshirsa answered quizbot, memory fragmentation
+
+nkshirsa correctly answered Memory fragmentation
+
+Anshuman said quizbot, memory fragmentation
+
+Anshuman answered quizbot, memory fragmentation
+
+Malhar said quizbot, memory fragementattion
+
+Malhar answered quizbot, memory fragementattion
+
+This company tried to make their own version of linux and failed miserably? is question
+Malhar said quizbot, oracle
+
+Malhar answered quizbot, oracle
+
+Malhar correctly answered oracle
+
+Which one of the following is not true about proc filesystem? 1 - proc filesystem is a pseudo-filesystem 2 - proc filesystem is used as an interface to kernel data structures 3 - some files in proc filesystem allow kernel variables to be changed 4 -  none of the mentioned is question
+nkshirsa said quizbot, 4
+
+nkshirsa answered quizbot, 4
+
+nkshirsa correctly answered 4
+
+Malhar said quizbot, 
+
+Malhar answered quizbot, 
+
+nuclear plant that closed for ever in Ukrain? is question
+Malhar said quizbot, chernobyl
+
+Malhar answered quizbot, chernobyl
+
+Malhar correctly answered Chernobyl
+
+Prasanna said quizbot, chrnobyl
+
+Prasanna answered quizbot, chrnobyl
+
+nkshirsa said quizbot, chernobyl
+
+nkshirsa answered quizbot, chernobyl
+
+Anshuman said quizbot, chernobyl
+
+Anshuman answered quizbot, chernobyl
+
+popular search engine in the ninties is question
+nkshirsa said quizbot, lycos
+
+nkshirsa answered quizbot, lycos
+
+nkshirsa correctly answered lycos
+
+FORTRAN is acronym for? is question
+Parth said quizbot, chrnobyl
+
+Parth answered quizbot, chrnobyl
+
+Parth incorrectly answered 
+
+**rm*** *********r is hint
+
+Anshuman said quizbot, format translator
+
+Anshuman answered quizbot, format translator
+
+Anshuman incorrectly answered 
+
+**rm*l* ****s****r is hint
+
+Malhar said quizbot, Formula Translator
+
+Malhar answered quizbot, Formula Translator
+
+Malhar correctly answered formula translator
+
+read() system call on success returns? 1 - 0, 2 - 1, 3 -  number of characters, 4 - none of these is question
+Malhar said quizbot, 3
+
+Malhar answered quizbot, 3
+
+Malhar correctly answered 3
+
+What does echo $$ do? 1 - report PID of previous background process 2 - shows current shell ID 3 - shows the exit status of the most previous process command  4 - none of these is question
+Malhar said quizbot, 1
+
+Malhar answered quizbot, 1
+
+Malhar incorrectly answered 
+
+Anshuman said quizbot, 3
+
+Anshuman answered quizbot, 3
+
+Anshuman incorrectly answered 
+
+Malhar said quizbot, 2
+
+Malhar answered quizbot, 2
+
+Malhar correctly answered 2
+
+Prasanna said quizbot, 2
+
+Prasanna answered quizbot, 2
+
+WiFi full form? is question
+Prasanna said quizbot, wireless fidelity'
+
+Prasanna answered quizbot, wireless fidelity'
+
+Prasanna correctly answered Wireless Fidelity
+
+Malhar said quizbot, Wireless Fidelity
+
+Malhar answered quizbot, Wireless Fidelity
+
+Anshuman said quizbot, wireless fidelity
+
+Anshuman answered quizbot, wireless fidelity
+
+Parth said quizbot, formula transformaiton
+
+Parth answered quizbot, formula transformaiton
+
+Parth said quizbot, formula translator
+
+Parth answered quizbot, formula translator
+
+Parth said quizbot, 
+
+Parth answered quizbot, 
+
+Largest contributor to Linux Kernel? is question
+nkshirsa said nice testing Parth 
+
+nkshirsa said really good test
+
+*n*** is hint
+
+Anshuman said quizbot, intel
+
+Anshuman answered quizbot, intel
+
+Anshuman correctly answered Intel
+
+What is my favorite hobby? is question
+Prasanna said quizbot, shayari
+
+Prasanna answered quizbot, shayari
+
+Prasanna correctly answered shayari
+
+Malhar said quizbot, Shayari
+
+Malhar answered quizbot, Shayari
+
+What must you install for getting symbols in application core files? 1 - debuginfo packages, 2 - strace , 3 - kdump , 4 - sym drivers is question
+Malhar said quizbot, 1
+
+Malhar answered quizbot, 1
+
+Malhar correctly answered 1
+
+Prasanna said quizbot, 1
+
+Prasanna answered quizbot, 1
+
+Anshuman said quizbot, 1
+
+Anshuman answered quizbot, 1
+
+First ever video game made popular is question
+***g is hint
+
+**ng is hint
+
+*ong is hint
+
+Malhar said quizbot, pong
+
+Malhar answered quizbot, pong
+
+Malhar correctly answered pong
+
+The shell used for Single user mode shell is 1 - bash 2 - csh 3 - ksh 4 - sh is question
+Prasanna said quizbot, 1
+
+Prasanna answered quizbot, 1
+
+Prasanna incorrectly answered 
+
+Anshuman said quizbot, 4
+
+Anshuman answered quizbot, 4
+
+Anshuman correctly answered 4
+
+When was Red Hat established? (month year) is question
+Prasanna said quizbot, 1999
+
+Prasanna answered quizbot, 1999
+
+Prasanna incorrectly answered 
+
+nkshirsa said quizbot, oisjd
+
+nkshirsa answered quizbot, oisjd
+
+nkshirsa incorrectly answered 
+
+Anshuman said quizbot, march 1993
+
+Anshuman answered quizbot, march 1993
+
+Anshuman correctly answered March 1993
+
+Malhar said quizbot, March 1993
+
+Malhar answered quizbot, March 1993
+
+Who is nkshirsa? is question
+Malhar said quizbot, Nikhil Kshrirsagar
+
+Malhar answered quizbot, Nikhil Kshrirsagar
+
+Malhar incorrectly answered 
+
+****** ****r*a*** is hint
+
+Prasanna said quizbot, nikhil kshirsagar
+
+Prasanna answered quizbot, nikhil kshirsagar
+
+Prasanna correctly answered nikhil kshirsagar
+
+Malhar said quizbot, Nikhil Kshirsagar
+
+Malhar answered quizbot, Nikhil Kshirsagar
+
+Anshuman said quizbot, nikhil kshirsagar
+
+Anshuman answered quizbot, nikhil kshirsagar
+
+This company makes device drivers for video cards, and a lot more? is question
+**i*** is hint
+
+Prasanna said quizbot, nvidia
+
+Prasanna answered quizbot, nvidia
+
+Prasanna correctly answered nvidia
+
+Anshuman said quizbot, nvidia
+
+Anshuman answered quizbot, nvidia
+
+Red Hats acquisition for kubernetes development? is question
+Kshitij said quizbot CoreOS
+
+Kshitij answered quizbot CoreOS
+
+Kshitij correctly answered CoreOS
+
+Parth said haha...damn these guys
+
+Parth said quizbot, dungeons and dragons
+
+Parth answered quizbot, dungeons and dragons
+
+Parth said quizbot, march 1993
+
+Parth answered quizbot, march 1993
+
+system function in C is used for? 1 - calling interrupts 2 - invoking binaries 3 - exitting the program 4 - none of these is question
+Malhar said quizbot, 1
+
+Malhar answered quizbot, 1
+
+Malhar incorrectly answered 
+
+Parth said quizbot, nvidia
+
+Parth answered quizbot, nvidia
+
+Parth incorrectly answered 
+
+Parth said quizbot, coreos
+
+Parth answered quizbot, coreos
+
+Parth incorrectly answered 
+
+Prasanna said quizbot, 4
+
+Prasanna answered quizbot, 4
+
+Prasanna incorrectly answered 
+
+Malhar said quizbot, 2
+
+Malhar answered quizbot, 2
+
+Malhar correctly answered 2
+
+Anshuman said quizbot, 2
+
+Anshuman answered quizbot, 2
+
+Prasanna said quizbot,3
+
+Prasanna answered quizbot,3
+
+nkshirsa said hmm so older answers are coming once u come back online Parth ?
+
+The redirection 2> abc implies 1 - Write file 2 to file abc 2 - Write standard output to abc 3 -  Write standard error to abc 4 -  None of the mentioned  is question
+nkshirsa said needs a fix i guess.. 
+
+Prasanna said quizbot, 3
+
+Prasanna answered quizbot, 3
+
+Prasanna correctly answered 3
+
+Parth said i guess
+
+Anshuman said quizbot, 1
+
+Anshuman answered quizbot, 1
+
+Who wrote the screwtape letters (also wrote chronicles of narnia)? is question
+* * ***i* is hint
+
+* * ***i* is hint
+
+Prasanna said quizbot, c S lewis
+
+Prasanna answered quizbot, c S lewis
+
+Prasanna correctly answered C S Lewis
+
+Malhar said quizbot, 
+
+Malhar answered quizbot, 
+
+What bot do I fear the most? is question
+Anshuman said quizbot, hi
+
+Anshuman answered quizbot, hi
+
+Anshuman incorrectly answered 
+
+Prasanna said quizbot, redskull
+
+Prasanna answered quizbot, redskull
+
+Prasanna correctly answered redskull
+
+Prasanna wins the quiz
+Parth said quizbot, redskull
+
+Parth said redskull and quizbot replied No way! really?
+
+Kshitij said prasanna++
+
+Malhar said quizbot, hi
+
+Malhar said hi and quizbot replied Hi there! what's up?!
+
+Parth said quizbot, i tried my best
+
+Parth said i tried my best and quizbot replied When your you tried, how do you feel?
+
+nkshirsa said bug ! 
+
+Malhar said quizbot, hi
+
+Malhar said hi and quizbot replied Hello... I'm sure glad you could drop by today.
+
+Malhar said quizbot, hi
+
+Malhar said hi and quizbot replied Hello, and .. how are you feeling today?
+
+Parth said quizbot, i feel like testing you
+
+Parth said i feel like testing you and quizbot replied Good, tell me more about these feelings.
+
+Anshuman said quizbot, hey
+
+Anshuman said hey and quizbot replied heheheheheheh.... !  
+
+Prasanna said quizbot, thanks to parth he let me win
+
+Prasanna said thanks to parth he let me win and quizbot replied It's like they say.. thank you is for when you don't want to pay money
+
+Parth said prasanna++
+
+Anshuman said quizbot, goodbye
+
+Anshuman said goodbye and quizbot replied Thank you, that will be $150.  Have a good day!
+
+Kshitij said !startquiz
+
+ Kshitij!~kupadhya@10.76.0.141 started the quiz
+
+srwxr-xrw- is a 1 - internet socket file 2 -  unix domain socket file 3 - symbolic link 4 - shared file is question
+Kshitij said quizbot 3
+
+Kshitij answered quizbot 3
+
+Kshitij correctly answered 3
+
+Which command is used to record a user login session in a file? 1 - macro, 2 - read, 3 - history, 4 - script is question
+Kshitij said quizbot 1
+
+Kshitij answered quizbot 1
+
+Kshitij incorrectly answered 
+
+Parth said quizbot, 4
+
+Parth answered quizbot, 4
+
+Parth correctly answered 4
+
+What file mounts a FS persistently? 1 - fstab , 2 - lvm.conf , 3 - multipath.conf , 4 - trin.conf is question
+Prasanna said quizbot, 1
+
+Prasanna answered quizbot, 1
+
+Prasanna correctly answered 1
+
+Parth said quizbot, 1
+
+Parth answered quizbot, 1
+
+Which files stores the user min UID, max UID, password expiration settings, password encryption method being used etc? is question
+nkshirsa said !stopquiz
+
+ nkshirsa!~nkshirsa@10.76.0.19 stopped the quiz
+
+nkshirsa said one sec, patches
+
+Prasanna said ack
+
+Parth said ack
+starting logs
+2018-09-03 11:29:52.304303
+nkshirsa said quizbot, welcome back
+
+nkshirsa said welcome back and quizbot replied Did I hear you say welcome back ? That is so strange to hear..
+
+nkshirsa said quizbot, why?
+
+nkshirsa said why? and quizbot replied Coz its OK to feel like that.. and .. no .. nothing... 
+
+nkshirsa said nonsense quizbot 
+
+nkshirsa said nonsense  and quizbot replied And then?
+ 
+nkshirsa said and then more nonsense quizbot 
+
+nkshirsa said and then more nonsense  and quizbot replied I'm busy go away
+ 
+nkshirsa said quizbot, what do you think about redhat?
+
+nkshirsa said what do you think about redhat? and quizbot replied i was in production until i answered such questions so am gonna shut up and say nothing to that.. 
+
+nkshirsa said quizbot, nice you're being a diplomat i guess
+
+nkshirsa said nice you're being a diplomat i guess and quizbot replied That is so crazy.. when you say nice you're being a diplomat you guess I think, where's a doctor when you really need one, eh?
+
+nkshirsa said quizbot, doctors are in hospitals
+
+nkshirsa said doctors are in hospitals and quizbot replied Sure..sure.. 
+
+nkshirsa said quizbot, tell me about red hat
+
+nkshirsa said tell me about red hat and quizbot replied agree.. to that statement.. unless you are asking hehehe
+
+nkshirsa said quizbot, no really, what do you think about red hat ?
+
+nkshirsa said no really, what do you think about red hat ? and quizbot replied agree.. 
+
+nkshirsa said uhhhh quizbot 
+
+nkshirsa said uhhhh  and quizbot replied Why don't we end this, I'm sure you got work to do?
+starting logs
+2018-09-03 11:32:17.261346
+nkshirsa said quizbot, tell me about microsoft?
+
+nkshirsa said tell me about microsoft? and quizbot replied microsoft wont really answer that.. 
+
+nkshirsa said quizbot, ok fine
+
+nkshirsa said ok fine and quizbot replied :-
+
+nkshirsa said go away quizbot 
+
+nkshirsa said go away  and quizbot replied Me too.. i think..
+ 
+nkshirsa said all wrong quizbot 
+
+nkshirsa said all wrong  and quizbot replied If that's what you have to say about it, I have nothing more to say
+ 
+nkshirsa said quizbot, you're saying all wrong things today
+
+nkshirsa said you're saying all wrong things today and quizbot replied Let me guess, that isn't what you had in mind..
+
+nkshirsa said hahahaha quizbot 
+
+nkshirsa said hahahaha  and quizbot replied Sure.. 
+ 
+nkshirsa said quizbot, any thoughts about red hat?
+
+nkshirsa said any thoughts about red hat? and quizbot replied i was in production until i answered such questions so am gonna shut up and say nothing to that.. 
+
+nkshirsa said no really tell us about red hat quizbot 
+
+nkshirsa said no really tell us about red hat  and quizbot replied agree.. to that statement.. unless you are asking hehehe
+ 
+nkshirsa said quizbot, do you think red hat is a nice place ?
+
+nkshirsa said do you think red hat is a nice place ? and quizbot replied red hat is really awesome..
+
+nkshirsa said ok nice to hear that quizbot 
+
+nkshirsa said ok nice to hear that  and quizbot replied feel free to tell me if I have upset you with the things I say, ok? 
+ 
+nkshirsa said sure quizbot 
+
+nkshirsa said sure  and quizbot replied Sure..sure.. 
+ 
+nkshirsa said !startquiz
+
+ nkshirsa!~nkshirsa@10.76.0.19 started the quiz
+
+Linux kernel feature that allows to aggregate multiple network interfaces into a single virtual link? is question
+****o** **n**** is hint
+
+****or* *on**** is hint
+
+N***or* *on***g is hint
+
+N*t*ork *on***g is hint
+
+Net*ork *ond**g is hint
+
+What command is used to find the location of files?? is question
+****t* is hint
+
+**c*t* is hint
+
+*oc*t* is hint
+
+*oc*te is hint
+
+*ocate is hint
+
+What script is used to rescan scsi devices? is question
+****an***s******** is hint
+
+****an-**si-****** is hint
+
+**scan-**si-****s* is hint
+
+**scan-*csi-**s.s* is hint
+
+r*scan-*csi-*us.sh is hint
+
+ If a program executing in background attempts to read from STDIN 1 - It is terminated 2 - Its execution is suspended 3 - STDIN is made available to it 4 - None of the mentioned is question
+Default filesystem on RHEL 6? is question
+***4 is hint
+
+**t4 is hint
+
+*xt4 is hint
+
+Which command is used to set limits on file size is question
+*l**** is hint
+
+*l**i* is hint
+
+*l*mi* is hint
+
+*l*mit is hint
+
+ul*mit is hint
+
+In Puppet what are the files in which the client configuration is specified called? is question
+********s is hint
+
+***i****s is hint
+
+*a*i****s is hint
+
+*ani****s is hint
+
+*anif***s is hint
+
+A process is said to be in this state when it has finished execution but is waiting for its parent to retrieve its exit status? is question
+z***** is hint
+
+z****e is hint
+
+z**b*e is hint
+
+z**bie is hint
+
+zo*bie is hint
+
+The blue colour of the clear sky is due to ........ of light ? 1 - Diffraction 2 - Dispersion 3 - Reflection 4 - Refraction is question
+Lead singer of the doors  is question
+*** ******on is hint
+
+**m ****s*on is hint
+
+**m ***is*on is hint
+
+j*m **ris*on is hint
+
+j*m *orisson is hint
+
+........ was the first feature film produced on Linux servers is question
+nkshirsa said !stopquiz
+
+ nkshirsa!~nkshirsa@10.76.0.19 stopped the quiz
+starting logs
+2018-09-03 11:48:20.730289
+nkshirsa said !reload

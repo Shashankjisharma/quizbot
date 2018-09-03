@@ -148,12 +148,11 @@ class Bot(irc.IRCClient):
             
         if msg.startswith(self.nickname):
             if self.quiz_on == 0: #general comment, not an answer since quiz is not on
-              #self.msg(self.factory.channel, 'Type !help to see what I can do %s' % (user))
               query = str(msg)
               to_send = query.partition(" ")[2]
-              reply = self.chat_bot.respond(to_send)
-              userstr = str(user).partition("!")[0]
-              self.msg(self.factory.channel, '%s, %s' % (userstr,reply))
+	      reply = self.chat_bot.respond(to_send)
+	      userstr = str(user).partition("!")[0]
+	      self.msg(self.factory.channel, '%s, %s' % (userstr,reply))
               self.logfile.write('\n%s said %s and quizbot replied %s' %(userstr,to_send,reply))
               self.logfile.write("\n")
         else:

@@ -42,6 +42,7 @@ import datetime
 class Bot(irc.IRCClient):
     #answered_already={}
     quiz_on=0
+    who_started_quiz=""
     answered_question =0
     chat_bot =  eliza.eliza()
     now = datetime.datetime.now()
@@ -185,12 +186,16 @@ class Bot(irc.IRCClient):
                 self.help(name)
         elif msg.startswith('!startquiz'):
             if self.quiz_on==1:
-                userstr = str(user).partition("!")[0]
-                self.msg(self.factory.channel, 'Cant start something thats already started, %s' % (userstr))
+                name = self.clean_nick(user)
+                #userstr = str(user).partition("!")[0]
+                self.msg(self.factory.channel, 'Cant start something thats already started, %s' % (name))
             else:
-                self.msg(self.factory.channel, 'questions shall be posed starting now')
+                name = self.clean_nick(user)
+                #userstr = str(user).partition("!")[0]
+                self.msg(self.factory.channel, '%s started the quiz .. questions shall be posed starting now' % (name))
                 self.quiz_on = 1
-                self.logfile.write('\n %s started the quiz\n' %(user))
+                self.logfile.write('\n %s started the quiz\n' %(name))
+                self.who_started_quiz = name 
         elif msg.startswith('!shayari'):
             if(self.quiz_on==0):
                self.logfile.write('\n %s asked for shayari\n' %(user))
@@ -203,10 +208,23 @@ class Bot(irc.IRCClient):
                 userstr = str(user).partition("!")[0]
                 self.msg(self.factory.channel, 'Cant stop something thats already stopped, %s' % (userstr))
             else:
-                self.msg(self.factory.channel, 'No further questions shall be posed')
-                self.quiz_on = 0
-                self.answered = 5
-                self.logfile.write('\n %s stopped the quiz\n' %(user))
+                name = self.clean_nick(user)
+                if name==self.who_started_quiz:
+                  self.msg(self.factory.channel, 'No further questions shall be posed')
+                  self.quiz_on = 0
+                  self.answered = 5
+                  self.logfile.write('\n %s stopped the quiz\n' %(user))
+                else:
+                  if self.who_started_quiz in self.quizzers:
+                    self.msg(self.factory.channel, 'Only %s can stop the quiz' %(self.who_started_quiz))
+                  else:
+                    self.msg(self.factory.channel, '%s is not around, therefore anybody can stop the quiz .. stopping quiz' %(self.who_started_quiz))
+                    #guy who started quiz is no longer around so anyone can stop the quiz
+                    self.msg(self.factory.channel, 'No further questions shall be posed')
+                    self.quiz_on = 0
+                    self.answered = 5
+                    self.logfile.write('\n %s stopped the quiz\n' %(user))
+
         elif msg.startswith('!reload'):
             self.reload_questions(name)
         elif msg.startswith('!botsnack'):

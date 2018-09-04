@@ -104,6 +104,13 @@ gPats = [
     "the other day i met someone who liked quizzing.. wonder what happened to that person.... ",
     "ok? what ok? what do you mean ok?"]],
 
+  [r'(fine)',
+  [  "whatever..",
+    "good..",
+    "thats good..",
+    "thats it? fine?",
+    "fine.. "]],
+
   [r'(.*) child(.*)',
   [  "hmmm ..Did you have close friends as a child?",
     "What is your favorite childhood memory?",

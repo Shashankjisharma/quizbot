@@ -2,6 +2,7 @@
 
 # Copyright (C) 2012, 2013  Alexander Berntsen <alexander@plaimi.net>
 # Copyright (C) 2012, 2013  Stian Ellingsen <stian@plaimi.net>
+# Copyright (C) 2018, 2019  Nikhil Kshirsagar <nkshirsa@redhat.com>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -153,6 +154,7 @@ class Bot(irc.IRCClient):
               to_send = query.partition(" ")[2]
 	      reply = self.chat_bot.respond(to_send)
 	      userstr = str(user).partition("!")[0]
+              sleep(3)
 	      self.msg(self.factory.channel, '%s, %s' % (userstr,reply))
               self.logfile.write('\n%s said %s and quizbot replied %s' %(userstr,to_send,reply))
               self.logfile.write("\n")
@@ -171,6 +173,7 @@ class Bot(irc.IRCClient):
                       
                   reply = self.chat_bot.respond(to_send)
                   userstr = str(user).partition("!")[0]
+                  sleep(3)
                   self.msg(self.factory.channel, '%s, %s' % (userstr,reply))
                   self.logfile.write('\n%s said %s and quizbot replied %s' %(userstr,to_send,reply))
                   self.logfile.write('\n ')
@@ -253,7 +256,7 @@ class Bot(irc.IRCClient):
                             if self.answered_question == 0:
                                 self.award(name)
                             else:
-                                self.msg(self.factory.channel, '%s, too late.. :-(' % (name))
+                                self.msg(self.factory.channel, '\x037%s, too late.. :-(\x03' % (name))
                         elif len(str(self.answer))==1:
                             if self.answered_question==0:
                                word_list = msg.split()
@@ -267,7 +270,7 @@ class Bot(irc.IRCClient):
                                 word_list = msg.split()
                                 #print word_list[-1]
                                 if len(str(word_list[-1]))==1:
-                                    self.msg(self.factory.channel, '%s, too late.. :-(' % (name))
+                                    self.msg(self.factory.channel, '\x037%s, too late.. :-(\x03' % (name))
                     else:
                         if self.answered_question == 0:
                             self.deduct(name)
@@ -383,18 +386,18 @@ class Bot(irc.IRCClient):
 
     def fail(self):
         """Timeout/giveup on answer."""
-        self.msg(self.factory.channel, 'Time is UP ! onto the next question!')
+        self.msg(self.factory.channel, '\x038Time is UP ! onto the next question!\x03')
         #self.msg(self.factory.channel, 'the answer was: "%s"' % self.answer)
         self.answered = time()
 
     def deduct(self, awardee):
         """deducts a point from awardee."""
         if self.quizzers[awardee] == 0:
-            self.msg(self.factory.channel, 'wrong! But %s already at 0, showing mercy!' %
+            self.msg(self.factory.channel, '\x035wrong! But %s already at 0, showing mercy!\x03' %
                 (awardee)) 
         else:
             self.quizzers[awardee] -= 1
-            self.msg(self.factory.channel, 'wrong! deducting one point for %s!' %
+            self.msg(self.factory.channel, '\x035wrong! deducting one point for %s!\x03' %
                 (awardee))
         self.logfile.write('\n%s incorrectly answered ' %(awardee))
         self.logfile.write('\n')
@@ -402,7 +405,7 @@ class Bot(irc.IRCClient):
     def award(self, awardee):
         """Gives a point to awardee."""
         self.quizzers[awardee] += 1
-        self.msg(self.factory.channel, '%s is right! congratulations, %s!' %
+        self.msg(self.factory.channel, '\x032%s is right! congratulations, %s!\x03' %
                 (self.answer, awardee))
         self.logfile.write('\n%s correctly answered %s' %(awardee,self.answer))
         self.logfile.write('\n')
@@ -440,18 +443,18 @@ class Bot(irc.IRCClient):
             self.db.commit()
 
         self.winner = winner
-        self.msg(self.factory.channel, 'congratulations to %s, the winner!!!' % self.winner)
-        self.msg(self.factory.channel, "****************************************************************************** ")
-        self.msg(self.factory.channel, "****************************************************************************** ")
+        self.msg(self.factory.channel, '\x02congratulations to %s, the winner!!!\x02' % self.winner)
+        self.msg(self.factory.channel, "\x033****************************************************************************** \x03")
         #art = cprint(figlet_format('missile!', font='starwars'), 'yellow', 'on_red', attrs=['bold'])
         os.system('rm outputascii')
         os.system('python test.py %s > outputascii' % (self.winner))
         self.ascii_art();
         #self.msg(self.factory.channel, "New Quiz starting !")
-        self.msg(self.factory.channel, "****************************************************************************** ")
+        self.msg(self.factory.channel, "\x033****************************************************************************** \x03")
         self.reset()
         self.quiz_on=0
         self.help(winner)
+
 
     def help(self, user):
         """Message help message to the user."""
@@ -459,16 +462,16 @@ class Bot(irc.IRCClient):
         #if user not in self.quizzers and user is not "test":
         #   print "returning from help"
         #  return
-        self.msg(self.factory.channel, "****************************************************************************** ")
-        self.msg(self.factory.channel, "****************************************************************************** ")
-        self.msg(self.factory.channel, 'I am ' + self.nickname + ', and I ask questions.')
-        self.msg(self.factory.channel, 'Plus 1 for right answers, minus 1 for wrong answers. Reach 10 points to win!')
+        self.msg(self.factory.channel, "\x038****************************************************************************** \x03")
+        self.msg(self.factory.channel, '\x02I am ' + self.nickname + ', and I ask questions.\x02')
         self.msg(self.factory.channel, '!startquiz and !stopquiz starts and stops the quiz.')
+        self.msg(self.factory.channel, 'Plus 1 for right answers, minus 1 for wrong answers. Reach 10 points to win!')
         self.msg(self.factory.channel, 'During the quiz, answer this way: %s, YOUR ANSWER' % (self.nickname))
-        self.msg(self.factory.channel, "****************************************************************************** ")
         self.msg(self.factory.channel, 'Please provide feedback on https://docs.google.com/document/d/11DSlUQPc69DjA4cMNA1vaEo4AvdYW2VV0IAoM5IHRpk')
         self.msg(self.factory.channel, 'If not quizzing, feel free to talk to me I have some interesting opinions!')
         self.msg(self.factory.channel, 'Oh, and for shayari, type !shayari')
+        self.msg(self.factory.channel, "\x038****************************************************************************** \x03")
+
 
     def reload_questions(self, user):
         """Reload the question/answer list."""

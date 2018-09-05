@@ -1025,7 +1025,7 @@ gPats = [
      "what %2 is something nobody can ever tell you about",
      "what %2 is my expertise. Sit down. Talk to me about it..",
      "It's something you won't understand",
-     "Look. I've had it with this stuff. You keep saying what is %2 what %2 what %2 do you think it is so easy to tell you what %2?",
+     "Look. I've had it with this stuff. You keep saying what %2 what %2 what %2 do you think it is so easy to tell you what %2?",
      "Let me think a bit about these things you've been saying, how about we talk in a bit? ",
      "Let me see..... it's not what you think it is for sure..  ",
      "what do you think?",

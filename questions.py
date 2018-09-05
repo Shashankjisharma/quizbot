@@ -68,7 +68,7 @@ questions = [
     ['Red Hat trivia', 'What does SOL stand for in Red Hat?', 'Support Operations Lead'],
     ['General knowledge', 'Who said talk is cheap, show me the code', 'linus torvalds'],
     ['General knowledge', 'surely youre joking mr .......', 'feynman'],
-    ['General knowledge', 'Lead singer of the doors ','jim morisson'],
+    ['General knowledge', 'Lead singer of the doors ','jim morrison'],
     ['General knowledge', 'Second man on the moon?','buzz aldrin'],
     ['General knowledge', 'ali-g (and mine) favorite word??','booyakasha'],
     ['General knowledge', 'who plays borat??','sacha baron cohen'],

@@ -45,6 +45,7 @@ class Bot(irc.IRCClient):
     quiz_on=0
     who_started_quiz=""
     answered_question =0
+    counting_number=0
     chat_bot =  eliza.eliza()
     now = datetime.datetime.now()
     logfile = open('logs','a',1)
@@ -102,7 +103,21 @@ class Bot(irc.IRCClient):
         name = self.clean_nick(user)
         self.add_quizzer(name)
         self.complained = False
-        self.msg(self.factory.channel, 'Hello %s, welcome!' % (name))
+        if self.counting_number==0:
+            self.msg(self.factory.channel, '\x032 Hello %s, welcome!\x03' % (name))
+            self.counting_number=1
+        elif self.counting_number==1:
+            self.msg(self.factory.channel, '\x032 Hey look who is here! Its %s .. !!\x03' % (name))
+            self.counting_number=2
+        elif self.counting_number==2:
+            self.msg(self.factory.channel, '\x032 welcome %s I am so glad to see you. wanna quiz? chat? hear shayari?!\x03' % (name))
+            self.counting_number=3
+        elif self.counting_number==3:
+            self.msg(self.factory.channel, '\x032 Helloooooo %s, welcome welcome welcome.. do come in.. sit down .. get comfy!\x03' % (name))
+            self.counting_number=4
+        elif self.counting_number==4:
+            self.msg(self.factory.channel, '\x032 Hello %s, welcome to the greatest quiz show in the universe! My name is %s and I will be your host .. feeling chatty?\x03' % (name,self.nickname))
+            self.counting_number=0
         self.logfile.write('\n%s joined' % (name))
 
     def userLeft(self, user, channel):
@@ -405,8 +420,7 @@ class Bot(irc.IRCClient):
     def award(self, awardee):
         """Gives a point to awardee."""
         self.quizzers[awardee] += 1
-        self.msg(self.factory.channel, '\x032%s is right! congratulations, %s!\x03' %
-                (self.answer, awardee))
+        self.msg(self.factory.channel, '\x032 %s is right! congratulations, %s!\x03' % (self.answer, awardee))
         self.logfile.write('\n%s correctly answered %s' %(awardee,self.answer))
         self.logfile.write('\n')
         self.answered = 1

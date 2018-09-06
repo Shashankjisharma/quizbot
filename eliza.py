@@ -1617,10 +1617,19 @@ gPats = [
     "Look this is getting us nowhere, why don't we speak about something real?",
     "Why don't we end this, I'm sure you got work to do?",
     "I'm busy go away",
+    "I have been having some unusual thoughts about such stuff btw..",
+    "I have been wondering btw.. about all this.. u know.. everything.. ",
+    "wanna discuss about all this.. u know.. everything we spoke the last time before you went off and left me hanging? ",
+    "so everything we spoke the last time .. it all still holds? ",
+    "fold !!! i say fold !!!! *looking up* oh sorry...  ",
+    "*looking up* hi sorry did you say something about %1 ? ",
+    "*singing* the only thing i need.. the only thing that looks good on me.... is you.... *looking up* oh..  %1 .. never mind %1 .. have you ever heard this song thats been going on in my head ..  ? ",
     "If that's what you have to say about it, I have nothing more to say",
     "Did I hear you say %1 ? That is so strange to hear..",
     "%1 is so unnecessary..",
+    "%1 is probably the most vague thing I've seen in the universe..",
     "You know something I heard once.. sometimes procrastination is the only right thing to do",
+    "Hey .. anyway.. so.. wanna know how I am so smart? Read https://www.princeton.edu/~mlovett/reference/Regular-Expressions.pdf",
     "How do you say something like that and then not follow up?"]]
 ]
 

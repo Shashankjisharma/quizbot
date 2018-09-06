@@ -169,7 +169,7 @@ class Bot(irc.IRCClient):
               to_send = query.partition(" ")[2]
 	      reply = self.chat_bot.respond(to_send)
 	      userstr = str(user).partition("!")[0]
-              sleep(3)
+              sleep(2)
 	      self.msg(self.factory.channel, '%s, %s' % (userstr,reply))
               self.logfile.write('\n%s said %s and quizbot replied %s' %(userstr,to_send,reply))
               self.logfile.write("\n")
@@ -188,7 +188,7 @@ class Bot(irc.IRCClient):
                       
                   reply = self.chat_bot.respond(to_send)
                   userstr = str(user).partition("!")[0]
-                  sleep(3)
+                  sleep(2)
                   self.msg(self.factory.channel, '%s, %s' % (userstr,reply))
                   self.logfile.write('\n%s said %s and quizbot replied %s' %(userstr,to_send,reply))
                   self.logfile.write('\n ')

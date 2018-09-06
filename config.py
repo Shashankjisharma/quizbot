@@ -1,5 +1,5 @@
 # IRC Network to connect to
-network = 'irc.devel.redhat.com'
+network = 'irc.freenode.net'
 # Port to connect on
 port = 6667
 # Channel to join (automatically)

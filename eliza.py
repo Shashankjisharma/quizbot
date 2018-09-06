@@ -805,7 +805,7 @@ gPats = [
     "i dont need to answer anthing.. show me some ID first",
     "who are you firstly?",]],
 
-  [r'(.*) ?How\??(.*)',
+  [r'(.*)\bHow\??(.*)',
   [  "Not for me to answer..",
     "thanks for asking but how do i tell you how?",
     "how to do anything?",

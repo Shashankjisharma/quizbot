@@ -541,11 +541,11 @@ gPats = [
     "to %1 your %2 is very important .. and I %1 my %2 too..lets call everyone and inform them..",
     "I can't believe your %2 ....",
     "and what is the point of saying anything about your %2 .. want me to call security? *sarcastic*",
-    "I don't agree...your %2 is nothing like that",
+    "I don't agree...your %2 is nothing ",
     "I agree... your %2 ...%1 .. sure",
-    "not possible.. it cannot be..",
-    "No way!",
-    "When your %2, how do you feel?"]],
+    "%2 .. forget it....",
+    "%2 isnt important.. No way!",
+    "your %2, oh yeah..hmm.. dunno.. "]],
 
 
 
@@ -723,7 +723,7 @@ gPats = [
     " what is %3 %4? Well, yesterday I hurt myself playing foozball.. don't ask me how!",
     " what is %3 %4? nothing much..the same stuff man ..!",
     " I am always the same.. the only constant in your life, as I see it.. everyone else changes as they see fit",
-    " I am always the same.. nothing really %4",
+    " I am always the same.. nothing really %3",
     " not much .. seen any movies lately?",
     " bhai .. sab vaisa hi hain..jaisa tha..",
     " well.. since we spoke last, i learned to play the guitar.... ",
@@ -1053,7 +1053,7 @@ gPats = [
      "time.thats all it takes... ",
      "*singing* one day at a time... sweet jesus.. thats all i ask of you... ",
     "Hmmm I think we're getting away from the main question - Why would you want this anyway?",
-    "Do you really want me to try and guess .. the future..?"]],
+    "Do you really want me to try and guess .. future tense..?"]],
 
   [r'Wh?at((s)|(\'s)|( is ?))(.*)',
   [  "%5 is %5 .. no more definitions fit.. ",

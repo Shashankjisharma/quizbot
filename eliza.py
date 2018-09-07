@@ -531,7 +531,7 @@ gPats = [
     "%2 does not really add up.. ",
     "%2, so?"]],
 
-  [r'\b(Hi|Hey|Yo|Hello|Sup|Howdy|Wasup)\b',
+  [r'\b(Hi|Hey|Yo|Hello|Sup|Howdy|Wat?sup)\b',
   [  "Hello... I'm sure glad you could drop by today.",
     "Yo How are you!",
     "sup!",
@@ -554,7 +554,7 @@ gPats = [
     "wasup!..",
     "Hello, and .. how are you feeling today?"]],
 
-  [r'(Hi |Hello |Yo |Sup |Howdy |wasup |Wats up )(.*)',
+  [r'(Hi |Hello |Yo |Sup |Howdy |wat?sup |Wats up )(.*)',
   [  "Hello... I'm glad you could drop by today.",
     "Hi there... how are you today?",
     "Hello hello hello... and hello",
@@ -1293,19 +1293,27 @@ gPats = [
     "I may be %1 and not know it -- what do you think?"]],
 
 #dead code i think, the wasup stuff
-  [r'was\'?sup(.*)',
+  [r'(.*)was\'?sup(.*)',
   [  "Not much .. honestly..",
     "Whats up is a whole lotta nothing",
     "you say.. its always the same for me.."]],
 
 #to have.. 
-  [r'(Has |Have |Had )(I |you |it| they |he |she |it |we )([^\?]*)\??',
+  [r'(Has |Have |Had )(I |you |it| they |he |she |it |we |u )([^\?]*)\??',
   [  "Why does it matter whether %2 %1 %3? dont bother about such stuff please",
     "Would you prefer it if %2 %1 not %3?",
     "whos asking? depends on that.",
     "%3 ? who cares anyway? %2 %1 many other things to worry about..",
     "why do u care if %2 %1 ? who cares anyway?",
     "do u care if %2 %1 %3??",
+    "finally.. u ask the right question...",
+    "yes......",
+    "no...",
+    "possible yeah...",
+    "yes it is quite possible...",
+    "possibly...",
+    "maybe...",
+    "better ask how %2 %1 %3 and perhaps wisdom will follow...",
     "%2 %1 .. i think .. yeah... for sure.. and the fact that %2 %1 %3 means a lot to you, right? ",
     "are you seriously asking me if %2 %1 %3 ? is that why u think %2 and I cannot ever communicate properly ? ",
     "Would you prefer it if I told you a diplomatic answer.. %2 %1 maybe %3 but not really as serious as it sounds..",

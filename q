@@ -42,6 +42,8 @@ import datetime
 
 class Bot(irc.IRCClient):
     #answered_already={}
+    earlier_question="somerandomtextsoifjdsoijdsojfdssdhds" # to avoid matching empty string first time
+    earlier_response="somerandomtextasdhsaoksdfoijfdsasdfs"
     quiz_on=0
     who_started_quiz=""
     answered_question =0
@@ -167,12 +169,22 @@ class Bot(irc.IRCClient):
             if self.quiz_on == 0: #general comment, not an answer since quiz is not on
               query = str(msg)
               to_send = query.partition(" ")[2]
-	      reply = self.chat_bot.respond(to_send)
 	      userstr = str(user).partition("!")[0]
-              sleep(2)
-	      self.msg(self.factory.channel, '%s, %s' % (userstr,reply))
-              self.logfile.write('\n%s said %s and quizbot replied %s' %(userstr,to_send,reply))
-              self.logfile.write("\n")
+              if query==self.earlier_question:
+                  self.msg(self.factory.channel, 'look %s can u please say something different..' % (userstr))
+              else:    
+	          reply = self.chat_bot.respond(to_send)
+                  #try twice if same response is selected, should be good enough for a unique answer
+                  if reply==self.earlier_response:
+	              reply = self.chat_bot.respond(to_send)
+                  if reply==self.earlier_response:
+	              reply = self.chat_bot.respond(to_send)
+                  
+                  sleep(2)
+	          self.msg(self.factory.channel, '%s, %s' % (userstr,reply))
+                  self.logfile.write('\n%s said %s and quizbot replied %s\n' %(userstr,to_send,reply))
+                  self.earlier_question=query
+                  self.earlier_response=reply
         else:
             word_list = msg.split()
             if self.nickname in msg:
@@ -185,14 +197,20 @@ class Bot(irc.IRCClient):
                       to_send=to_send1
                   else:
                       to_send=to_send2
-                      
-                  reply = self.chat_bot.respond(to_send)
                   userstr = str(user).partition("!")[0]
-                  sleep(2)
-                  self.msg(self.factory.channel, '%s, %s' % (userstr,reply))
-                  self.logfile.write('\n%s said %s and quizbot replied %s' %(userstr,to_send,reply))
-                  self.logfile.write('\n ')
-                  #else:
+                  if query==self.earlier_question:
+                      self.msg(self.factory.channel, 'look %s how about you say something different..' % (userstr))
+                  else:
+                      reply = self.chat_bot.respond(to_send)
+                      if reply==self.earlier_response:
+	                  reply = self.chat_bot.respond(to_send)
+                      if reply==self.earlier_response:
+	                  reply = self.chat_bot.respond(to_send)
+                      sleep(2)
+                      self.msg(self.factory.channel, '%s, %s' % (userstr,reply))
+                      self.logfile.write('\n%s said %s and quizbot replied %s\n' %(userstr,to_send,reply))
+                      self.earlier_question=query
+                      self.earlier_response=reply
  
         # Check if it's a command for the bot.
         if msg.startswith('!help'):

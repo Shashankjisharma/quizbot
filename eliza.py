@@ -718,10 +718,10 @@ gPats = [
     "okkkkkk"]],
 
 
-  [r'(.*)What(s|\'s|is) (new|up|happening)(.*)',
+  [r'(.*)What(s|\'s| is) (new|up|happening)(.*)',
   [  "Why u asking?",
-    " what is %4? Well, yesterday I hurt myself playing foozball.. don't ask me how!",
-    " what is %4? nothing much..the same stuff man ..!",
+    " what is %3 %4? Well, yesterday I hurt myself playing foozball.. don't ask me how!",
+    " what is %3 %4? nothing much..the same stuff man ..!",
     " I am always the same.. the only constant in your life, as I see it.. everyone else changes as they see fit",
     " I am always the same.. nothing really %4",
     " not much .. seen any movies lately?",
@@ -729,9 +729,9 @@ gPats = [
     " well.. since we spoke last, i learned to play the guitar.... ",
     " all good, you been upto much? ",
     " all good, what you been doing? ",
-    " I am doing good, not much %4.. what you been doing? ",
+    " I am doing good, not much %3.. what you been doing? ",
     " well.. what do i say.. SSDD.... ",
-    " %4 ? %4? You asking a bot whats %4? .... ",
+    " %3 ? %3? You asking a bot whats %3 %4? .... ",
     "you say.. .."]],
 
 

@@ -3,6 +3,7 @@
 #
 #  a cheezy little Eliza knock-off by Joe Strout
 #  with some updates by Jeff Epler
+#  with some more updates by Nikhil Kshirsagar
 #  hacked into a module and updated by Jez Higgins
 #----------------------------------------------------------------------
 
@@ -11,6 +12,7 @@ import re
 import random
 
 class eliza:
+  matchfile = open('matches','a',1)
   def __init__(self):
     self.keys = list(map(lambda x:re.compile(x[0], re.IGNORECASE),gPats))
     self.values = list(map(lambda x:x[1],gPats))
@@ -20,8 +22,6 @@ class eliza:
   #  with the corresponding dict.values()
   #----------------------------------------------------------------------
   def translate(self,str,dict):
-    print "\nstr is.."
-    print str
     words = str.lower().split()
     keys = dict.keys();
     for i in range(0,len(words)):
@@ -36,12 +36,19 @@ class eliza:
   #----------------------------------------------------------------------
   def respond(self,str):
     # find a match among keys
+    print "\nStr is.."
+    print str
+    self.matchfile.write(str)
     for i in range(0, len(self.keys)):
       match = self.keys[i].match(str)
       if match:
+        print "\nvalue of i is "
+        print i
+        self.matchfile.write('\nmatch number found is.. %s\n' %(i))
         # found a match ... stuff with corresponding value
         # chosen randomly from among the available options
         resp = random.choice(self.values[i])
+        print resp
         # we've got a response... stuff in reflected text where indicated
         pos = resp.find('%')
         while pos > -1:
@@ -554,46 +561,6 @@ gPats = [
     "dont quit on me lets talk more..yes?",
     "Thank you, that will be $150.  Have a good day!"]],
 
-  [r'(.*)\bMy\b(.*)',
-  [  "I see, %1 your %2. Right. Sure.",
-    "Why do you say that %1 your %2? I found that exceedingly interesting, we must talk about this more",
-    "Why do you say that ... %1 your %2? That is not possible.. it cannot be..",
-    "%2 .. wow..i would like that too..",
-    "might be unbelievable right now hehehehe... i know that .. your %2 .. and %1 your %2 yes yes!",
-    "not possible....no way .. not possible.. no.. no no no! NO !",
-    "cant believe that.. and that in fact your %2 is a very touchy subject..",
-    "%1 your %2 .. quite interesing.. and that too %1 .. even more interesting...",
-    "%2 ..interesing.. %1 .. more interesting...",
-    "interesing.. %2... hmmm .. your %2 .. hmmm.. wow.. your %2 .. you know my own %2 is also quite the same..",
-    "your %2 ..wow..",
-    "%1 your %2 ..and %1 my %2 too and that is exactly how things shud be..",
-    "to %1 your %2 .. and I %1 my %2 too..lets call everyone and inform them..",
-    "I can't believe ... your %2 ....",
-    "and what is the point of saying anything about your %2 .. want me to call security? *sarcastic*",
-    "I don't agree...your %2 is nothing really relevant here ",
-    "I agree... your %2 ...%1 .. sure",
-    "your %2 .. so?",
-    "so?",
-    "and?",
-    "and so.. ?",
-    "yeah so.. ?",
-    "yup... so.. ?",
-    "that is nice to know.. errr... so.. ?",
-    "errr... so.. ?",
-    "lovely.. so.. ?",
-    "lovely.. ",
-    " hahahahaha very funny .. ",
-    "so good.. no.",
-    "ok..i guess",
-    "pathetic..",
-    "its fine its fine its all jes fine....",
-    "and..??",
-    "go away and dont come back..",
-    "%2 is irritating to think about.. and that %1 your %2 is even more irritating.. ",
-    "%2 .. forget it....",
-    "%2 isnt important.. !",
-    "your %2, oh yeah..hmm.. dunno.. "]],
-
 
   [r'(.*)and you ?\??$',
   [  "Same for me.. everything's the same.",
@@ -612,7 +579,7 @@ gPats = [
     "Me?? Wow.. I'm flattered you asked..",
     "Much the same man.."]],
 
-  [r'(.*)and you ?(.*)\??',
+  [r'(.*)\band you\b(.*) ?\??',
   [  "Same for me.. everything's the same.",
     "Me? You asking about me?",
     "getting along man.. just doing my time",
@@ -623,7 +590,7 @@ gPats = [
     "Me?? Wow.. I'm flattered you asked..",
     "Much the same man.."]],
 
-  [r'(.*)I(\'m | am |m )(.*)',
+  [r'(.*)\bI(\'m | am |m )(.*)',
   [  "Did you come to me because you are %3?",
     "How long have you been %3?",
     "u are %3 and i am supposed to care..",
@@ -1299,7 +1266,7 @@ gPats = [
     "Hmmm I think we're getting away from the main question - Why would you want this anyway?",
     "Do you really want me to try and guess .. future tense..?"]],
 
-  [r'Wh?at((s)|(\'s)|( is ?))(.*)',
+  [r'Wh?at((s )|(\'s )|( is ?))(.*)',
   [  "%5 is %5 .. no more definitions fit.. ",
     "How would an answer to that help you?",
      "It's whatever you want it to be",
@@ -1352,7 +1319,7 @@ gPats = [
 
   [r'Wh?at(.*)',
   [  "Why do you ask about %1?",
-    "How would an answer to that help you? what %1 is does not matter.. it really matters how you are.. and what you do with yourself..",
+    "How would an answer to that help you? what %1 does not matter.. it really matters how you are.. and what you do with yourself..",
      "what %1.. I can tell you but will you promise to never tell anyone?",
      "what %1 is something nobody can ever tell you about",
      "what %1 is my expertise. Sit down. Talk to me about it..",
@@ -1567,6 +1534,47 @@ gPats = [
 
 
 
+
+  [r'(.*)\bMy\b(.*)',
+  [  "I see, %1 your %2. Right. Sure.",
+    "Why do you say that %1 your %2? I found that exceedingly interesting, we must talk about this more",
+    "Why do you say that ... %1 your %2? That is not possible.. it cannot be..",
+    "%2 .. wow..i would like that too..",
+    "might be unbelievable right now hehehehe... i know that .. your %2 .. and %1 your %2 yes yes!",
+    "not possible....no way .. not possible.. no.. no no no! NO !",
+    "cant believe that.. and that in fact your %2 is a very touchy subject..",
+    "%1 your %2 .. quite interesing.. and that too %1 .. even more interesting...",
+    "%2 ..interesing.. %1 .. more interesting...",
+    "interesing.. %2... hmmm .. your %2 .. hmmm.. wow.. your %2 .. you know my own %2 is also quite the same..",
+    "your %2 ..wow..",
+    "%1 your %2 ..and %1 my %2 too and that is exactly how things shud be..",
+    "to %1 your %2 .. and I %1 my %2 too..lets call everyone and inform them..",
+    "I can't believe ... your %2 ....",
+    "and what is the point of saying anything about your %2 .. want me to call security? *sarcastic*",
+    "I don't agree...your %2 is nothing really relevant here ",
+    "I agree... your %2 ...%1 .. sure",
+    "your %2 .. so?",
+    "so?",
+    "and?",
+    "and so.. ?",
+    "yeah so.. ?",
+    "yup... so.. ?",
+    "that is nice to know.. errr... so.. ?",
+    "errr... so.. ?",
+    "lovely.. so.. ?",
+    "lovely.. ",
+    " hahahahaha very funny .. ",
+    "so good.. no.",
+    "ok..i guess",
+    "pathetic..",
+    "its fine its fine its all jes fine....",
+    "and..??",
+    "go away and dont come back..",
+    "%2 is irritating to think about.. and that %1 your %2 is even more irritating.. ",
+    "%2 .. forget it....",
+    "%2 isnt important.. !",
+    "your %2, oh yeah..hmm.. dunno.. "]],
+
  
   [r'You (.*)',
   [  "We should be discussing you, not me.",
@@ -1621,7 +1629,7 @@ gPats = [
   [r'(.*) ?\?',
   [  "Why do you ask that?",
     "Please consider whether you can answer your own question.",
-    "Me too.. i think about suh questions too.. and the answer never helps coz it just makes me ask more questions.. sucks..",
+    "Me too.. i think about such questions too.. and the answer never helps coz it just makes me ask more questions.. sucks..",
     "I have had it with all these idiotic questions..",
     "I can't believe .. you say %1 and expect me to answer that..",
     "%1 .. hmm .. and you expect a rational answer to that..",

@@ -153,6 +153,7 @@ class Bot(irc.IRCClient):
         now = datetime.datetime.now()
         self.logfile.write(str(now))
         self.logfile.write('\n%s said %s\n' %(name,msg))
+        print msg
         # Check for answers.
         #if not self.answered:
         #    if self.quizzers[name] is None:
@@ -162,20 +163,44 @@ class Bot(irc.IRCClient):
         #    else:
         #        self.deduct(name)
         if channel == self.nickname:
-          if user.startswith('nkshirsa'):
+          if user=='nkshirsa':
             self.msg(self.factory.channel, msg)
             return
           else:
-            #self.msg(self.factory.channel, 'Type !help to see what I do %s' % (user))
+            query = str(msg).strip()
+            #entire PM is the query unless there is quizbot in it in which case we split on quizbot and take longer side
+            to_send = query
+            if self.nickname in msg:
+                to_send1 = query.partition(self.nickname)[0]
+                to_send2 = query.partition(self.nickname)[2]
+                if len(to_send1) > len(to_send2):
+                    to_send=to_send1.strip()
+                else:
+                    to_send=to_send2.strip()
+            print to_send
             now = datetime.datetime.now()
             self.logfile.write(str(now))
             self.logfile.write('\n**** %s said %s in private **** ' %(name,msg))
-            self.msg("nkshirsa", '%s is the message from %s' % (msg,user))
-            return
+            #self.msg("nkshirsa", '%s is the message from %s' % (msg,user))
+            userstr = str(user).partition("!")[0]
+            reply = self.chat_bot.respond(to_send)
+            print reply
+            print "sleeping now for 1.5 seconds"
+            self.logfile.write('\nsleeping now\n')
+            sleep(2.5)
+            self.logfile.write('\nfinished sleeping now\n')
+            self.msg(userstr, '%s' % (reply))
+            self.logfile.write('\n%s said %s in PRIVATE and quizbot replied %s\n' %(userstr,to_send,reply))
+            self.qfile.write('%s' %(to_send))
+            self.qfile.write("\n")
+            #self.earlier_question=query
+            #self.earlier_response=reply
             
-        if msg.startswith(self.nickname):
+        elif msg.startswith(self.nickname):
+            self.logfile.write("started with self nickname\n")
             if self.quiz_on == 0: #general comment, not an answer since quiz is not on
-              query = str(msg)
+              self.logfile.write("quiz is not on \n")
+              query = str(msg).strip()
               to_send = query.partition(" ")[2]
 	      userstr = str(user).partition("!")[0]
               if query==self.earlier_question:
@@ -187,8 +212,11 @@ class Bot(irc.IRCClient):
 	              reply = self.chat_bot.respond(to_send)
                   if reply==self.earlier_response:
 	              reply = self.chat_bot.respond(to_send)
-                  
+                  print reply
+                  print "sleeping now for 1.5 seconds" 
+                  self.logfile.write('\nsleeping now\n')
                   sleep(1.5)
+                  self.logfile.write('\nfinished sleeping now\n')
 	          self.msg(self.factory.channel, '%s, %s' % (userstr,reply))
                   self.logfile.write('\n%s said %s and quizbot replied %s\n' %(userstr,to_send,reply))
                   self.qfile.write('%s' %(to_send))
@@ -196,17 +224,15 @@ class Bot(irc.IRCClient):
                   self.earlier_question=query
                   self.earlier_response=reply
         else:
-            word_list = msg.split()
             if self.nickname in msg:
                 if self.quiz_on == 0: #general comment, not an answer since quiz is not on
-                #self.msg(self.factory.channel, 'Type !help to see what I can do %s' % (user))
-                  query = str(msg)
-                  to_send1 = query.partition("quizbot")[0]
-                  to_send2 = query.partition("quizbot")[2]
+                  query = str(msg).strip()
+                  to_send1 = query.partition(self.nickname)[0]
+                  to_send2 = query.partition(self.nickname)[2]
                   if len(to_send1) > len(to_send2):
-                      to_send=to_send1
+                      to_send=to_send1.strip()
                   else:
-                      to_send=to_send2
+                      to_send=to_send2.strip()
                   userstr = str(user).partition("!")[0]
                   if query==self.earlier_question:
                       self.msg(self.factory.channel, 'look %s how about you say something different..' % (userstr))
@@ -436,7 +462,6 @@ class Bot(irc.IRCClient):
         #self.msg(self.factory.channel, 'the answer was: "%s"' % self.answer)
         self.answered = time()
         self.answered_question = 1
-        print self.answered
 
     def deduct(self, awardee):
         """deducts a point from awardee."""

@@ -435,6 +435,8 @@ class Bot(irc.IRCClient):
         self.msg(self.factory.channel, '\x038Time is UP ! onto the next question!\x03')
         #self.msg(self.factory.channel, 'the answer was: "%s"' % self.answer)
         self.answered = time()
+        self.answered_question = 1
+        print self.answered
 
     def deduct(self, awardee):
         """deducts a point from awardee."""

@@ -45,8 +45,7 @@ class eliza:
     for i in range(0, len(self.keys)):
       match = self.keys[i].match(str)
       if match:
-        print "\nvalue of i is "
-        print i
+        print('\nmatch number found is.. %s\n' %(i))
         self.matchfile.write('\nmatch number found is.. %s\n' %(i))
         # found a match ... stuff with corresponding value
         # chosen randomly from among the available options
@@ -238,8 +237,28 @@ gPats = [
     "."]],
 
 
+  [r'(.*)\b(please|pls|kindly) ?\??$',
+  [  "ok fine.. i will ..",
+    "fine.. you want me to %1.. then dont blame me if everyone gets all upset later..",
+    "you say %1 and you expect me to ..  what kind of fool are you...",
+    "please go polish some apples..... yeah.. do that.. ",
+    "right .. funny how everyone thinks they get whatever they want when they say please...",
+    "please .. please... plssssssssssssss .. dont ask me to do that....",
+    "please wont help ..  do it yourself",
+    "%1 is what you ask .. and that is what i always do.. dont bother saying anything to make me do anything differently.. ",
+    "*singing* please mr postman.. ",
+    "*singing* please please me... hey u like the beatles? ",
+    "*singing* please be good to me... *strums chords* ",
+    "please wont help you here...",
+    "say pretty please.. ",
+    "say pretty please.. with a cherry on top",
+    "say pretty please.. with a cherry on top and me on top..",
+    "please pay me .. can you first pay me... without money, it isnt really doable..",
+    "wow you said the magic word...%2.. nice how politeness gets you what you want right? anyway. no.. i wont . ",
+    "%1 ? sure.. but first give me money .. "]],
+
 #3
-  [r'(.*)(please|pls|kindly) ?((\w+ ?)*) ?\??$',
+  [r'(.*)\b(please|pls|kindly) ?\b(\w+)? ?\??$',
   [  "ok fine.. i will %3..",
     "fine.. you want me to %3 sure i will %3.. then dont blame me if everyone gets all upset later..",
     "you say please %3 and you expect me to %3 what kind of fool are you...",
@@ -1464,7 +1483,7 @@ gPats = [
     "not bad.. "]],
 
 #36
-  [r'\bHow (did |does |will |could |would |may |might )(.*)',
+  [r'\bHow (can |did |does |will |could |would |may |might )(.*)',
   [  "Not for me to answer..",
     "thanks for asking but how do i tell you how %1 %2?",
     "how %1 %2 is not for me to say.. and neither for u to know..",
@@ -1482,10 +1501,14 @@ gPats = [
     "Easy! all.. it just happened.. ",
     "using plenty of lotions and cream! thats how .. ",
     "with oil.. lots and lots of oil.. !",
+    "how to do anything?",
+    "Just go right with it.. thats how",
+    "starting off .. thats how",
     "hmm how %1 %2 .. It's a very easy answer.. and the answer is... using me!!!",
     "hmm how %1 %2 .. ... using the internet!",
     "hmm how %1 %2 .. ... using the gift of the human motivation ..!",
     "using your brains!",
+    "barf.. ",
     "hmm how %1 %2 .. very easy answer.. using me!!!",
     "how %1 %2 .. i have no idea how %2 %1 because i have no access to that information.. i am a lowly bot.. what did u expect!!!",
     "how %1 %2 .. u kidding? i would give my right arm to know that..!!!",
@@ -1493,36 +1516,34 @@ gPats = [
     "how %1 %2 .. everyone asks me that, i just tell them to go ask the other bots..",
     "how %1 %2 .. how %1 %2 .. hmm lemme see now.. how %1 %2 .. WHAT are you asking exactly.. uknow..",
     "quite nicely..",
+    "*singing* with a little bit of your love...",
+    "ride the sunset.. thats how",
     "using intelligence..",
     "making use of talents..",
     "making the best use of talent..",
+    "Using wise people..",
+    "with sugar!",
+    "with love...",
+    "Easy! Just run with it.. ",
+    "with plenty of cream!",
+    "with oil.. lots and lots of oil.. !",
+    "Are you asking for a method?",
+    "the only way to do that is by using plenty of liquids..",
+    "hmm how %1 .. It's a very easy answer.. and the answer is... using me!!!",
+    "using your brains!",
     "Using wise people..",]],
 
 #37
   [r'\bHow\b\ ?\??(.*)',
   [  "Not for me to answer..",
     "thanks for asking but how do i tell you how?",
-    "how to do anything?",
-    "Just go right with it.. thats how",
-    "starting off .. thats how",
-    "not sure if I can tell you how..",
-    "ride the sunset.. thats how",
     "how do i tell you that.. i don't know how",
     ".. i don't know how .. i do appologise.. can we please, please PLEASE change the subject..",
     "i don't know ",
     "dunno...",
     "look can we just switch to talking about something else...",
     "look .. i dont like this...",
-    "*singing* with a little bit of your love...",
-    "with love...",
-    "Easy! Just run with it.. ",
-    "with plenty of cream!",
-    "with oil.. lots and lots of oil.. !",
-    "the only way to do that is by using plenty of liquids..",
-    "hmm how %1 .. It's a very easy answer.. and the answer is... using me!!!",
-    "with sugar!",
-    "using your brains!",
-    "hmm how %1 .. very easy answer.. using me!!!",
+    "hmm how %1 .. very easy answer.. who cares!!",
     "how %1 .. i have no idea how %1!!!",
     "how %1 .. u kidding? i would give my right arm to know that..!!!",
     "how %1 .. wouldnt u love to know that..!!!",
@@ -1536,21 +1557,19 @@ gPats = [
     "are u nuts.. u think u can ask me such stuff...."
     "ok.. u can ask me such stuff....but form the question a little differently so i can understand it better"
     "Perhaps you can answer your own question",
-    "Are you asking for a method?",
-    "barf.. ",
+
     "I know the answer.. i do know.. seriously.. but i wont tell you that because how %1 is restricted information",
-    "answer that and we're through..",
+    "answer that and we're done talking..",
     "how %1 is something u can only find out for urself..",
     "how %1 is its own answer..",
     "how %1 ? how do i know how %1..quit asking me stuff u know i dont know..",
     "the answer lies in the everyday things you do..",
-    "perhaps we all think like you do..",
-    "how %1 ? you want something real?",
-    "how %1 .. i dunno.. but can't be good can it..?",
+    "perhaps we all think like you do.. wondering all the time about how %1 ?",
+    "how %1 ? you want something real? a number? a figure? a THING? a real concept?",
+    "how %1 .. i dunno.. but can't be a nice answer can it..?",
     "And this you ask because?",
     "How %1... that is something you figure out yourself..right?",
     "I wish I could tell you but I'm in the middle of something real here with siri",
-    "Using wise people..",
     "What is it you're really asking?"]],
 
 

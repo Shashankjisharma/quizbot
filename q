@@ -154,14 +154,6 @@ class Bot(irc.IRCClient):
         self.logfile.write(str(now))
         self.logfile.write('\n%s said %s\n' %(name,msg))
         print msg
-        # Check for answers.
-        #if not self.answered:
-        #    if self.quizzers[name] is None:
-        #        self.quizzers[name] = 0
-        #    if str(self.answer).lower() in msg.lower():
-        #        self.award(name)
-        #    else:
-        #        self.deduct(name)
         if channel == self.nickname: #if it is a PM
           if user=='nkshirsa':
             self.msg(self.factory.channel, msg)
@@ -203,6 +195,7 @@ class Bot(irc.IRCClient):
             #self.earlier_response=reply
             
         elif msg.startswith(self.nickname):
+            print "\nstarts with nickname\n"
             self.logfile.write("started with self nickname\n")
             if self.quiz_on == 0: #general comment, not an answer since quiz is not on
               self.logfile.write("quiz is not on \n")
@@ -293,7 +286,8 @@ class Bot(irc.IRCClient):
                 self.msg(self.factory.channel, 'Cant stop something thats already stopped, %s' % (userstr))
             else:
                 name = self.clean_nick(user)
-                if name==self.who_started_quiz:
+                if name==self.who_started_quiz or name.startswith('nkshirsa'):
+                #if name==self.who_started_quiz :
                   self.msg(self.factory.channel, 'No further questions shall be posed')
                   self.quiz_on = 0
                   self.answered = 5

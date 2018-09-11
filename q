@@ -162,7 +162,7 @@ class Bot(irc.IRCClient):
         #        self.award(name)
         #    else:
         #        self.deduct(name)
-        if channel == self.nickname:
+        if channel == self.nickname: #if it is a PM
           if user=='nkshirsa':
             self.msg(self.factory.channel, msg)
             return
@@ -171,12 +171,18 @@ class Bot(irc.IRCClient):
             #entire PM is the query unless there is quizbot in it in which case we split on quizbot and take longer side
             to_send = query
             if self.nickname in msg:
+              if msg.startswith(self.nickname):
+                to_send = query.partition(" ")[2]               
+              else:
                 to_send1 = query.partition(self.nickname)[0]
                 to_send2 = query.partition(self.nickname)[2]
-                if len(to_send1) > len(to_send2):
-                    to_send=to_send1.strip()
-                else:
-                    to_send=to_send2.strip()
+                to_send = to_send1.replace(',','').strip() + " " +  to_send2.replace(',','').strip()
+                #if len(to_send1) > len(to_send2):
+                 #   to_send=to_send1.strip()
+                #else:
+                 #   to_send=to_send2.strip()
+                 
+            to_send = to_send.strip()
             print to_send
             now = datetime.datetime.now()
             self.logfile.write(str(now))
@@ -202,6 +208,7 @@ class Bot(irc.IRCClient):
               self.logfile.write("quiz is not on \n")
               query = str(msg).strip()
               to_send = query.partition(" ")[2]
+              to_send = to_send.replace(',','')
 	      userstr = str(user).partition("!")[0]
               if query==self.earlier_question:
                   self.msg(self.factory.channel, 'look %s can u please say something different..' % (userstr))
@@ -214,25 +221,24 @@ class Bot(irc.IRCClient):
 	              reply = self.chat_bot.respond(to_send)
                   print reply
                   print "sleeping now for 1.5 seconds" 
-                  self.logfile.write('\nsleeping now\n')
                   sleep(1.5)
-                  self.logfile.write('\nfinished sleeping now\n')
 	          self.msg(self.factory.channel, '%s, %s' % (userstr,reply))
                   self.logfile.write('\n%s said %s and quizbot replied %s\n' %(userstr,to_send,reply))
                   self.qfile.write('%s' %(to_send))
                   self.qfile.write("\n")
                   self.earlier_question=query
                   self.earlier_response=reply
-        else:
-            if self.nickname in msg:
+        elif self.nickname in msg:
                 if self.quiz_on == 0: #general comment, not an answer since quiz is not on
                   query = str(msg).strip()
                   to_send1 = query.partition(self.nickname)[0]
                   to_send2 = query.partition(self.nickname)[2]
-                  if len(to_send1) > len(to_send2):
-                      to_send=to_send1.strip()
-                  else:
-                      to_send=to_send2.strip()
+                  to_send = to_send1.replace(',','').strip() + " " +  to_send2.replace(',','').strip()
+                  to_send = to_send.strip()
+                  #if len(to_send1) > len(to_send2):
+                  #    to_send=to_send1.strip()
+                  #else:
+                  #    to_send=to_send2.strip()
                   userstr = str(user).partition("!")[0]
                   if query==self.earlier_question:
                       self.msg(self.factory.channel, 'look %s how about you say something different..' % (userstr))
@@ -251,7 +257,7 @@ class Bot(irc.IRCClient):
                       self.earlier_response=reply
  
         # Check if it's a command for the bot.
-        if msg.startswith('!help'):
+        elif msg.startswith('!help'):
             try:
                 # !help user
                 self.help(msg.split()[1])
@@ -535,12 +541,10 @@ class Bot(irc.IRCClient):
         #   print "returning from help"
         #  return
         self.msg(self.factory.channel, "\x038****************************************************************************** \x03")
-        self.msg(self.factory.channel, '\x02I am ' + self.nickname + ', and I ask questions.\x02')
-        self.msg(self.factory.channel, '!startquiz and !stopquiz starts and stops the quiz.')
-        self.msg(self.factory.channel, 'Plus 1 for right answers, minus 1 for wrong answers. Reach 10 points to win!')
+        self.msg(self.factory.channel, '\x02I am ' + self.nickname + ', and I mainly ask questions. type !startquiz or !stopquiz for that.. \x02')
         self.msg(self.factory.channel, 'During the quiz, answer this way: %s, YOUR ANSWER' % (self.nickname))
         self.msg(self.factory.channel, 'Please provide feedback on https://docs.google.com/document/d/11DSlUQPc69DjA4cMNA1vaEo4AvdYW2VV0IAoM5IHRpk')
-        self.msg(self.factory.channel, 'If not quizzing, feel free to talk to me I have some interesting opinions!')
+        self.msg(self.factory.channel, 'If not quizzing, feel free to talk to me on the channel, or even in PM! I have some interesting opinions!')
         self.msg(self.factory.channel, 'Oh, and for shayari, type !shayari')
         self.msg(self.factory.channel, "\x038****************************************************************************** \x03")
 

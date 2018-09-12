@@ -50,7 +50,6 @@ class eliza:
         # found a match ... stuff with corresponding value
         # chosen randomly from among the available options
         resp = random.choice(self.values[i])
-        print resp
         # we've got a response... stuff in reflected text where indicated
         pos = resp.find('%')
         while pos > -1:
@@ -82,7 +81,7 @@ gReflections = {
   "you'll": "I will",
   "your"  : "my",
   "yours"  : "mine",
-  "you"  : "me",
+  "you"  : "I",
   "us"  : "you",
   "u"  : "I",
   "ur"  : "mah",
@@ -1548,7 +1547,7 @@ gPats = [
     "how %1 .. u kidding? i would give my right arm to know that..!!!",
     "how %1 .. wouldnt u love to know that..!!!",
     "how %1 .. everyone asks me that, i just tell them to go ask the other bots..",
-    "how %1 .. how %1 .. hmm lemme see now.. how %1 .. WHAT are you asking exactly.. whats the actual query here.. how %1 cannot be your true question.. everything has to be read between the lines with you man.. what is wrong with you... how %1 .. who cares.. life is short man.. go on.. have a good time.. dont bother about how %1 .. just live.. go with it.. flow.. zen man.. zen...uknow..",
+    "how %1 .. how %1 .. hmm lemme see now.. .. WHAT are you asking exactly.. how %1 is so easy to understand.. why ask??",
     "cant help u there"
     "no idea"
     "how would i know that man.."

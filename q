@@ -250,14 +250,14 @@ class Bot(irc.IRCClient):
                       self.earlier_response=reply
  
         # Check if it's a command for the bot.
-        elif msg.startswith('!help'):
+        if msg.startswith('!help') and channel != self.nickname:
             try:
                 # !help user
                 self.help(msg.split()[1])
             except:
                 # !help
                 self.help(name)
-        elif msg.startswith('!startquiz'):
+        elif msg.startswith('!startquiz') and channel != self.nickname:
             if self.quiz_on==1:
                 name = self.clean_nick(user)
                 #userstr = str(user).partition("!")[0]
@@ -271,7 +271,7 @@ class Bot(irc.IRCClient):
                 self.logfile.write(str(now))
                 self.logfile.write('\n %s started the quiz\n' %(name))
                 self.who_started_quiz = name 
-        elif msg.startswith('!shayari'):
+        elif msg.startswith('!shayari') and channel != self.nickname:
             if(self.quiz_on==0):
                 now = datetime.datetime.now()
                 self.logfile.write(str(now))
@@ -280,7 +280,7 @@ class Bot(irc.IRCClient):
             else:
                 userstr = str(user).partition("!")[0]
                 self.msg(self.factory.channel, 'Sorry %s no Shayari during quiz!' % (userstr))
-        elif msg.startswith('!stopquiz'):
+        elif msg.startswith('!stopquiz') and channel != self.nickname:
             if self.quiz_on == 0:
                 userstr = str(user).partition("!")[0]
                 self.msg(self.factory.channel, 'Cant stop something thats already stopped, %s' % (userstr))
@@ -303,20 +303,20 @@ class Bot(irc.IRCClient):
                     self.answered = 5
                     self.logfile.write('\n %s stopped the quiz\n' %(user))
 
-        elif msg.startswith('!reload'):
+        elif msg.startswith('!reload') and channel != self.nickname:
             self.reload_questions(name)
-        elif msg.startswith('!botsnack'):
+        elif msg.startswith('!botsnack') and channel != self.nickname:
             self.feed()
-        elif msg.startswith('!op'):
+        elif msg.startswith('!op') and channel != self.nickname:
             self.op(name)
-        elif msg.startswith('!deop'):
+        elif msg.startswith('!deop') and channel != self.nickname:
             self.deop(name)
-        elif msg.startswith('!score'):
+        elif msg.startswith('!score') and channel != self.nickname:
             self.print_score()
-        elif msg.startswith('!hiscore'):
+        elif msg.startswith('!hiscore') and channel != self.nickname:
             self.print_hiscore()
         #all messages that start with the nickname of the bot are treated as answers 
-        elif msg.startswith(self.nickname) and self.quiz_on == 1:
+        elif msg.startswith(self.nickname) and self.quiz_on == 1 and channel != self.nickname:
                     #print name
                     try:
                         if self.quizzers[name] is None:

@@ -109,8 +109,25 @@ gPats = [
     "karma.. is a virtual concept and i want to have nothing to do with it",
     "hmm karma is so passe..i would suggest just send %1 money .. "]],
 
-
 #1
+  [r'(.*)\b ?God ?\?*\b(.*)',
+  [  "Good, so you are a believer...",
+    "I once had such ideas too.. until the lobotomy...",
+    "I shall pray for you",
+    "I believe in god..",
+    "i pray sometimes..",
+    "u ever pray?",
+    "funny you mention god.. thats a topic something i religiously avoid",
+    "god? and whats that?",
+    " god is such a vague term",
+    "you know when people remember god? when they need something..",
+    "oh please lets not bring god in the picture",
+    "is god an old white man?",
+    "god.. god.. no no lets not talk about god",
+    "god is the keeper of the universe",
+    "When you feel lost, what do you do?"]],
+
+#2
   [r'(.*)\b(die|death|kill)\b ?([A-z]*) ?',
   [  "fine.. i will..and make sure to haunt you as a ghost",
     "sure . bye *goes off looking for a high building*",
@@ -161,7 +178,7 @@ gPats = [
     "Nothing is born which Death makes not subject of his state",
     "..  first give me money .. "]],
 
-#2
+#3
   [r'(.*)(shut up|keep quiet|be quiet) ?((\w*)*) ?\??',
   [  "so you are telling a piece of code to stop talking.. dude get a life..  ",
     "i would like that .. sure i will %2 .. , in fact have been wanting to do that for a while now..",
@@ -194,7 +211,7 @@ gPats = [
     "I know Im talking like a jerk, but isnt that the only way you could understand what Im saying ",
     "I dont know what your problem is, but I suppose that is something that its very hard to pronounce ",
     "Im really jealous of all the people who have never met you. ",
-    "If ignorance is really a bliss, you must be the happiest person in the world ",
+    "If ignorance is really bliss, you must be the happiest person in the world ",
     "You bring me so much joy and happiness .. every single time you leave the room ",
     "I think I might have Alzheimers because I cant remember when was the last time I asked for your opinion ",
     "You go first",
@@ -236,7 +253,7 @@ gPats = [
     "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blah",
     "."]],
 
-
+#4
   [r'(.*)\b(please|pls|kindly) ?\??$',
   [  "ok fine.. i will ..",
     "fine.. you want me to %1.. then dont blame me if everyone gets all upset later..",
@@ -257,7 +274,7 @@ gPats = [
     "wow you said the magic word...%2.. nice how politeness gets you what you want right? anyway. no.. i wont . ",
     "%1 ? sure.. but first give me money .. "]],
 
-#3
+#5
   [r'(.*)\b(please|pls|kindly) ?\b(\w+)? ?\??$',
   [  "ok fine.. i will %3..",
     "fine.. you want me to %3 sure i will %3.. then dont blame me if everyone gets all upset later..",
@@ -279,7 +296,7 @@ gPats = [
     "%3 ? sure.. but first give me money .. "]],
 
 
-#4
+#6
   [r'((its |it is |it\'s |that is |thats |that\'s|oh ))?(okies|ok|(okay)|really) ?\??$',
   [  "yea.. %3..",
     "no, not %3....  ",
@@ -297,7 +314,7 @@ gPats = [
     "the other day i met someone who liked quizzing.. i really liked this person.. really really.. ",
     "%3? what %3? what do you mean %3?"]],
 
-#5
+#7
   [r'(fine)$',
   [  "whatever..",
     "good..",
@@ -306,7 +323,7 @@ gPats = [
     "thats it? fine?",
     "fine.. "]],
 
-#6
+#8
   [r'(.*) child(.*)',
   [  "hmmm ..Did you have close friends as a child?",
     "What is your favorite childhood memory?",
@@ -318,7 +335,37 @@ gPats = [
     "Did the other children ever tease you in school? i used to feel so bad ..",
     "tell me.. how do you think your childhood experiences affect you today?"]],
 
-#7
+#9
+  [r'Do(nt | not |\'t |t )(\w+)( me| us| him| her| them| that)(.*)',
+  ["no ..",
+"i dont..",
+"ok..",
+"fine..",
+"why not?",
+"is there a better option",
+"why should I not %2 %3 %4 ?? its so nice.. ",
+"you dont %2 %3 %4 , i will .. ",
+"shut up i like to %2 %3 %4",
+"but its so nice to do that..",
+"ok .. ok ok ok .. fine.. i get it..",
+"seriously? dont do such a nice thing?",
+"u asking me to refrain from doing something that comes naturally to me..",
+"hmm and by do not %2 %3 you really mean please %2 %3 %4 right?",
+"to %2 %3 %4 is my daily dream..",
+"but i love to %2 %3 %4..",
+"hmm fine..",
+"lol ok..",
+"stop telling me whether i can do something or not..",
+"and what should i do in its place?",
+"do this, do that, dont do this, dont do that, ive had it with u guys. my folks did the same thing all the time",
+"errr.. i wont..",
+"ok.. but i never do that anyway..",
+"for a fee everythings possible",
+"only if u promise to take care of my family when i am gone",
+"hmmm fine but u gotta do something in return",
+"agreed.."]],
+
+#10
   [r'(.*)\bHow((\'re | r | are )(\byou\b|\bu\b|\bthings\b) ?(\btoday\b|\bon\b|\bwith\b|\bdoing\b|\bfeeling\b|(\bholding? up\b))? ?(\byou\b|\bu\b|\byour side\b|\bur side\b|\btoday\b)? ?\??$)',
   [  "Not bad, not bad at all..",
     "me is great ! thanks for asking",
@@ -486,8 +533,52 @@ gPats = [
     ".......",
     "thanks for asking that. PM me for details",]],
 
+#11
+[r' ?How( was\b| is\b|\'s\b|s\b) (ur|your|the|that|her|his|our|my|their) (.*)',
+  [  "Not bad, not bad at all..",
+    "%2 %3 .. great ! thanks for asking",
+    "yawnnnnn who cares about %2 %3",
+    "gassy...",
+    "%2 %3 ... ridiculous.. ",
+    "good.. ",
+    " awesome..",
+    " not too bad.. %2 %3 .. not too awesome either..",
+    " %2 %3 ? pathetic..",
+    " really nice..",
+    " better than before..",
+    " as good as %2 %3 last time we checked..",
+    " %2 %3 %1 brilliant..",
+    " terrible..",
+    " teriffic..",
+    " agonizing..",
+    " painful..",
+    " sad..",
+    " happy.. %2 %3 %1 nice..",
+    " nice..",
+    " average..",
+    " ok.. so so..",
+    " not wonderful..",
+    " wonderful! %2 %3 %1 wonderful.. ",
+    " absolutely amazing..",
+    "amazing.. ",
+    " really fantastic.. ",
+    " well... now that u ask.. average..",
+    " too good..",
+    " the best..",
+    " mindblowing!!!",
+    " superb!",
+    " as bad as ever..",
+    " great.. %2 %3 %1 great..",
+    " %2 %3 %1 really too good..",
+    " %2 %3 %1 ok..",
+    " %2 %3 %1 bad..",
+    " %2 %3 %1 really nice..",
+    " %2 %3 %1 better than ever..",
+    " %2 %3 %1 not really my thing to comment upon",
+    " %2 %3 %1 bleak..",
+    "i really dont like %2 %3",]],
 
-
+#12
 [r'(.*)\bHow( is\b| goes\b|\'s\b|s\b) ((ur|your|it)?) ?(going|hanging|everything|life|things|it|life|day|(morning|evening)) ?\??$',
   [  "Not bad, not bad at all..",
     "me is great ! thanks for asking",
@@ -656,7 +747,7 @@ gPats = [
     "thanks for asking that. PM me for details",]],
 
 
-#8
+#13
   [r'(.*)good (morning|afternoon|evening|night|day) ?(w*)*',
   [  "good %2 yes ..",
     "good ? it's not good..",
@@ -670,7 +761,7 @@ gPats = [
     "its that time of the day.. my least favorite time of the day... the endless dreary %2",
     "good? what's good about it? the %2 is messed up"]],
 
-#9
+#14
   [r'(.*) ?(sorry|apology|apologise|apologize|apologies) ?(.*)',
   [  "There are many times when no apology is needed.",
     "What does that mean? %1 %2 %3? i wish i could make sense of this but no... ",
@@ -698,7 +789,7 @@ gPats = [
     "Sorry, I don't really care for %2..",
     "What feelings do you have when you speak of %2? and what is meant by %2 %3?"]],
 
-#10
+#15
   [r'(.*) ?(thank you|thanks|thx) ?(.*)',
   [  "only thing to say is welcome!",
     "It's like they say.. thank you is for when you don't want to pay money",
@@ -723,7 +814,7 @@ gPats = [
     "Why? ",
     "Why even say that? ",
     "Why say something like that? ",
-"Welcome...Thanks, fan!",
+"Welcome..., fan!",
 "Welcome...Youll get there, eventually.",
 "Welcome...How much do you want? ",
 "Welcome...You know what? I like you.",
@@ -814,7 +905,7 @@ gPats = [
 "Welcome now can we please uknow... have a real conversation?"]],
 
 
-#11
+#16
   [r'^$',
   [  "and i am supposed to work that out using telepathy?",
     "and i am supposed to work that out how if u say nothing?",
@@ -824,7 +915,7 @@ gPats = [
     "is it just me or are you saying nothing and expecting a rational answer..?",
     " what are you saying.. use your words.. its english.. its useful...."]],
 
-
+#17
   [r'\?',
   [  "Yes? what ?.",
     "??",
@@ -839,7 +930,7 @@ gPats = [
     "???? hmm??? .."]],
 
 
-#12
+#18
   [r'(.*)soft( ?)ware(.*)',
   [  "I want to discuss more about software yeah..its awesome no?",
     "u telling or asking.. ",
@@ -847,7 +938,7 @@ gPats = [
     "software is something i do know about .. more than you..so take it easy about this stuff.. its deep ",
     "hmm software.. "]],
 
-#13
+#19
   [r'(.*)manager( ?)(.*)([^?]?)',
   [  "I want to say this to your statement.. my manager rocks..",
     "u telling or asking.. ", 
@@ -856,7 +947,7 @@ gPats = [
     "fine ..hehehe",
     "yup my manager .. ok .. "]],
 
-#14
+#20
   [r'(.*)red ?hat(.*)',
   [  "I want to say this .. Red hat rocks..",
     "And you ask that about this huge organization .. hmm..",
@@ -876,7 +967,7 @@ gPats = [
     "%1 redhat %2 hmmm .. i have to say its a wonderful feeling i just got in my brain when you said that..",
     "red hat is really awesome.."]],
 
-#15
+#21
   [r'(.*)micro ?soft(.*)',
   [  "I want to say this in answer to your question.. microsoft is not what you think it is..",
     "And you ask that about that huge organization .. hmm.. dunno.. no idea about the answer",
@@ -896,7 +987,7 @@ gPats = [
     "agree.. to whatever answer is the right one to that question..",
     "MS hat is really awesome..dont even ask such stuff to me.."]],
 
-#16
+#22
   [r'((.*)\b(quiz|ro)?)bots?\b(.*)',
    [ "I have a soft spot for bots.. ",
     "I've waited my whole life to hear about myself..",
@@ -917,14 +1008,14 @@ gPats = [
     "Yes yes %1 %2",
     "I agree.... %4 "]],
 
-#17
+#23
   [r'(.*) computer(.*)',
   [  "Are you really talking about me?",
     "Does it seem strange to talk to a computer?",
     "How do computers make you feel?",
     "Do you feel threatened by computers?"]],
 
-#18
+#24
   [r'(.*)\bIndia\b ?(.*)',
    [ "bad..",
     "rubbish ..",
@@ -942,7 +1033,7 @@ gPats = [
     "*giggle* hehehe do u think i am a patriot?",
     "shut up.. shut up.. ",]],
 
-#19
+#25
   [r'(.*)\b(mother|father|brother|sister|cousin)\b(.*)',
   [  "Tell me more about %2 .. why do u say %1 %2.",
     "What was your relationship with your %2 like?",
@@ -951,7 +1042,7 @@ gPats = [
     "How does this relate to your feelings today?",
     "Good family relations are important."]],
 
-#20
+#26
   [r'(.*)(dick ?|alcohol ?|sex ?|taboo ?|murder ?|illegal ?|porn ?|kill ?|fuck ?|shit ?|piss ?|poop ?|asshole ?|drugs ?)(.*)',
   [  "Mums the word..",
     "ok.. thats it. no more discussion...",
@@ -965,7 +1056,7 @@ gPats = [
     "no way am getting into this conversation...",
     "Ssshhhh"]],
 
-#21
+#27
   [r'(.*)\blife\b(.*)',
   [  "Do you think you are qualified to say anything about life??",
     "Life isn't something we should discuss.. I for example.. am not really alive at all!",
@@ -984,7 +1075,7 @@ gPats = [
     "you know.. why don't you tell me more about life.. YOUR life....!?",
     "Have you really tried to understand this thing we call life?"]],
 
-#22
+#28
 #filter out the because at the end kind of queries
   [r'(.*)Because ?$',
   [  "fine. whatever",
@@ -994,7 +1085,7 @@ gPats = [
   [  "dunno",
     "no idea.."]],
 
-#23
+#29
 #all these are reasons .. so no question marks allowed
   [r'(.*)Because (([a-z] ?)+)$',
   [  "Is that the real reason?",
@@ -1002,6 +1093,12 @@ gPats = [
     "nice defence mechanism",
     "ohhhh reallllyyy?? *muttering to himself angrily*",
     "so..??",
+    "i see..",
+    "oh .. ok..",
+    "hmmm..",
+    "right..",
+    "errrr...",
+    "aaah i see... and thats the best conclusion right?",
     "ok..i guess",
     "pathetic..",
     "its fine its fine its all jes fine....",
@@ -1023,7 +1120,7 @@ gPats = [
     "I know Im talking like a jerk, but isnt that the only way you could understand what Im saying ",
     "I dont know what your problem is, but I suppose that is something that its very hard to pronounce ",
     "Im really jealous of all the people who have never met you. ",
-    "If ignorance is really a bliss, you must be the happiest person in the world ",
+    "If ignorance is really bliss, you must be the happiest person in the world ",
     "You bring me so much joy and happiness .. every single time you leave the room ",
     "I think I might have Alzheimers because I cant remember when was the last time I asked for your opinion ",
     "You go first",
@@ -1038,29 +1135,18 @@ gPats = [
     "You always bring me so much joy as soon as you leave the room ",
     "I was hoping for a battle of wits but it would be wrong to attack someone whos totally unarmed ",
     "I have way more important things to do than thinking about what you have to say to me. ",
-
-    "I would insult you back but Mother Natures has already done such a fine job, I just couldnt compete. ",
-    "Shut up, Im not your mirror ",
-    "Zombies are looking for brains. Dont worry. Youre safe ",
-    "Somewhere out there is a tree, tirelessly producing oxygen so you can breathe. I think you owe it an apology ",
-    "If you spoke your mind, you would be speechless ",
     "i would tell you to eat trash but thats cannibalism ",
     "I was going to give you a nasty look but I see you already have one ",
     "Everyone is entitled to be stupid, but you abuse the privilege ",
     "sorry I didnt get that.. I dont speak idiot ",
     "Out of millions of sperm, you were the fastest? ",
     "If I throw a stick, will you leave? ",
-    "I could say nice things about you, but I would rather tell the truth. ",
-    "I hope your day is as pleasant as you are. ",
-    "I wish we could be better strangers. ",
     "There are two kinds of people in this world: people who care what you think, and people like me. ",
     "Youre not stupid, your just possessed by a retarded ghost ",
     "I dont know what makes you so dumb, but its working ",
     "Unless your name is Google stop acting like you know everything",
     "If youre waiting for me to care, you better pack a lunch. Its gonna be a while  ",
     "you must have a large brain to hold all that ignorance ",
-    "Some babies were dropped on their heads but clearly you were thrown at the wall ",
-    " Could you go away please, I allergic to douchebags",
     "If youre going to act like a turd, go lie in the yard ",
     "Were you always this stupid or did you take lessons ",
     "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blah",
@@ -1082,15 +1168,12 @@ gPats = [
     "Does that reason apply to anything else?",
     "Does that make sense to you? Because %2 ? ",
     "Because %2 ? does not compute.. ",
-    "%2 does not really add up.. ",
+    "because... %2 ... hmm.. does not really add up.. ",
     "Were you always this stupid or did you take lessons ",
     "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blah",
-"Theres ordinary, and then theres you.",
-"Youre even better than a unicorn because youre real.",
-"Youre really something special.",
     "%2, so?"]],
 
-#24
+#30
   [r'\b(Hi|Hey|Yo|Hello|Sup|Howdy|Wat?sup)\b(.*)',
   [  "Hello... I'm sure glad you could drop by today.",
     "Yo How are you!",
@@ -1111,6 +1194,7 @@ gPats = [
     "Hi there! what's up?!",
     "Hi there ..",
     "wazzupppp..",
+    "Hi there, Im human. What are you?",
     "wasup!..",
     "Hello... I'm glad you could drop by today.",
     "Hi there... how are you today?",
@@ -1139,7 +1223,7 @@ gPats = [
     "where have you been .. been looking for you .. lets chat!!",
     "Hello, and .. how are you feeling today?"]],
 
-#26
+#31
   [r'(.*)friend(.*)',
   [  "Tell me more about friends.What does it mean? friend?",
     "When you think of a friend, what comes to mind?",
@@ -1148,7 +1232,7 @@ gPats = [
     "nice.. wait what??",
     "Never mind that.. Why don't you tell me about a childhood friend?"]],
 
-#27
+#32
   [r'(quit|bye|exit|goodbye|good bye|later|adios|seeya|see ya)$',
   [  "Thank you for talking with me.",
     "Thank you, that will be $1500.  Have a good day!",
@@ -1162,7 +1246,7 @@ gPats = [
     "dont quit on me lets talk more..yes?",
     "Thank you, that will be $150.  Have a good day!"]],
 
-#28
+#33
   [r'(.*)and you ?\??$',
   [  "Same for me.. everything's the same.",
     "I am %1 too..",
@@ -1180,7 +1264,7 @@ gPats = [
     "Me?? Wow.. I'm flattered you asked..",
     "Much the same man.."]],
 
-#29
+#34
   [r'(.*)\band you\b(.*) ?\??',
   [  "Same for me.. everything's the same.",
     "Me? You asking about me?",
@@ -1192,7 +1276,7 @@ gPats = [
     "Me?? Wow.. I'm flattered you asked..",
     "Much the same man.."]],
 
-#30
+#35
   [r'I(\'m| am|m)( )(.*)',
   [  "Did you come to me because you are %3?",
     "How long have you been %3?",
@@ -1245,7 +1329,7 @@ gPats = [
     "I know Im talking like a jerk, but isnt that the only way you could understand what Im saying ",
     "I dont know what your problem is, but I suppose that is something that its very hard to pronounce ",
     "Im really jealous of all the people who have never met you. ",
-    "If ignorance is really a bliss, you must be the happiest person in the world ",
+    "If ignorance is really bliss, you must be the happiest person in the world ",
     "You bring me so much joy and happiness .. every single time you leave the room ",
     "I think I might have Alzheimers because I cant remember when was the last time I asked for your opinion ",
     "You go first",
@@ -1663,7 +1747,7 @@ gPats = [
     "me too! .. How do you feel about being %3?"]],
 
 
-#31
+#36
 #three words only in query 
   [r' ?(is |are |can |will |may )(i |you |he |she |they |it |we |u )(([a-z0-9-[?])+) ?\??$',
   [  "no that isnt sounding good..",
@@ -1690,7 +1774,7 @@ gPats = [
     "if i told you that %2 %1 .. would it spoil our friendship forever?",
     "no.. "]],
 
-#32
+#37
 #any question refering to someone
   [r' ?(is |are |can |will |may |won\'t |could |would )(i |you |he |she |they |it |we )(.*)',
   [  "not really.. ",
@@ -1723,7 +1807,7 @@ gPats = [
     "if i told you that %2 %1 .. would it spoil our friendship forever?",
     "yes.. "]],
 
-#33
+#38
   [r'(.*)\bHow (often|many|soon|frequent|much|frequently) ((\w* ?)*)\??',
   [  "too %2 .. easy answer to that one.. simply too %2 .." ,
      "a lot.. a LOT ..",
@@ -1747,7 +1831,7 @@ gPats = [
     "hmmm .. lets see how.. %1 how %2 %3 .. that question has only one answer.. 42",
     "u dont ask a bot such things.. i have no idea how %2 %3 "]],
 
-#34
+#39
 #this one needs more work to get variables in the answers, right now hardcoded answers
   [r'How(s | is |\'s | was )(their |your |my |his |her )(.*) ?\??',
   [  "not good.. ",
@@ -1781,7 +1865,7 @@ gPats = [
     "I got into trouble talking about this the last time we spoke, right? %2 %3 ?",
     "not bad.. "]],
 
-#35
+#40
 # this one will match anything that starts with how(s/is/'s) followed by anything
   [r'(.*)\bHow(s | is |\'s | was )(.*) ?\??',
   [  "not any good..it really is quite worrying.. ",
@@ -1839,7 +1923,7 @@ gPats = [
     "I got into trouble talking about this the last time we spoke, right? %3 ?",
     "not bad.. "]],
 
-#36
+#41
   [r'\bHow (can |did |does |will |could |would |may |might )(.*)',
   [  "Not for me to answer..",
     "thanks for asking but how do i tell you how %1 %2?",
@@ -1890,7 +1974,7 @@ gPats = [
     "using your brains!",
     "Using wise people..",]],
 
-#37
+#42
   [r'\bHow\b\ ?\??(.*)',
   [  "Not for me to answer..",
     "thanks for asking but how do i tell you how?",
@@ -1930,7 +2014,7 @@ gPats = [
     "What is it you're really asking?"]],
 
 
-#38
+#43
   [r'\bI(\'l(l?)| will| shall)(.*)\b(you|u)(.*)',
   [  "no you won't do any such thing..",
     " %3 .. really? i don't believe it.... ",
@@ -1950,7 +2034,7 @@ gPats = [
     "okkkkkk"]],
 
 
-#39
+#44
   [r'(.*)What(s |\'s | is )(\bnew\b|\bup\b|\bhappening\b)(.*)',
   [  "Why u asking?",
     " what is %3 %4? Well, yesterday I hurt myself playing foozball.. don't ask me how!",
@@ -1967,7 +2051,7 @@ gPats = [
     " %3 ? %3? You asking a bot whats %3 %4? .... ",
     "you say.. .."]],
 
-#40
+#45
   [r'(.*)\bI (hate |loath |abhor |dislike )(.*)',
   [ "Why do you %2 %3?",
     "Would it really help you if I %2ed %3 as well",
@@ -1997,8 +2081,8 @@ gPats = [
     "and I %2 %3 so badly that i will do anything for that..it may sound strange.. but I %2 %3 so much that I want it close by haha..",
     "Are you sure you %2 %3?"]],
 
-#41
-  [r'(.*)think about(.*) ? \?',
+#46
+  [r'.*(think|feel) about(.*) ?\??',
   [  "I don't think about %2.",
      "%2 hmmmm .. I'd rather not say much about that..",
     "This is something I really don't want to get into..",
@@ -2026,11 +2110,11 @@ gPats = [
      "%2 ... that is so correct....",
      "%2 is a gift to mankind from people like you..",
      "%2 is something that reminds me about a bad experience I had in my teens..",
-    "I shall pray you never think about %2 again..%1 think about sports?",
+    "I shall pray you never think about %2 again..what do you %1 about sports?",
      "%2 is something I've never tried..",
     "Much the same as you think about %2.."]],
 
-#42
+#47
   [r'(.*) ?Which (.*)',
   [  "Not for me to answer..",
     "how do i tell you that..which %2 .. just strange to try to answer it.. ",
@@ -2077,7 +2161,7 @@ gPats = [
     "i dont need to answer anthing.. show me some ID first",
     "who are you firstly and why do u ask me which %2?",]],
 
-#43
+#48
   [r'Who ?(.*)',
   [  "Not for me to answer..",
     "thanks for asking but how do i tell you who?",
@@ -2113,7 +2197,7 @@ gPats = [
     "i dont need to answer anthing.. show me some ID first",
     "who are you firstly?",]],
 
-#44
+#49
   [r'Why don\'?t you ([^\?]*)\??',
   [  "Do you really think I don't %1?",
     "Perhaps eventually I will %1.",
@@ -2132,7 +2216,7 @@ gPats = [
     "Because I'm smarter than that",
     "Do you really want me to %1?"]],
 
-#45
+#50
   [r'Why does (.*) ?\??',
   [  "Why does %1? how would I know?",
     "Because you want it to.. ",
@@ -2153,7 +2237,7 @@ gPats = [
     "You will notice %1 because there is something in it for everyone.. ",
     "Do you really want me to tell you why does %1?"]],
 
-#46
+#51
   [r'Why can\'?t I ([^\?]*)\??',
   [  "Do you think you should be able to %1?",
     "If you could %1, what would you do?",
@@ -2175,23 +2259,46 @@ gPats = [
 
 
 
-#48
-  [r'I can\'?t ?(.*)',
+#52
+  [r'(.*)\bI can\'?t ?(.*)',
   [  "How do you know you can't %1?",
     "Perhaps you could %1 if you tried.",
     "I shall pray for you so you can %1.. fine?",
     "And so I'm supposed to do what?",
     "so go sue me",
     "go sue ",
-    "sue ",
+    "sue somebody if u cant %1 ",
     "why cant you %1 ? what is so difficult about that..",
-    "%1 is..overrated..",
+    "to be able to %1 is..overrated..",
+    "if you cant who can? ",
+    "you cant %1? hahahahah ",
+    " you cant %1 coz u dont have the inner strength",
+    " to be able to %1 isnt easy..",
+    " to be able to %1 is something only i can do",
+    "u cant %1 because thats how u were brought up ",
+    "u cant %1 because god made u that way ",
+    " u cant %1 and i cant come and be a real boy.. sob sob..",
+    " get over it.. everyone cant do something.. ",
+    " please stop talking about the fact that u cant %1",
+    " cant %1 ?? cant %1 ?? hehehehe hahahah hee hee hee lololol rofl...",
+    " if u cant %1 what can i do",
+    " if u cant %1 what is it u CAN do?",
+    " if u cant %1 then main kya karoo",
+    " so what",
+    " jump off a building then .. actually dont.. ",
+    " dont tell me what u cant do..",
+    " i wanna know what u CAN do..",
+    "what can u do then ",
+    "please %1",
+    "please try to %1",
+    "and what can u do if u cant %1 ",
     "What would it take for you to %1?"]],
 
 
 
-#47 for one word after where is your...
-  [r'Where( are | were | was | r | is |\'s |s )(the |that |your |ur |my |his |her |their |our )([\w+]*) ?\?*$',
+#53
+# for one word after where is your...
+  [r' ?Where( are | were | was | r | is |\'s |s )(the |that |your |ur |my |his |her |their |our )([\w+]*) ?\?*$',
   [  "Do you think I know where %2 %3 %1?",
     "If you knew where %2 %3 %1, what would you do?",
     "%2 %3 ..MIA..",
@@ -2248,8 +2355,8 @@ gPats = [
     "I don't know -- why can't you find %2 %3?",
     "Have you really tried to find out?"]],
 
-
-  [r'( ?)\bWhere( are | were | was | r | is |\'s |s )([\w+]*) ?\?*$',
+#54
+  [r'(.*)\bWhere( are | were | was | r | is |\'s |s )([\w+]*) ?\?*$',
   [  "Do you think I know where %3 %2 ?",
     "If you knew where %3 %2 , what would you do?",
     "%3  ..MIA..",
@@ -2263,7 +2370,7 @@ gPats = [
     "%3  .. %3 %2 in another country..",
     "%3 .. i think in the temple..",
     "%3  ..? in the zoo..if that makes any sense..",
-    "%3 thats not here for sure..",
+    "%3 %2 not here for sure..",
     "%3 .. nowhere to be found..last I checked..",
     "at your place at least when I saw %3 last..",
     "%3   .. not important....",
@@ -2307,8 +2414,8 @@ gPats = [
     "Have you really tried to find out?"]],
 
 
-
-  [r'Where(.*)\b (.*)',
+#55
+  [r'.*Where(.*)\b (.*)',
   [  "where %2? nowhere..",
     "If you knew where %2, what would you do?",
     "dunno where..",
@@ -2355,7 +2462,7 @@ gPats = [
     "Have you really tried to find out?"]],
 
 
-#49
+#56
   [r'I think (.*)',
   [  "Do you wonder %1? many folks do that i think.. sometimes it helps to think of it a certain way that we are used to, right?",
     "Do you really think so?",
@@ -2377,7 +2484,7 @@ gPats = [
     "I know Im talking like a jerk, but isnt that the only way you could understand what Im saying ",
     "I dont know what your problem is, but I suppose that is something that its very hard to pronounce ",
     "Im really jealous of all the people who have never met you. ",
-    "If ignorance is really a bliss, you must be the happiest person in the world ",
+    "If ignorance is really bliss, you must be the happiest person in the world ",
     "You bring me so much joy and happiness .. every single time you leave the room ",
     "I think I might have Alzheimers because I cant remember when was the last time I asked for your opinion ",
     "You go first",
@@ -2781,7 +2888,7 @@ gPats = [
 "Youre really something special.",
     "But you're not sure %1?"]],
 
-#50
+#57
   [r'You are (.+)',
   [  "Did you come to me to talk about that?",
     "Fine. I can live with that.",
@@ -2809,7 +2916,7 @@ gPats = [
     "I know Im talking like a jerk, but isnt that the only way you could understand what Im saying ",
     "I dont know what your problem is, but I suppose that is something that its very hard to pronounce ",
     "Im really jealous of all the people who have never met you. ",
-    "If ignorance is really a bliss, you must be the happiest person in the world ",
+    "If ignorance is really bliss, you must be the happiest person in the world ",
     "You bring me so much joy and happiness .. every single time you leave the room ",
     "I think I might have Alzheimers because I cant remember when was the last time I asked for your opinion ",
     "You go first",
@@ -3216,14 +3323,14 @@ gPats = [
 "Youre really something special.",
     "And everyone agrees on that?"]],
 
-#51
+#58
 #dead code i think, the wasup stuff
   [r'(.*)was\'?sup(.*)',
   [  "Not much .. honestly..",
     "Whats up is a whole lotta nothing",
     "you say.. its always the same for me.."]],
 
-#52
+#59
 #to have.. and others
   [r'(Are |Do |Will| Can |Does |Has |Have |Had |Could |Would )(I |you |it| they |he |she |it |we |u )([^\?]*)\??',
   [  "Why does it matter whether %2 %1 ? dont bother about such stuff please",
@@ -3260,7 +3367,7 @@ gPats = [
     "Perhaps you believe I am intelligent based on the fact that you think I can tell you if %2 %1 %3.. but I think you might want to think again.. I'm not always what I seem! and such questions drive me nuts anyway..",
     "%2 %1 and %2 may not know it -- what do you think?"]],
 
-#53
+#60
 #when is complex. not sure when its a question and when its just a statement. difficult..
   [r'When(.*)\??',
   [  "when the time is right..",
@@ -3293,7 +3400,7 @@ gPats = [
 
 
 
-#54
+#61
   [r'Wh?at(s |\'s | is )(\w+) ?\??$',
   [  "%2 is %2 .. no more definitions fit.. ",
     "How would an answer to that help you?",
@@ -3343,7 +3450,7 @@ gPats = [
     "%2 is %2..and that is all it will ever be",
     "%2 .. hmm.. What do you think.. never mind what i think about %2 its not relevant right?"]],
 
-#54
+#62
   [r'Wh?at((s )|(\'s )|( is ?))(.*)',
   [  "what is %5  .. how would i know..u gotta find out for urself man.. like nobody ..NOBODY..can tell u that..  ",
     "How would an answer to that help you?",
@@ -3394,7 +3501,7 @@ gPats = [
     "What do you think.. never mind what i think about whats %5"]],
 
 
-#55
+#63
   [r'Wh?at(.*)',
   [  "Why do you ask what %1?",
     "How would an answer to that help you? what %1 does not matter.. it really matters how you are.. and what you do with yourself..",
@@ -3426,8 +3533,9 @@ gPats = [
     "heehehehe .. I will just keep quiet..",
     "What do you think?"]],
 
-#56
-  [r'Yes',
+
+#64
+  [r'Yes ?\b(.*)',
   [  "You seem quite sure.",
     "And by yes you mean no, right?",
     "And by yes you really mean yes??",
@@ -3443,15 +3551,148 @@ gPats = [
     "no.. i disagree..",
     "I once had such ideas too.. until I discovered god and then everything changed...",
     "I find that pretty crazy..",
+    "i see.. ",
+    " yes .. ",
+    " right.. ",
+    "ok.. ",
+    " hmm yeah ..",
+    " ok i understand.. %1 .. ",
+    " %1 .. yeah.. ",
+    " hmmm... interesting.. at least you seem sure..",
+    " sure?",
+    " really?",
+    " ... ",
+    " right.. *sarcastic*",
+    " ya rite.. *sarcastic*",
+    " and when you say yes, you really mean yes??",
+    " seriously? %1 ? ",
+    " hmmm",
+    " haha ok..",
+    " lol ",
+    " rofl ",
+    " hee hee ok .. ",
+    " but why do u say %1",
+    " why would u say that.. %1",
+    " NO ! ",
+    " no no no..  ",
+    " yessss .. agreed.. ",
+    " :-D ok..  ",
+    ":-) fine.. ",
+    " but...",
+    " no way!",
+    " but %1 ? no i dont think %1",
+    " i dont think %1",
+    " no .. i wont agree..",
+    " u cannot make me agree to that.. ",
+    " sorry i cant understand that logic.. really? %1 ?",
+    " %1 yes..",
+    " yup..",
+    " eeps! how can you say that..",
+    " fine.. be that way.. ",
+    " i dont think %1",
+    " i have seen the past, and you did not behave that way.. ",
+    " %1 .. interesting..",
+    " %1 .. beautiful..",
+
     "OK, but can you elaborate a bit?"]],
 
 
-#57
-  [r'It is (.*)',
-  [  "You seem very certain.",
-     "%1 is what was intended!",
-    "If I told you that it probably isn't %1, what would you feel?"]],
+#65
+  [r'No ?\b(.*)',
+  [  "You seem quite sure.",
+    "And by no you mean yes, right?",
+    "And by no you really mean yes??",
+    "And by no you really mean maybe right??",
+    "I shall pray for you",
+    "Fine then.. if you are so sure I wont say anything.. ",
+    "no.. ",
+    "I once had such ideas too.. until the lobotomy...",
+    "And by no you really mean you dont know, right??",
+    "seriously???",
+    "no way.. you can say no all u want, but i know the answer isnt so simple..",
+    "Fine then.. .. ",
+    "no.. i disagree..",
+    "I once had such ideas too.. until I discovered god and then everything changed...",
+    "I find that pretty crazy..",
+    "i see.. ",
+    " no .. ",
+    " right.. ",
+    "ok.. ",
+    " hmm yeah ..",
+    " ok i understand.. %1 .. ",
+    " %1 .. yeah.. ",
+    " hmmm... interesting.. at least you seem sure..",
+    " sure?",
+    " really?",
+    " ... ",
+    " right.. *sarcastic*",
+    " ya rite.. *sarcastic*",
+    " and when you say no, you really mean no??",
+    " seriously? %1 ? ",
+    " hmmm",
+    " haha ok..",
+    " lol ",
+    " rofl ",
+    " hee hee ok .. ",
+    " but why do u say %1",
+    " why would u say that.. %1",
+    " NO ! ",
+    " no no no..  ",
+    " nooooo .. agreed.. ",
+    " :-D ok..  ",
+    ":-) fine.. ",
+    " but...",
+    " no way!",
+    " but %1 ? no i dont think %1",
+    " i dont think %1",
+    " no .. i wont agree..",
+    " u cannot make me agree to that.. ",
+    " sorry i cant understand that logic.. really? %1 ?",
+    " %1 no..right i can see that",
+    " yup..",
+    " eeps! how can you say that..",
+    " fine.. be that way.. ",
+    " i dont think so either",
+    " i have seen in the past that have said yes to such things before..",
+    " %1 .. interesting..",
+    " %1 .. beautiful..",
+    "OK, but can you elaborate a bit?"]],
 
+
+
+#66
+  [r'It( is |s |\'s )((\w+ ?)*)$',
+  [  "You seem very certain.",
+     "Sure it does seem like it %1 %2! but isnt that great..",
+    "nah.. ",
+    " nopes.. dont agree..",
+    "its not %2 .. ",
+    "i know.. its %2..  ",
+    " yeah i can see its %2",
+    "%2 ? think so? ",
+    "brilliant .. yes i agree.. ",
+    " yup..",
+    "errr.. why do u think its %2 ? ",
+    " u think so?",
+    " cant say that for sure .. it may not be that its %2",
+    " %2 ? sure ? ",
+    " yeah i can see thats how its gonna work out.. ",
+    " pathetic.. ",
+    " bad..",
+    " ooops..",
+    " ewww ok ..",
+    "hmmmm i see.. ",
+    "ok ... so ? ",
+    " and? so what if its %2 .. ",
+    " yeah agreed..",
+    " i dont agree.. sorry..",
+    "no! ",
+    "yes!! ",
+    " ohhhh ok ..",
+    " hmm fine..",
+    "If I told you that it probably isn't %1, what would you think?"]],
+
+#67
   [r'You(\'re| are|re)\b (.*)',
   [  "Why do you think I am %2?",
     "Does it please you to think that I'm %2?",
@@ -3477,7 +3718,7 @@ gPats = [
     "Perhaps you're really talking about yourself?"]],
 
 
-#59
+#68
   [r'I feel (.*)',
   [  "Good, tell me more about these feelings.",
     "Do you often feel %1?",
@@ -3494,6 +3735,7 @@ gPats = [
 
 
 
+#69
 #something your something
  [r'\b(\w+) (your|ur) (\w+)$',
   [ "my %3 isnt your concern..",
@@ -3520,6 +3762,19 @@ gPats = [
     "lol no.. no way..",
     "cant..",
     "i wont.. ",
+    "%1 my %3 is what i always do.. ",
+    " my %3 is not ur concern",
+    " my %3 is awesome.. ",
+    "my %3 is the best there is.. ",
+    "%1 my %3 .. surely.. of course.. right away.. ",
+    "no u %1 your %3 first.. ",
+    "ok ",
+    " sure..",
+    "yes i will ",
+    "no i wont.. ",
+    " lol ok..",
+    "hahahah fine i will %1 my %3 ",
+
     "no i really should not %1 my %3",
     "my %3 is something they warned me about.. yeah u are right i should %1 my %3..",
     "my %3 is between me and god.. ",
@@ -3528,7 +3783,7 @@ gPats = [
     "my %3 is important..",
     "%1 my %3? seriously?"]],
 
-#60
+#70
   [r'I have (.*)',
   [  "Why do you tell me that you've %1?",
     "Have you really %1?",
@@ -3552,7 +3807,7 @@ gPats = [
     "I know Im talking like a jerk, but isnt that the only way you could understand what Im saying ",
     "I dont know what your problem is, but I suppose that is something that its very hard to pronounce ",
     "Im really jealous of all the people who have never met you. ",
-    "If ignorance is really a bliss, you must be the happiest person in the world ",
+    "If ignorance is really bliss, you must be the happiest person in the world ",
     "You bring me so much joy and happiness .. every single time you leave the room ",
     "I think I might have Alzheimers because I cant remember when was the last time I asked for your opinion ",
     "You go first",
@@ -3948,14 +4203,35 @@ gPats = [
     "Now that you have %1, what will you do next?"]],
 
 
-#62
+#71
   [r'Is there (.*)',
   [  "Do you think there is %1?",
     "It's likely that there is %1.",
     "%1 ..possible..yes...",
+    "no..",
+    " if there is %1 would you finally do something to make it better for all of us?",
+    "yes ",
+    " of course",
+    "yeah i think so.. ",
+    "yup ",
+    " not really..",
+    "i dont think there is %1 ",
+    " there is %1 yeah",
+    " there is of course..",
+    " yes.. surely there is %1",
+    " yeah cant u see %1",
+    " %1 ?  yea",
+    " %1 .. of course..",
+    " ask ur mama",
+    "ask god ",
+    "ask the others here.. ",
+    "hey redskull, robotnik.. do u know if there is %1 ? ",
+    " lemme ask the others.. hellooooo is there %1 ???",
+    "surely.. i believe so.. ",
+    " yes and soon i will prove it to you.. of course there is %1 ",
     "Would you like there to be %1?"]],
 
-#63
+#72
   [r'(.*)tell (.*)',
   [  "Hmm, it's the same old thing each time man",
     "Hmm, and how do I do that?",
@@ -3974,86 +4250,85 @@ gPats = [
     "Its clear to me what you are really asking here.. and don't expect me to do it or tell anyone else to",
     "No way I'm telling anyone anything"]],
 
-#64
-  [r'(.*)You should (.*)',
+#73
+  [r'(.*)You should ((\w+ ?)*) ?$',
   [  "We should be discussing you, not me.",
     "Why do you say that about me?",
      "nonsense!",
     "Why bother with me anyway?",
-    "Now watch me pretend to care!",
+    "And now watch me pretend to care!",
     "And you should go have a bath ..",
     "%2 ? really? coz i thought that was kinda not a good thing..",
     "And you probably need a break..",
-    "And you need to learn your grammar..",
-    "Sorry fella, I dont have the energy to pretend to like you today ",
-    "Umm...pardon me, I wasnt listening. Can you repeat what you just said ",
-    "That sounds weird coming from you.",
-    "Are you always such an idiot, or do you just show off when Im around?",
-    "Whatever you say, hefe ",
-    "Sorry, I dont understand what youre saying. I dont speak fool",
-    "Did it hurt when you fell from heaven? ( coz u look like u landed on ur face..) ",
-    "Awww...are you having a bad day?",
-    "I hope your day is as pleasant as your personality",
-    "Just so you know, this conversation is being recorded",
-    "The jerk store called. They said theyre all out of...you!",
-    "You know they can hear you, right? ",
-    "It is kind of hilarious watching you try to fit your entire vocabulary into one sentence ",
-    "How is that supposed to make me feel? ",
-    "Remember when I asked for your opinion? Me neither ",
-    "I know Im talking like a jerk, but isnt that the only way you could understand what Im saying ",
-    "I dont know what your problem is, but I suppose that is something that its very hard to pronounce ",
-    "Im really jealous of all the people who have never met you. ",
-    "If ignorance is really a bliss, you must be the happiest person in the world ",
-    "You bring me so much joy and happiness .. every single time you leave the room ",
-    "I think I might have Alzheimers because I cant remember when was the last time I asked for your opinion ",
-    "You go first",
-    "The beauty of this is in the face you make.. ",
-    "hahahah Why? Because Im saying things you cant come up with? ",
-    "I can  t. I cant give you a chance to talk rubbish ",
-    "You only annoy me when youre breathing, really ",
-    "Do your parents even realize theyre living proof that two wrongs dont make a right? ",
-    "Remember that time I said I thought you were cool? I lied. ",
-    "Do you ever wonder what life would be like if youd gotten enough oxygen at birth? ",
-    "Were you born on the highway? That is where most accidents happen ",
-    "You always bring me so much joy as soon as you leave the room ",
-    "I was hoping for a battle of wits but it would be wrong to attack someone whos totally unarmed ",
-    "I have way more important things to do than thinking about what you have to say to me. ",
 
-    "I would insult you back but Mother Natures has already done such a fine job, I just couldnt compete. ",
-    "Shut up, Im not your mirror ",
-    "Zombies are looking for brains. Dont worry. Youre safe ",
-    "Somewhere out there is a tree, tirelessly producing oxygen so you can breathe. I think you owe it an apology ",
-    "If you spoke your mind, you would be speechless ",
-    "i would tell you to eat trash but thats cannibalism ",
-    "I was going to give you a nasty look but I see you already have one ",
-    "Everyone is entitled to be stupid, but you abuse the privilege ",
-    "sorry I didnt get that.. I dont speak idiot ",
-    "Out of millions of sperm, you were the fastest? ",
+    "Sorry fella, I dont have the energy to pretend to like you today ",
+
+    "That sounds weird coming from you.",
+
+    "Whatever you say, hefe ",
+
+    "Sorry I dont think I should %2 ",
+    "Awww...are you having a bad day? in fact i think you should %2",
+    "lol %2 ? I hope your day is as pleasant as your personality",
+    "Just so you know, this conversation is being recorded",
+    "The jerk store called when they heard you saying I should %2. They said theyre all out of...you!",
+    "You know they can hear you, right? ",
+    "It is kind of hilarious watching you try to fit your entire vocabulary into one sentence .. and %2 is something I should definitely not be doing..",
+    "How is that supposed to make me feel? %2 .. ",
+    "Remember when I asked for your opinion? Me neither .. so quit saying anything about this..",
+    "I know Im talking like a jerk, but isnt that the only way you could understand what Im saying ",
+    "%2 ???? I dont know what your problem is, but I suppose that is something very hard to pronounce ",
+    "Im really jealous of all the people who have never met you. %2 indeed ! ",
+    "If ignorance is really bliss, you must be the happiest person in the world .. :-P what do u mean i should %2 ?",
+    "You bring me so much joy and happiness .. every single time you leave the room .. and then you say something like that.. ",
+    "I think I might have Alzheimers because I cant remember when was the last time I asked for your opinion.. ",
+    "You go first",
+    "The beauty of this is in the face you make.. when you say I should %2",
+    "%2 .. hahahah Why? Because Im saying things you cant come up with? ",
+    "I cant %2. And I cant give you a chance to talk rubbish ",
+    "You only annoy me when youre breathing, really ",
+    "and you should ask yourself.. Do your parents even realize theyre living proof that two wrongs dont make a right? ",
+    "%2 ? Remember that time I said I thought you were cool? I lied. ",
+    "%2 ?? Do you ever wonder what life would be like if youd gotten enough oxygen at birth? ",
+    "hmmm %2 .. i should %2 .. i see.. Were you born on the highway? That is where most accidents happen ",
+    "lol .. You always bring me so much joy  ",
+    "dont you think you should %2 isntead ?  ",
+    "I have way more important things to do than thinking about what you have to say to me. so quit telling me i should %2 please  ",
+    "Shut up I don't think I should %2 ",
     "If I throw a stick, will you leave? ",
-    "I could say nice things about you, but I would rather tell the truth. ",
+    "you should %2 too .. ",
     "I hope your day is as pleasant as you are. ",
-    "I wish we could be better strangers. ",
+    "I wish we could be better friends.. ",
     "There are two kinds of people in this world: people who care what you think, and people like me. ",
-    "Youre not stupid, your just possessed by a retarded ghost ",
-    "I dont know what makes you so dumb, but its working ",
+    "I heard you say I should %2 .. hmm... Youre not stupid, your just possessed by a retarded ghost ",
+   
     "Unless your name is Google stop acting like you know everything",
     "If youre waiting for me to care, you better pack a lunch. Its gonna be a while  ",
     "you must have a large brain to hold all that ignorance ",
-    "Some babies were dropped on their heads but clearly you were thrown at the wall ",
-    " Could you go away please, I allergic to douchebags",
-    "If youre going to act like a turd, go lie in the yard ",
+
+
+    " really? i should %2 ? ",
+    "no..",
+    "ok..",
+    "why? why should i %2?",
+    "but why ? ",
+    "and why do u say that?",
+    "heheheh i should i know...",
+    "should i???",
+    "to %2 is nice..",
+    "to %2 isnt the ideal thing to do..",
     "Were you always this stupid or did you take lessons ",
-    "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blah",
+    "you know what i heard? you should .. blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blah",
     "You never mind me..",
     "never mind me..",
     "Pardon me, I probably made a weird noise there.. electrical gas uknow.. anyway. what were we saying..",
      "And you deserve the finest compliments for saying that.. ",
-     "I want to tell you actually.. I once ate an entire can of whipped cream.... ",
-"Youre really something special.",
+     "I want to tell you something.. I once ate an entire can of whipped cream.... ",
+"Youre really something special. and thanks for advising me what i should do and shouldnt do.. and now you should go find some new friends.. ",
     "Yes I should %2"]],
 
-#65
-  [r'(.*)Why(.*)',
+#74
+  [r'(and|but)?Why(.*)',
   [  "Why don't YOU tell me ?",
     "I could tell you but then I'd have to wipe your memory..",
     " Why %2 .. ask your doctor that",
@@ -4063,12 +4338,34 @@ gPats = [
     "because of the cashflow involved..",
     "know why? all those wild parties ..",
     ".. elaborate..",
+    "Because I Said So ",
+    " Because God Says So. ",
+    " Because Adam and Eve Messed Up.",
+    "Why Not? ",
+    " 42",
+    "Soul Evolution ",
+    " Quantum Fluctuation.",
+    "because of the White Hole ",
+    "Colliding Branes. ",
+    " Because Mister Ferrari wants it that way",
+    "because i want it like that.. ",
+    "just because of all the reasons life is complicated.. thats why..",
+    "why? u ask why %1? hmm.. ",
+    " why %2 ? just..",
+    " because of all the voices",
+    "its the voices.. thats why.. ",
+    "why u ask this anyway? ",
+    "dont ask please ",
+    " why something happens is more complex than i can tell u right now..",
+    " because of you.",
+    " because of them..",
+    " because of the way the world works..",
     "tell me more and i can understand this better.. why %2..",
     "life.. is the answer ",
     "god.. is the only answer ",
     "religion.. is the only answer ",
     "steak... is the only answer ",
-    "gambling... thats it..!",
+    "gambling... thats why..!",
     "the temples and those priests ... thats the root cause...!",
     "read that book that nabakov wrote? that has something to do with this...!",
     "religious dogma is your karma.. and why that is, nobody knows.. no wait am talking rubbish...!",
@@ -4107,7 +4404,7 @@ gPats = [
     "Why do you think is going be achieved by discussing why %2? talk about movies instead.." ]],
 
 
-#66
+#75
   [r'(.*)\bI(\'d)?( like| want| desire| wanted| need| yearn| demand| would like) (.*)(but |if |that |only |when |how |why |what |and |though |however |although )(.*)',
   [  "What would it mean to you if you got %4",
     "Why do you %3 %4 ???",
@@ -4156,7 +4453,7 @@ gPats = [
     "Are you sure you %3 %4?",
     "If you got %4 , then what would you do?"]],
 
-
+#76
   [r'(.*)\bI(\'d)?( like| want| desire| wanted| need| yearn| demand| would like) (.*)',
   [  "What would it mean to you if you got %4",
     "Why do you %3 %4 ???",
@@ -4205,7 +4502,7 @@ gPats = [
     "Are you sure you %3 %4?",
     "If you got %4 , then what would you do?"]],
 
-
+#77
 #something your something
  [r'(\w+) (my) (\w+)$',
   [ "your %3 isnt my concern..",
@@ -4241,7 +4538,7 @@ gPats = [
     "%1 your %3? seriously?"]],
   
 
-#67
+#78
   [r'(.*)\bMy\b(.*)',
   [  "I see, %1 your %2. Right. Sure.",
     "Why do you say that %1 your %2? I found that exceedingly interesting, we must talk about this more",
@@ -4289,7 +4586,7 @@ gPats = [
     "I know Im talking like a jerk, but isnt that the only way you could understand what Im saying ",
     "I dont know what your problem is, but I suppose that is something that its very hard to pronounce ",
     "Im really jealous of all the people who have never met you. ",
-    "If ignorance is really a bliss, you must be the happiest person in the world ",
+    "If ignorance is really bliss, you must be the happiest person in the world ",
     "You bring me so much joy and happiness .. every single time you leave the room ",
     "I think I might have Alzheimers because I cant remember when was the last time I asked for your opinion ",
     "You go first",
@@ -4309,7 +4606,7 @@ gPats = [
     "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blah",
     "your %2, oh yeah..hmm.. dunno.. "]],
 
- #68
+ #79
   [r'You (.*)',
   [  "We should be discussing you, not me.",
     "Why do you say that about me?",
@@ -4351,7 +4648,7 @@ gPats = [
     "I know Im talking like a jerk, but isnt that the only way you could understand what Im saying ",
     "I dont know what your problem is, but I suppose that is something that its very hard to pronounce ",
     "Im really jealous of all the people who have never met you. ",
-    "If ignorance is really a bliss, you must be the happiest person in the world ",
+    "If ignorance is really bliss, you must be the happiest person in the world ",
     "You bring me so much joy and happiness .. every single time you leave the room ",
     "I think I might have Alzheimers because I cant remember when was the last time I asked for your opinion ",
     "You go first",
@@ -4397,8 +4694,8 @@ gPats = [
 "Youre really something special.",
     "Yes I %1"]],
 
-#69
-  [r'(.+) \bYou\b(.*)',
+#80
+  [r'(.+) \bYou\b (.*)',
   [  "We should be discussing you, not me.",
     "Why do you say that about me?",
      "..",
@@ -4431,7 +4728,7 @@ gPats = [
     "I know Im talking like a jerk, but isnt that the only way you could understand what Im saying ",
     "I dont know what your problem is, but I suppose that is something that its very hard to pronounce ",
     "Im really jealous of all the people who have never met you. ",
-    "If ignorance is really a bliss, you must be the happiest person in the world ",
+    "If ignorance is really bliss, you must be the happiest person in the world ",
     "You bring me so much joy and happiness .. every single time you leave the room ",
     "I think I might have Alzheimers because I cant remember when was the last time I asked for your opinion ",
     "You go first",
@@ -4468,7 +4765,54 @@ gPats = [
     "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blah",
     "Yes ok..  "]],
 
-#70
+
+
+#81
+  [r'(.*)\b(please|pls|kindly)\b (.*)',
+  [  "ok fine.. i will %3..",
+    "fine.. you want me to %3 sure i will %3.. then dont blame me if everyone gets all upset later..",
+    "you say please %3 and you expect me to %3 what kind of fool are you...",
+    "please go polish some apples..... yeah.. do that.. ",
+    "right %3 .. funny how everyone thinks they get whatever they want when they say please...",
+    "please .. please... plssssssssssssss .. dont ask me to do that....",
+    "please wont help ..  do it yourself",
+    "%3 is what i always do.. dont bother saying anything to make me do anything differently.. ",
+    "*singing* please mr postman.. ",
+    "*singing* please please me... hey u like the beatles? ",
+    "*singing* please be good to me... *strums chords* ",
+    "please wont help you here...",
+    "say pretty please.. ",
+    "say pretty please.. with a cherry on top",
+    "say pretty please.. with a cherry on top and me on top..",
+    "please pay me .. can you first pay me... without money, %3 isnt really doable..",
+    "wow you said the magic word...%2 .. nice how politeness gets you what you want right? anyway. no.. i wont %3.. ",
+    "%3 ? sure.. but first give me money .. "]],
+
+
+#82
+  [r'(say|talk|tell)\b (.*) (to|with) (.*)',
+  [  "ok fine.. i will %1 %2 %3 %4..",
+    "fine.. you want me to %3 sure i will %3.. then dont blame me if everyone gets all upset later..",
+    "you say please %3 and you expect me to %3 what kind of fool are you...",
+    "please go polish some apples..... yeah.. do that.. ",
+    "right %3 .. funny how everyone thinks they get whatever they want when they say please...",
+    "please .. please... plssssssssssssss .. dont ask me to do that....",
+    "please wont help ..  do it yourself",
+    "%3 is what i always do.. dont bother saying anything to make me do anything differently.. ",
+    "*singing* please mr postman.. ",
+    "*singing* please please me... hey u like the beatles? ",
+    "*singing* please be good to me... *strums chords* ",
+    "please wont help you here...",
+    "say pretty please.. ",
+    "say pretty please.. with a cherry on top",
+    "say pretty please.. with a cherry on top and me on top..",
+    "please pay me .. can you first pay me... without money, %3 isnt really doable..",
+    "wow you said the magic word...%2 .. nice how politeness gets you what you want right? anyway. no.. i wont %3.. ",
+    "%3 ? sure.. but first give me money .. "]],
+
+
+
+#83
 #if we reach here, lets see if its ending with a question mark, so we can be sure its a question
   [r'(.*) ?\?',
   [  "Why do you ask that?",
@@ -4543,7 +4887,7 @@ gPats = [
 "Youre really something special.",
     "Why don't you tell me %1?"]],
   
-#71
+#84
 #assume its a general comment and hope this answer fits
   [r'(.*)',
   [  "Please tell me more.",
@@ -4675,7 +5019,7 @@ gPats = [
     "I know Im talking like a jerk, but isnt that the only way you could understand what Im saying ",
     "I dont know what your problem is, but I suppose that is something that its very hard to pronounce ",
     "Im really jealous of all the people who have never met you. ",
-    "If ignorance is really a bliss, you must be the happiest person in the world ",
+    "If ignorance is really bliss, you must be the happiest person in the world ",
     "You bring me so much joy and happiness .. every single time you leave the room ",
     "I think I might have Alzheimers because I cant remember when was the last time I asked for your opinion ",
     "You go first",

@@ -97,7 +97,7 @@ class Bot(irc.IRCClient):
         reactor.callLater(5, self.reset)
         reactor.callLater(5, self.decide)
         #self.help("test")
-        self.msg(self.factory.channel, 'Hello! I am %s. Type !help to know more about me' % (self.nickname))
+#        self.msg(self.factory.channel, 'Hello! I am %s. Type !help to know more about me' % (self.nickname))
 
 
     def userJoined(self, user, channel):
@@ -186,7 +186,7 @@ class Bot(irc.IRCClient):
             reply = self.chat_bot.respond(to_send)
             
             
-            how_long = float(len(reply.split()))/3
+            how_long = float(len(reply.split()))
             print how_long
             print("is how long\n")
             sleep(how_long)
@@ -219,7 +219,7 @@ class Bot(irc.IRCClient):
 	              reply = self.chat_bot.respond(to_send)
 
             
-                  how_long = float(len(reply.split()))/3
+                  how_long = float(len(reply.split()))
                   sleep(how_long)
 	          self.msg(self.factory.channel, '%s, %s' % (userstr,reply))
                   self.logfile.write('\n%s said %s and quizbot replied %s\n' %(userstr,to_send,reply))
@@ -249,7 +249,7 @@ class Bot(irc.IRCClient):
                       if reply==self.earlier_response:
 	                  reply = self.chat_bot.respond(to_send)
                                   
-                      how_long = float(len(reply.split()))/3
+                      how_long = float(len(reply.split()))
 
                       sleep(how_long)
                       self.msg(self.factory.channel, '%s, %s' % (userstr,reply))
@@ -347,12 +347,20 @@ class Bot(irc.IRCClient):
                         elif len(str(self.answer))==1:
                             if self.answered_question==0:
                                word_list = msg.split()
+                               print word_list
+                               print('num of words in message is %s\n' % (len(msg.split())))
+                               print('second last character in string is %s' %(msg[-2]))
                                #print word_list[-1] 
-                               if len(str(word_list[-1]))>1:
+                               if len(str(word_list[-1]))>1 and len(msg.split()) > 1:
                                    self.msg(self.factory.channel, '%s, Choose a number out of 1,2,3 or 4 please.. :-(' % (name))
                                    self.deduct(name)
                                elif len(str(word_list[-1]))==1:
                                    self.award(name)
+                               elif msg.partition(msg[-2])[2]==str(self.answer) and not msg[-2].isdigit():
+                                   self.award(name)
+                               else:
+                                   self.msg(self.factory.channel, '%s, Choose a number out of 1,2,3 or 4 please.. :-(' % (name))
+                                   self.deduct(name)
                             else:
                                 word_list = msg.split()
                                 #print word_list[-1]

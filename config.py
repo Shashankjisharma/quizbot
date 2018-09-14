@@ -1,11 +1,11 @@
 # IRC Network to connect to
-network = 'irc.freenode.net'
+network = 'irc.devel.redhat.com'
 # Port to connect on
 port = 6667
 # Channel to join (automatically)
-chan = 'quiz_test'
+chan = 'quiz_test1'
 # Nickname of bot
-nickname = 'quizbot'
+nickname = 'derek_obrien'
 # Username to use when identifying with services (or not)
 username = nickname
 # Whether to use a password to identify with services or not

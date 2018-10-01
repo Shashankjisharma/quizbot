@@ -97,7 +97,7 @@ class Bot(irc.IRCClient):
         reactor.callLater(5, self.reset)
         reactor.callLater(5, self.decide)
         #self.help("test")
-#        self.msg(self.factory.channel, 'Hello! I am %s. Type !help to know more about me' % (self.nickname))
+        self.msg(self.factory.channel, 'Hello! I am %s. Type !help to know more about me' % (self.nickname))
 
 
     def userJoined(self, user, channel):
@@ -106,19 +106,19 @@ class Bot(irc.IRCClient):
         self.add_quizzer(name)
         self.complained = False
         if self.counting_number==0:
-            self.msg(self.factory.channel, '\x032 Hello %s, welcome!\x03' % (name))
+            self.msg(self.factory.channel, '\x032    Hello %s, welcome!\x03' % (name))
             self.counting_number=1
         elif self.counting_number==1:
-            self.msg(self.factory.channel, '\x032 Hey look who is here! Its %s .. !!\x03' % (name))
+            self.msg(self.factory.channel, '\x032    Hey look who is here! Its %s .. !!\x03' % (name))
             self.counting_number=2
         elif self.counting_number==2:
-            self.msg(self.factory.channel, '\x032 welcome %s I am so glad to see you. wanna quiz? chat? hear shayari?!\x03' % (name))
+            self.msg(self.factory.channel, '\x032    Welcome %s I am so glad to see you. wanna quiz? chat? hear shayari?!\x03' % (name))
             self.counting_number=3
         elif self.counting_number==3:
-            self.msg(self.factory.channel, '\x032 Helloooooo %s, welcome welcome welcome.. do come in.. sit down .. get comfy!\x03' % (name))
+            self.msg(self.factory.channel, '\x032    Helloooooo %s, welcome welcome welcome.. do come in.. sit down .. get comfy!\x03' % (name))
             self.counting_number=4
         elif self.counting_number==4:
-            self.msg(self.factory.channel, '\x032 Hello %s, welcome to the greatest quiz show in the universe! My name is %s and I will be your host .. feeling chatty?\x03' % (name,self.nickname))
+            self.msg(self.factory.channel, '\x032    Hello %s, welcome to the greatest quiz show in the universe! My name is %s and I will be your host .. feeling chatty?\x03' % (name,self.nickname))
             self.counting_number=0
         self.logfile.write('\n%s joined' % (name))
         now = datetime.datetime.now()
@@ -137,8 +137,10 @@ class Bot(irc.IRCClient):
 
     def userRenamed(self, oldname, newname):
         """Overrides USERRENAMED."""
+        oldscore = self.quizzers[oldname]
         self.del_quizzer(oldname)
         self.add_quizzer(newname)
+        self.quizzers[newname]=oldscore
 
     def irc_RPL_NAMREPLY(self, prefix, params):
         """Overrides RPL_NAMEREPLY."""
@@ -157,7 +159,7 @@ class Bot(irc.IRCClient):
         print('\n%s said %s\n' %(name,msg))
         
         if channel == self.nickname: #if it is a PM
-          if user=='nkshirsa':
+          if user.startswith('nkshirsa'):
             self.msg(self.factory.channel, msg)
             return
           else:
@@ -186,7 +188,7 @@ class Bot(irc.IRCClient):
             reply = self.chat_bot.respond(to_send)
             
             
-            how_long = float(len(reply.split()))
+            how_long = float(len(reply.split()))/2.5
             print how_long
             print("is how long\n")
             sleep(how_long)
@@ -218,8 +220,9 @@ class Bot(irc.IRCClient):
                   if reply==self.earlier_response:
 	              reply = self.chat_bot.respond(to_send)
 
-            
-                  how_long = float(len(reply.split()))
+                  how_long = float(len(reply.split()))/2.5
+                  print('reply is %s' % reply)
+                  print('sleeping for %s' % how_long)
                   sleep(how_long)
 	          self.msg(self.factory.channel, '%s, %s' % (userstr,reply))
                   self.logfile.write('\n%s said %s and quizbot replied %s\n' %(userstr,to_send,reply))
@@ -249,8 +252,10 @@ class Bot(irc.IRCClient):
                       if reply==self.earlier_response:
 	                  reply = self.chat_bot.respond(to_send)
                                   
-                      how_long = float(len(reply.split()))
+                      how_long = float(len(reply.split()))/2.5
 
+                      print('reply is %s' % reply)
+                      print('sleeping for %s' % how_long)
                       sleep(how_long)
                       self.msg(self.factory.channel, '%s, %s' % (userstr,reply))
                       self.logfile.write('\n%s said %s and quizbot replied %s\n' %(userstr,to_send,reply))
@@ -373,28 +378,22 @@ class Bot(irc.IRCClient):
     def decide(self):
         """Figure out whether to post a question or a hint."""
         t = time()
-        f, dt = ((self.ask, self.answered + 10 - t) if self.answered else
+        f, dt = ((self.ask, self.answered + 15 - t) if self.answered else
                  (self.hint, self.last_decide + 10 - t))
         if dt < 0.5:
            f()
            self.last_decide = t
            dt = 5
         reactor.callLater(min(10, dt), self.decide)
+        
 
     def ask(self):
         self.answered_once = {} #reset to nobody answered
         """Ask a question."""
-        #self.hunger += 1
-        #if self.hunger > 6:
-        #    if not self.complained:
-        #        self.msg(self.factory.channel,
-        #                 "I'm hungry. Please feed me with !botsnack.")
-        #        #self.complained = True
-        #    return
         # Make sure there have been ten questions in between this question.
         if self.quiz_on == 0:
             return
-        self.msg(self.factory.channel, "****************************************************************************** ")
+        self.msg(self.factory.channel, "******************************************************************************")
         self.answered_question = 0
         while self.question in self.recently_asked or not self.question:
             cqa = choice(q.questions)
@@ -506,7 +505,7 @@ class Bot(irc.IRCClient):
     def award(self, awardee):
         """Gives a point to awardee."""
         self.quizzers[awardee] += 1
-        self.msg(self.factory.channel, '\x032 %s is right! congratulations, %s!\x03' % (self.answer, awardee))
+        self.msg(self.factory.channel, '\x032Yes %s is right! congratulations, %s!\x03' % (self.answer, awardee))
         self.logfile.write('\n%s correctly answered %s' %(awardee,self.answer))
         self.logfile.write('\n')
         self.answered = 1
@@ -514,9 +513,10 @@ class Bot(irc.IRCClient):
         if self.quizzers[awardee] >= self.target_score:
             self.win(awardee)
             self.logfile.write('\n%s wins the quiz' %(awardee))
-        #self.hunger = max(0, self.hunger - 1)
-        self.print_score()
-        self.answered = time()
+        else:
+            self.print_score()
+            self.msg(self.factory.channel, '\x02Next question coming up...\x02')
+            self.answered = time()
 
     def win(self, winner):
         """Is called when target score is reached."""
@@ -547,9 +547,8 @@ class Bot(irc.IRCClient):
         os.system('rm outputascii')
         os.system('python test.py %s > outputascii' % (self.winner))
         self.ascii_art();
-        #self.msg(self.factory.channel, "New Quiz starting !")
         self.msg(self.factory.channel, "\x034****************************************************************************** \x03")
-        self.msg(self.factory.channel,"\x034 Type !help to get help") 
+        self.msg(self.factory.channel,"\x034                       Type !help to get help") 
         self.reset()
         self.quiz_on=0
 
@@ -564,10 +563,10 @@ class Bot(irc.IRCClient):
         #  return
         self.msg(self.factory.channel, "\x038****************************************************************************** \x03")
         self.msg(self.factory.channel, '\x034I am ' + self.nickname + ', and I mainly ask questions. Type !startquiz or !stopquiz for that.. \x03')
-        self.msg(self.factory.channel, '\x02During the quiz, answer this way: %s, YOUR ANSWER. Reach 7 points to win!\x02' % (self.nickname))
-        self.msg(self.factory.channel, 'Please provide feedback on https://docs.google.com/document/d/11DSlUQPc69DjA4cMNA1vaEo4AvdYW2VV0IAoM5IHRpk')
+        self.msg(self.factory.channel, '\x02During the quiz, answer this way: %s, YOUR ANSWER.\x02 Reach 10 points to win!' % (self.nickname))
+        self.msg(self.factory.channel, 'Provide feedback on https://goo.gl/2q94Jv , Watch a talk about me at https://bluejeans.com/s/z2Ygo')
         self.msg(self.factory.channel, ' ')
-        self.msg(self.factory.channel, 'If not quizzing, feel free to talk to me on the channel, or even in PM! I have some interesting opinions!')
+        self.msg(self.factory.channel, 'If not quizzing, feel free to talk to me on the channel, or in PM!')
         self.msg(self.factory.channel, 'Oh, and for shayari, type !shayari')
         self.msg(self.factory.channel, "\x038****************************************************************************** \x03")
 
@@ -632,7 +631,7 @@ class Bot(irc.IRCClient):
         for i in self.quizzers:
             self.quizzers[i] = None
         #self.target_score = 1 + len(self.quizzers) / 2
-        self.target_score = 7
+        self.target_score = 10
         #self.set_topic()
 
     def add_quizzer(self, quizzer):

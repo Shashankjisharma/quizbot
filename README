@@ -2,7 +2,7 @@ quizbot
 =======
 
 ------------------------------------------------------------------------------------------------
-Small and simple quizbot for IRC, uses code cloned from original quizbot at https://github.com/plaimi/q/blob/master/q
+Small and simple quizbot for IRC, builds upon https://github.com/plaimi/q/blob/master/q
 ------------------------------------------------------------------------------------------------
 
 
